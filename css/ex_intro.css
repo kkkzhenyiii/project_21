@@ -1,0 +1,88 @@
+.banner {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+.banner img {
+  width: 100%;
+}
+.banner .exhibition_name {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+}
+.banner .exhibition_name h2 {
+  font-size: 80px;
+  color: #222;
+}
+.banner .exhibiton_date {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+.banner .exhibiton_date p {
+  text-align: center;
+  font-size: 100px;
+  color: #fefefe;
+  font-weight: 300;
+}
+
+article {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding: 60px 0;
+}
+article p {
+  padding: 20px 0;
+}
+
+.btn_tickets {
+  text-align: center;
+}
+.btn_tickets a {
+  text-align: center;
+  display: inline-block;
+  background-color: #222;
+  padding: 4px 12px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  color: #fefefe;
+  font-weight: 400;
+}
+.btn_tickets a .link_tickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+.ex_slider_wrapper {
+  width: 60%;
+  margin: 40px auto;
+}
+.ex_slider_wrapper .ex_item {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.ex_slider_wrapper .ex_item img {
+  width: 100%;
+}

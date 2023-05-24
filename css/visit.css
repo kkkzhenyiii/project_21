@@ -1,0 +1,332 @@
+@charset "UTF-8";
+p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.visit_tickets {
+  width: 80%;
+  margin: 0 auto;
+}
+.visit_tickets .visit_tickets_title {
+  padding: 40px 0;
+}
+.visit_tickets .visit_tickets_title h2 {
+  font-size: 100px;
+  text-align: center;
+}
+.visit_tickets .visit_tickets_title h3 {
+  font-size: 100px;
+  text-align: right;
+  padding-right: 80px;
+  color: #fefefe;
+  text-shadow: 1px 1px #222, -1px -1px #222, 1px -1px #222, -1px 1px #222;
+}
+.visit_tickets .visit_tickets_title h3 span {
+  font-size: 50px;
+}
+.visit_tickets .visit_tickets_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.visit_tickets .visit_tickets_wrapper .opening_info {
+  width: 50%;
+  border-right: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_title {
+  padding: 20px 0;
+}
+.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_title h4 {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+}
+.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_wrapper {
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_wrapper .opening_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_wrapper .opening_item p {
+  font-weight: bold;
+  font-size: 20px;
+}
+.visit_tickets .tickets {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.visit_tickets .tickets .tickets_title {
+  padding: 20px 0;
+}
+.visit_tickets .tickets .tickets_title h4 {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+}
+.visit_tickets .tickets .tickets_wrapper {
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.visit_tickets .tickets .tickets_wrapper .tickets_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #000;
+}
+.visit_tickets .tickets .tickets_wrapper .tickets_item p {
+  font-weight: bold;
+  font-size: 20px;
+}
+.visit_tickets .tickets .tickets_wrapper .tickets_item span {
+  font-weight: bold;
+}
+.visit_tickets .tickets .tickets_wrapper .btn_tickets {
+  text-align: right;
+  padding: 20px 0;
+}
+.visit_tickets .tickets .tickets_wrapper .btn_tickets a {
+  text-align: center;
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  color: #fefefe;
+  font-weight: 400;
+  background-color: #222;
+}
+.visit_tickets .tickets .tickets_wrapper .btn_tickets a .link_tickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+.policies {
+  width: 80%;
+  margin: 0 auto;
+}
+.policies .policies_title {
+  padding: 40px 0;
+}
+.policies .policies_title h2 {
+  font-size: 100px;
+  text-align: center;
+}
+.policies .policies_title h3 {
+  font-size: 100px;
+  text-align: center;
+  color: #fefefe;
+  text-shadow: 1px 1px #222, -1px -1px #222, 1px -1px #222, -1px 1px #222;
+}
+.policies .policies_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.policies .policies_wrapper .basic_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+}
+.policies .policies_wrapper .basic_wrapper .basic_item {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.policies .policies_wrapper .basic_wrapper .basic_item .basic_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.policies .policies_wrapper .basic_wrapper .basic_item .basic_info .title h4 {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px 0;
+}
+.policies .policies_wrapper .basic_wrapper .basic_item .basic_info .txt {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.policies .policies_wrapper .policies_access .access_title {
+  padding: 20px 0;
+}
+.policies .policies_wrapper .policies_access .access_title h3 {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+}
+.policies .policies_wrapper .policies_access .access_title p {
+  text-align: center;
+}
+.policies .policies_wrapper .policies_access .access_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+.policies .policies_wrapper .policies_access .access_wrapper .access_item {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.policies .policies_wrapper .policies_access .access_wrapper .access_item .access_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.policies .policies_wrapper .policies_access .access_wrapper .access_item .access_info .title h4 {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px 0;
+}
+.policies .policies_wrapper .policies_access .access_wrapper .access_item .access_info .txt {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.route {
+  width: 80%;
+  margin: 0 auto;
+}
+.route .route_title {
+  padding: 40px 0;
+}
+.route .route_title h2 {
+  font-size: 100px;
+  text-align: center;
+}
+.route .route_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.route .route_wrapper .transportation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+.route .route_wrapper .transportation .means_item {
+  width: 33.3333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.route .route_wrapper .transportation .means_item .means_info {
+  font-size: 16px;
+}
+.route .route_wrapper .transportation .means_item .means_info h4 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+.route .route_wrapper .map {
+  width: 100%;
+  background-color: #222;
+  position: relative;
+  position: relative;
+  padding-bottom: 30%;
+  /* 此為地圖長寬比 */
+  height: 0;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.route .route_wrapper .map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}

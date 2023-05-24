@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&family=Libre+Baskerville&display=swap");
+.container {
+  width: 100%;
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+  color: #222;
+  background-image: url(../img/bg/bg_home_01.jpg);
+  background-repeat: repeat;
+  position: relative;
+}
+
+h2,
+h3 {
+  font-family: "Libre Baskerville", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+header {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+  z-index: 1;
+}
+header .logo {
+  width: 380px;
+}
+header .logo img {
+  width: 100%;
+  vertical-align: bottom;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #222;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header nav ul li a:hover {
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 40px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footer_lt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .footer_lt .logo_name {
+  width: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+footer .footer_lt .logo_name img {
+  width: 100%;
+  vertical-align: bottom;
+}
+footer .footer_rt {
+  position: relative;
+}
+footer .footer_rt .social_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+footer .footer_rt .subscribe .subscribe_txt h4 {
+  font-size: 24px;
+}
+footer .footer_rt .subscribe .subscribe_txt p {
+  font-size: 20px;
+}
+footer .footer_rt .tibame {
+  font-size: 12px;
+  padding-top: 10px;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yeesiàsià gallery</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- carousel -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- slideshow -->
+        <section class="home-slideshow">
+            <div class="slideshow-logo"></div>
+            <div class="slideshow-mover">
+
+            </div>
+        </section>
+
+        <!-- header -->
+        <header>
+            <div class="logo">
+                <h1><a href="#"><img src="img/logo/logo_hz.svg" alt="yeesiàsià gallery"></a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/visit.html">visit</a></li>
+                    <li><a href="/exhibition.html">exhibition</a></li>
+                    <li><a href="#">event</a></li>
+                    <li><a href="#">news</a></li>
+                    <li><a href="/about.html">about</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- whats on -->
+        <section class="whatson">
+            <h2>What’s on</h2>
+            <div class="whatson_wrapper">
+                <div class="whatson_slider">
+                    <div class="whatson_item wibg01">
+                        <a href="/ex_intro.html">
+                            <div class="whatson_intro">
+                                <p>exhibiton</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="whatson_item wibg02">
+                        <a href="/ex_intro.html">
+                            <div class="whatson_intro">
+                                <p>exhibiton</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="whatson_item wibg03">
+                        <a href="/ex_intro.html">
+                            <div class="whatson_intro">
+                                <p>event</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="whatson_item wibg01">
+                        <a href="/ex_intro.html">
+                            <div class="whatson_intro">
+                                <p>exhibiton</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="whatson_item wibg02">
+                        <a href="/ex_intro.html">
+                            <div class="whatson_intro">
+                                <p>exhibiton</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="whatson_item wibg03">
+                        <a href="/ex_intro.html">
+                            <div class="whatson_intro">
+                                <p>event</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- news?? -->
+        <section class="news">
+
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <div class="footer_lt">
+                <div class="logo_name">
+                    <a href="/index.html"><img src="img/logo/logo_name.svg" alt="yeesiàsià gallery"></a>
+                </div>
+                <div class="footer_txt">
+                    <p>Trekanten C 1, 2630 Taastrup Nykirke Høje Taastrup, Denmark</p>
+                    <p>Copyright © yeesiàsià gallery. All Right Reserved.</p>
+                </div>
+            </div>
+            <div class="footer_rt">
+                <!-- .social_media做position-absolute定位在.footer_rt右上角 -->
+                <div class="social_media">
+                    <div class="social_media_icon"><a href="#"><img src="img/icon/32/line.svg" alt=""></a></div>
+                    <div class="social_media_icon"><a href="#"><img src="img/icon/32/instagram.svg" alt=""></a></div>
+                    <div class="social_media_icon"><a href="#"><img src="img/icon/32/facebook.svg" alt=""></a></div>
+                    <div class="social_media_icon"><a href="#"><img src="img/icon/32/mail.svg" alt=""></a></div>
+                </div>
+                <div class="subscribe">
+                    <div class="subscribe_txt">
+                        <h4>get updates</h4>
+                        <p>sign up to receive our newsletter</p>
+                    </div>
+                    <div class="subscribe_input">
+                        <form class="subscibe_email">
+                            <input type="email" placeholder="email" autocomplete='off' required />
+                            <button type="submit" class="btn">submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="tibame">
+                    <p>本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        // carousel
+        $(document).ready(function () {
+            $('.whatson_slider').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                speed: 500,
+                autoplaySpeed: 5000,
+                infinite: true,
+                autoplay: true,
+                centerMode: true,
+                centerPadding: "0",
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

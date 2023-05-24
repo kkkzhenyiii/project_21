@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&family=Libre+Baskerville&display=swap');
+
+// * {
+//     outline: 1px solid darkcyan;
+// }
+
+.container {
+    width: 100%;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    overflow: hidden;
+    color: #222;
+    background-image: url(../img/bg/bg_home_01.jpg);
+    background-repeat: repeat;
+
+    position: relative;
+    
+}
+
+h2,
+h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+// exhition, ex_intro 的banner
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+header {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    z-index: 1;
+
+    .logo {
+        width: 380px;
+
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            gap: 40px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 24px;
+                    color: #222;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 40px;
+    display: flex;
+    justify-content: space-between;
+
+    // position: absolute;
+    // bottom: 0;
+    // z-index: 1;
+    // align-items: center;
+    .footer_lt {
+        display: flex;
+        flex-direction: column;
+
+        .logo_name {
+            width: 200px;
+            flex-grow: 1;
+
+            img {
+                width: 100%;
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    .footer_rt {
+        position: relative;
+
+        .social_media {
+            display: flex;
+            gap: 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .subscribe {
+            .subscribe_txt {
+                h4 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .tibame {
+            font-size: 12px;
+            padding-top: 10px;
+        }
+    }
+}

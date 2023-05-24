@@ -1,0 +1,176 @@
+h2 {
+  font-size: 100px;
+}
+
+.concept {
+  width: 100%;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.concept h2 {
+  text-align: right;
+}
+.concept .concept_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.concept .concept_wrapper .concept_img .concept_img_front {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+}
+.concept .concept_wrapper .concept_img .concept_img_front img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.concept .concept_wrapper .concept_img .concept_img_back {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  right: -50%;
+  bottom: 20%;
+  opacity: 0.5;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  z-index: 0;
+}
+.concept .concept_wrapper .concept_img .concept_img_back img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.concept .concept_wrapper .concept_info {
+  width: 50%;
+}
+.concept .concept_wrapper .concept_info p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.concept .concept_wrapper .concept_info .concept_foreword {
+  width: 120%;
+  position: relative;
+  right: 20%;
+  font-family: "Libre Baskerville", serif;
+  text-align: right;
+  padding: 40px 0;
+}
+.concept .concept_wrapper .concept_info .concept_foreword p {
+  padding: 10px 0;
+}
+.concept .concept_wrapper .concept_info .concept_intr {
+  position: relative;
+  bottom: -10%;
+  padding: 0 40px;
+  background-color: rgba(254, 254, 254, 0.6549019608);
+}
+.concept .concept_wrapper .concept_info .concept_intr p {
+  padding: 20px 0;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.space {
+  width: 100%;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.space .space_info {
+  width: 50%;
+}
+.space .space_info p {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.space .space_info .space_info_first {
+  width: 120%;
+  position: relative;
+  left: 0%;
+  font-family: "Libre Baskerville", serif;
+  padding: 40px 0;
+}
+.space .space_info .space_info_first p {
+  padding: 10px 0;
+}
+.space .space_info .space_info_sec {
+  padding: 0 40px;
+  background-color: rgba(254, 254, 254, 0.6549019608);
+}
+.space .space_info .space_info_sec p {
+  padding: 20px 0;
+  font-weight: 300;
+}
+.space .space_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.space .space_wrapper .space_img .space_img_front {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+}
+.space .space_wrapper .space_img .space_img_front img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.space .space_wrapper .space_img .space_img_back {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  left: -50%;
+  bottom: 20%;
+  opacity: 0.5;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  z-index: 0;
+}
+.space .space_wrapper .space_img .space_img_back img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.space_wrapper {
+  width: 100%;
+  margin: 20px auto;
+}
+.space_wrapper .space_item {
+  width: 100%;
+  height: 360px;
+  background-color: cadetblue;
+  margin: 0 auto;
+}
+.space_wrapper .space_item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
