@@ -97,13 +97,13 @@ header nav ul li a:hover {
   display: none;
 }
 .whatson .wibg01 {
-  background-image: url(/img/new_on/whatson01.jpg);
+  background-image: url(./img/new_on/whatson01.jpg);
 }
 .whatson .wibg02 {
-  background-image: url(/img/new_on/whatson02.png);
+  background-image: url(./img/new_on/whatson02.png);
 }
 .whatson .wibg03 {
-  background-image: url(/img/new_on/whatson03.jpg);
+  background-image: url(./img/new_on/whatson03.jpg);
 }
 
 .slick-slide {
