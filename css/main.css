@@ -1,19 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Unna:ital@0;1&display=swap");
 .container {
   width: 100%;
   position: relative;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
   overflow: hidden;
-  color: #222;
-  background-image: url(../img/bg/bg_home_01.jpg);
-  background-repeat: repeat;
-  position: relative;
+  background-image: url(../img/bg/all_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h2,
 h3 {
-  font-family: "Libre Baskerville", serif;
+  font-family: "Unna", serif;
+  font-style: italic;
+}
+
+p {
+  line-height: 1.5;
+  font-family: "Unna", serif;
 }
 
 a {
@@ -47,11 +50,10 @@ header {
   z-index: 1;
 }
 header .logo {
-  width: 380px;
+  width: 150px;
 }
 header .logo img {
   width: 100%;
-  vertical-align: bottom;
 }
 header nav ul {
   display: -webkit-box;
@@ -71,18 +73,33 @@ header nav ul li a:hover {
 }
 
 footer {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 40px 40px;
+  margin-top: 60px;
+  background: rgba(252, 250, 242, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+footer .footer_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 16px;
+  color: #08192D;
 }
-footer .footer_lt {
+footer .footer_wrapper h4,
+footer .footer_wrapper p {
+  font-family: "Noto Sans", sans-serif;
+}
+footer .footer_wrapper h4 {
+  font-weight: bold;
+}
+footer .footer_wrapper .footer_logo {
+  padding: 40px;
+}
+footer .footer_wrapper .footer_info {
+  padding: 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,36 +107,47 @@ footer .footer_lt {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 20px;
 }
-footer .footer_lt .logo_name {
-  width: 200px;
+footer .footer_wrapper .footer_info .footer_title {
+  border-bottom: 1px solid #08192D;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+footer .footer_wrapper .footer_info .footer_openinghoursinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer_wrapper .footer_info .footer_nav {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-footer .footer_lt .logo_name img {
-  width: 100%;
-  vertical-align: bottom;
+footer .footer_wrapper .footer_info .footer_nav .footer_content a {
+  color: #08192D;
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.5;
 }
-footer .footer_rt {
-  position: relative;
-}
-footer .footer_rt .social_media {
+footer .footer_wrapper .footer_info .socialmedia_icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  gap: 20px;
 }
-footer .footer_rt .subscribe .subscribe_txt h4 {
-  font-size: 24px;
+footer .footer_wrapper .footer_img {
+  width: 33%;
 }
-footer .footer_rt .subscribe .subscribe_txt p {
-  font-size: 20px;
-}
-footer .footer_rt .tibame {
-  font-size: 12px;
-  padding-top: 10px;
+footer .footer_wrapper .footer_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }

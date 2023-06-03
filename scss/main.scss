@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Unna:ital@0;1&display=swap');
 
 // * {
 //     outline: 1px solid darkcyan;
 // }
 
 .container {
+    // max-width: 1200px;
     width: 100%;
     position: relative;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
     overflow: hidden;
-    color: #222;
-    background-image: url(../img/bg/bg_home_01.jpg);
-    background-repeat: repeat;
-
-    position: relative;
-    
+    background-image: url(../img/bg/all_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h2,
 h3 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Unna', serif;
+    font-style: italic;
+}
+
+p {
+    line-height: 1.5;
+    font-family: 'Unna', serif;
 }
 
 a {
@@ -52,11 +54,10 @@ header {
     z-index: 1;
 
     .logo {
-        width: 380px;
+        width: 150px;
 
         img {
             width: 100%;
-            vertical-align: bottom;
         }
     }
 
@@ -84,57 +85,78 @@ header {
 
 
 footer {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 40px 40px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 60px;
+    background: rgba($color: #FCFAF2, $alpha: 0.3);
+    backdrop-filter: blur(4px);
+    
 
-    // position: absolute;
-    // bottom: 0;
-    // z-index: 1;
-    // align-items: center;
-    .footer_lt {
+    .footer_wrapper {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        // align-items: flex-start;
+        font-size: 16px;
+        color: #08192D;
 
-        .logo_name {
-            width: 200px;
-            flex-grow: 1;
-
-            img {
-                width: 100%;
-                vertical-align: bottom;
-            }
+        h4,
+        p {
+            font-family: 'Noto Sans', sans-serif;
         }
-    }
 
-    .footer_rt {
-        position: relative;
+        h4 {
+            font-weight: bold;
+        }
 
-        .social_media {
+        .footer_logo {
+            padding: 40px;
+        }
+
+        .footer_info {
+            padding: 40px 0;
             display: flex;
-            gap: 5px;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
+            flex-direction: column;
+            gap: 20px;
 
-        .subscribe {
-            .subscribe_txt {
-                h4 {
-                    font-size: 24px;
-                }
 
-                p {
-                    font-size: 20px;
+            .footer_title {
+                border-bottom: 1px solid #08192D;
+                padding-bottom: 8px;
+                margin-bottom: 8px;
+            }
+
+            .footer_openinghoursinfo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .footer_nav {
+                flex-grow: 1;
+                .footer_content {
+                    a {
+                        color: #08192D;
+                        font-family: 'Noto Sans', sans-serif;
+                        line-height: 1.5;
+                    }
                 }
             }
-        }
 
-        .tibame {
-            font-size: 12px;
-            padding-top: 10px;
+            .socialmedia_icon {
+                display: flex;
+                gap: 20px;
+            }
+            
+
         }
+        
+        .footer_img {
+                width: 33%;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
     }
+
 }

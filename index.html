@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="./css/index.css">
 
     <!-- carousel -->
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
@@ -23,74 +21,87 @@
 <body>
     <div class="container">
 
-        <!-- slideshow -->
-        <section class="home-slideshow">
-            <div class="slideshow-logo"></div>
-            <div class="slideshow-mover">
-
-            </div>
-        </section>
-
         <!-- header -->
-        <header>
+        <header id="navbar">
             <div class="logo">
-                <h1><a href="#"><img src="img/logo/logo_hz.svg" alt="yeesiàsià gallery"></a></h1>
+                <h1><a href="#"><img src="img/logo/logo_vector.svg" alt="yeesiàsià gallery"></a></h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="visit.html">visit</a></li>
-                    <li><a href="exhibition.html">exhibition</a></li>
-                    <li><a href="#">event</a></li>
+                    <li><a href="exhibition.html">exhibition&event</a></li>
+                    <li><a href="#">tickets</a></li>
                     <li><a href="#">news</a></li>
                     <li><a href="about.html">about</a></li>
                 </ul>
             </nav>
         </header>
 
+        <!-- slideshow -->
+        <section class="home-slideshow">
+            <!-- <div class="slideshow-logo"></div> -->
+            <div class="slideshow-mover"></div>
+        </section>
+
+
+
         <!-- whats on -->
         <section class="whatson">
             <h2>What’s on</h2>
             <div class="whatson_wrapper">
                 <div class="whatson_slider">
-                    <div class="whatson_item wibg01">
+                    <div class="whatson_item">
                         <a href="ex_intro.html">
+                            <div whatson_img>
+                                <img src="img/new_on/whatson01.jpg" alt="">
+                            </div>
                             <div class="whatson_intro">
-                                <p>exhibiton</p>
+                                <h3>something you dream of</h3>
+                                <h4>2023.04.18 - 2023.06.18</h4>
                             </div>
                         </a>
                     </div>
-                    <div class="whatson_item wibg02">
+                    <div class="whatson_item">
                         <a href="ex_intro.html">
+                            <div whatson_img>
+                                <img src="img/new_on/whatson02.png" alt="">
+                            </div>
                             <div class="whatson_intro">
-                                <p>exhibiton</p>
+                                <h3>something you dream of</h3>
+                                <h4>2023.04.18 - 2023.06.18</h4>
                             </div>
                         </a>
                     </div>
-                    <div class="whatson_item wibg03">
+                    <div class="whatson_item">
                         <a href="ex_intro.html">
+                            <div whatson_img>
+                                <img src="img/new_on/whatson03.jpg" alt="">
+                            </div>
                             <div class="whatson_intro">
-                                <p>event</p>
+                                <h3>something you dream of</h3>
+                                <h4>2023.04.18 - 2023.06.18</h4>
                             </div>
                         </a>
                     </div>
-                    <div class="whatson_item wibg01">
+                    <div class="whatson_item">
                         <a href="ex_intro.html">
+                            <div whatson_img>
+                                <img src="img/new_on/whatson01.jpg" alt="">
+                            </div>
                             <div class="whatson_intro">
-                                <p>exhibiton</p>
+                                <h3>something you dream of</h3>
+                                <h4>2023.04.18 - 2023.06.18</h4>
                             </div>
                         </a>
                     </div>
-                    <div class="whatson_item wibg02">
+                    <div class="whatson_item">
                         <a href="ex_intro.html">
-                            <div class="whatson_intro">
-                                <p>exhibiton</p>
+                            <div whatson_img>
+                                <img src="img/new_on/whatson02.png" alt="">
                             </div>
-                        </a>
-                    </div>
-                    <div class="whatson_item wibg03">
-                        <a href="ex_intro.html">
                             <div class="whatson_intro">
-                                <p>event</p>
+                                <h3>something you dream of</h3>
+                                <h4>2023.04.18 - 2023.06.18</h4>
                             </div>
                         </a>
                     </div>
@@ -98,49 +109,171 @@
             </div>
         </section>
 
-        <!-- news?? -->
+        <!-- news -->
         <section class="news">
-
+            <div class="news_title">
+                <h2>NEWS</h2>
+            </div>
+            <div class="news_list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="news_date">
+                                2023.04.18
+                            </span>
+                            <h3>
+                                Grand Opening! Embark on a Journey to Explore the Beauty of Art
+                            </h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="news_date">
+                                2023.04.18
+                            </span>
+                            <h3>
+                                Engaging with Artists: Delve into Their Creative Inspirations and Meanings
+                            </h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="news_date">
+                                2023.04.18
+                            </span>
+                            <h3>
+                                Annual Closure Notice: Gallery Temporarily Closed
+                            </h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page_link">
+                <a href="news.html">view all</a>
+            </div>
         </section>
+
+        <!-- subscribe -->
+        <section class="subscribe">
+            <div class="subscirbe_wrapper">
+                <div class="subscribe_intro">
+                    <p>
+                        Join us on this enriching journey as we bring together art lovers, creators, and enthusiasts to
+                        celebrate the beauty and transformative power of artistic expression.
+                    </p>
+                </div>
+                <div class="subscribe_input">
+                    <form>
+                        <input type="text" placeholder="Email address" name="mail" required>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </section>
+
 
         <!-- footer -->
         <footer>
-            <div class="footer_lt">
-                <div class="logo_name">
-                    <a href="index.html"><img src="img/logo/logo_name.svg" alt="yeesiàsià gallery"></a>
+            <div class="footer_wrapper">
+                <div class="footer_logo">
+                    <a href="index.html">
+                        <img src="img/logo/logo_vertiacl.svg" alt="yeesiàsià gallery">
+                    </a>
                 </div>
-                <div class="footer_txt">
-                    <p>Trekanten C 1, 2630 Taastrup Nykirke Høje Taastrup, Denmark</p>
-                    <p>Copyright © yeesiàsià gallery. All Right Reserved.</p>
-                </div>
-            </div>
-            <div class="footer_rt">
-                <!-- .social_media做position-absolute定位在.footer_rt右上角 -->
-                <div class="social_media">
-                    <div class="social_media_icon"><a href="#"><img src="img/icon/24/line.svg" alt=""></a></div>
-                    <div class="social_media_icon"><a href="#"><img src="img/icon/24/instagram.svg" alt=""></a></div>
-                    <div class="social_media_icon"><a href="#"><img src="img/icon/24/facebook.svg" alt=""></a></div>
-                    <div class="social_media_icon"><a href="#"><img src="img/icon/24/mail.svg" alt=""></a></div>
-                </div>
-                <div class="subscribe">
-                    <div class="subscribe_txt">
-                        <h4>get updates</h4>
-                        <p>sign up to receive our newsletter</p>
+                <div class="footer_info">
+                    <div class="footer_openinghours">
+                        <div class="footer_title">
+                            <h4>OPENING HOURS</h4>
+                        </div>
+                        <div class="footer_content">
+                            <div class="footer_openinghoursinfo">
+                                <div class="footer_date">
+                                    <p>SUNDAY</p>
+                                </div>
+                                <div class="footer_time">
+                                    <p>CLOSED</p>
+                                </div>
+                            </div>
+                            <div class="footer_openinghoursinfo">
+                                <div class="footer_date">
+                                    <p>MONDAY - SATURDAY</p>
+                                </div>
+                                <div class="footer_time">
+                                    <p>11:00 am - 06:00 pm</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="subscribe_input">
-                        <form class="subscibe_email">
-                            <input type="email" placeholder="email" autocomplete='off' required />
-                            <button type="submit" class="btn">submit</button>
-                        </form>
+                    <div class="footer_address">
+                        <div class="footer_title">
+                            <h4>ADDRESS</h4>
+                        </div>
+                        <div class="footer_content">
+                            <P>Trekanten C 1, 2630 Taastrup Nykirke Høje Taastrup, Denmark</P>
+                        </div>
                     </div>
+                    <div class="footer_nav">
+                        <div class="footer_title">
+                            <h4>MORE ABOUT</h4>
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        # concept & space
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        # visit information
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        # exhibition & event
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        # tickets & FAQ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        # news
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_socialmedia">
+                        <div class="footer_title">
+                            <h4>FOLLOW US</h4>
+                        </div>
+                        <div class="footer_content">
+                            <div class="socialmedia_icon">
+                                <a href="#"><img src="img/icon/40/line.svg" alt="LINE"></a>
+                                <a href="#"><img src="img/icon/40/instagram.svg" alt="INSTAGRAM"></a>
+                                <a href="#"><img src="img/icon/40/facebook.svg" alt="FACEBOOK"></a>
+                                <a href="#"><img src="img/icon/40/mail.svg" alt="MAIL"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tibame">
+                        <p>本網站為緯育TibaMe前端工程師班第XX期學員專題作品</p>
+                        <p>本平台僅供學習、展示之用</p>
+                    </div>
+
                 </div>
-                <div class="tibame">
-                    <p>本網站為緯育TibaMe前端工程師班第XX期學員專題作品，本平台僅供學習、展示之用。</p>
+                <div class="footer_img">
+                    <img src="img/about/concept03.jpg" alt="inner peace">
                 </div>
             </div>
         </footer>
 
-    </div>
+    </div> <!--container-->
+
+
 
     <!-- carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -160,8 +293,8 @@
                 centerPadding: "0",
             });
         });
-
     </script>
+
 
 </body>
 
