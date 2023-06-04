@@ -53,6 +53,7 @@ header {
           justify-content: space-between;
   padding: 40px;
   z-index: 1;
+  margin-bottom: 40px;
 }
 header .logo {
   width: 150px;
@@ -70,11 +71,12 @@ header nav ul li a {
   font-family: "Unna", serif;
   font-style: italic;
   font-size: 24px;
+  padding: 0 4px;
   color: #08192D;
+  z-index: 1;
   position: relative;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  padding: 0 4px;
 }
 header nav ul li a::before {
   background-color: #91989F;
@@ -98,7 +100,6 @@ header nav ul li a:hover::before {
           transform-origin: left;
 }
 header nav ul li a:hover {
-  z-index: 1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }

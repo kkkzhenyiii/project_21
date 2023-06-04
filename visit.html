@@ -35,14 +35,14 @@
         </header>
 
         <!-- banner -->
-        <section class="visit_banner">
+        <div class="visit_banner">
             <div class="banner_img">
                 <img src="img/bg/banner_visit.jpg" alt="visit information">
             </div>
             <div class="banner_title">
                 <h2>visit information</h2>
             </div>
-        </section>
+        </div>
 
         <!-- opening hours -->
         <section class="opening_info">
@@ -184,79 +184,66 @@
             </div>
         </section>
 
-        <!-- visit & tickets -->
-        <section class="visit_tickets">
-            <div class="visit_tickets_wrapper">
-
-                <div class="tickets">
-                    <div class="tickets_title">
-                        <h3>ADMISSION PRICES</h3>
-                    </div>
-                    <div class="tickets_wrapper">
-                        <div class="tickets_item">
-                            <div class="tickets_id">
-                                <p>ADULT</p>
-                            </div>
-                            <div class="tickets_price">
-                                <p>$ 150</p>
-                            </div>
-                        </div>
-                        <div class="tickets_item">
-                            <div class="tickets_id">
-                                <p>Senior</p>
-                                <span>65 and over with ID</span>
-                            </div>
-                            <div class="tickets_price">
-                                <p>$ 65</p>
-                            </div>
-                        </div>
-                        <div class="tickets_item">
-                            <div class="tickets_id">
-                                <p>Student</p>
-                                <span>Full-time with ID, including international students</span>
-                            </div>
-                            <div class="tickets_price">
-                                <p>$ 75</p>
-                            </div>
-                        </div>
-                        <div class="tickets_item">
-                            <div class="tickets_id">
-                                <p>Children</p>
-                                <span>7 and under</span>
-                            </div>
-                            <div class="tickets_price">
-                                <p>FREE</p>
-                            </div>
-                        </div>
-                        <div class="btn_tickets">
-                            <a href="#">
-                                <div class="link_tickets">
-                                    <div class="icon_tickets">
-                                        <img src="img/icon/40/tickets.svg" alt="tickets">
-                                    </div>
-                                    <div class="txt_tickets">
-                                        <p>Get Tickets</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+        <!-- admission price -->
+        <section class="admission_price">
+            <div class="container">
+                <div class="price_title">
+                    <h2>ADMISSION PRICES</h2>
                 </div>
+
+                <div class="tickets_wrapper">
+                    <div class="tickets_item">
+                        <img src="img/icon/60/adult.svg" alt="adult">
+                        <p>Adult</p>
+                        <p class="tickets_price">$ 80</p>
+                    </div>
+                    <div class="tickets_item">
+                        <img src="img/icon/60/student.svg" alt="adult">
+                        <p>Student</p>
+                        <p class="tickets_price">$ 75</p>
+                        <div class="tickets_info">
+                            <p>Full-time with ID, including international students</p>
+                        </div>
+                    </div>
+                    <div class="tickets_item">
+                        <img src="img/icon/60/children.svg" alt="adult">
+                        <p>Children</p>
+                        <p class="tickets_price">$ FREE</p>
+                        <div class="tickets_info">
+                            <p>7 and under</p>
+                        </div>
+                    </div>
+                    <div class="tickets_item">
+                        <img src="img/icon/60/senior.svg" alt="adult">
+                        <p>Senior</p>
+                        <p class="tickets_price">$ 65</p>
+                        <div class="tickets_info">
+                            <p>65 and over with ID</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn_tickets">
+                    <a href="#">
+                        <img src="img/icon/40/tickets.svg" alt="tickets">
+                        <p>Get Tickets</p>
+                    </a>
+                </div>
+
             </div>
         </section>
 
         <!-- visitor policies -->
         <section class="policies">
-            <div class="policies_title">
-                <h2>Visitor<br><span>Policies</span></h2>
-
-            </div>
-            <div class="policies_wrapper">
+            <div class="container">
+                <div class="policies_title">
+                    <h2>VISITOR POLICIES</h2>
+                </div>
                 <div class="policies_basic">
                     <div class="basic_wrapper">
                         <div class="basic_item">
                             <div class="basic_icon">
-                                <img src="img/icon/100/clothes-hanger.svg" alt="clothes-hanger">
+                                <img src="img/icon/60/clothes-hanger.svg" alt="clothes-hanger">
                             </div>
                             <div class="basic_info">
                                 <div class="title">
@@ -269,7 +256,7 @@
                         </div>
                         <div class="basic_item">
                             <div class="basic_icon">
-                                <img src="img/icon/100/phone-vibration.svg" alt="phone-vibration">
+                                <img src="img/icon/60/phone-vibration.svg" alt="phone-vibration">
                             </div>
                             <div class="basic_info">
                                 <div class="title">
@@ -282,7 +269,7 @@
                         </div>
                         <div class="basic_item">
                             <div class="basic_icon">
-                                <img src="img/icon/100/baby-carrier.svg" alt="baby-carrier">
+                                <img src="img/icon/60/baby-carrier.svg" alt="baby-carrier">
                             </div>
                             <div class="basic_info">
                                 <div class="title">
@@ -297,21 +284,22 @@
                         </div>
                         <div class="basic_item">
                             <div class="basic_icon">
-                                <img src="img/icon/100/pencil.svg" alt="pencils">
+                                <img src="img/icon/60/pencil.svg" alt="pencils">
                             </div>
                             <div class="basic_info">
                                 <div class="title">
                                     <h4>SKETCHING</h4>
                                 </div>
                                 <div class="txt">
-                                    <p>Use of writing utensils other than pencils is prohibited in the exhibition rooms.
+                                    <p>Use of writing utensils other than pencils is prohibited in the exhibition
+                                        rooms.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="basic_item">
                             <div class="basic_icon">
-                                <img src="img/icon/100/camera.svg" alt="cameras">
+                                <img src="img/icon/60/camera.svg" alt="cameras">
                             </div>
                             <div class="basic_info">
                                 <div class="title">
@@ -326,7 +314,7 @@
                         </div>
                         <div class="basic_item">
                             <div class="basic_icon">
-                                <img src="img/icon/100/bottle.svg" alt="bottle">
+                                <img src="img/icon/60/bottle.svg" alt="bottle">
                             </div>
                             <div class="basic_info">
                                 <div class="title">
@@ -341,92 +329,86 @@
                         </div>
                     </div>
                 </div>
-                <div class="policies_access">
-                    <div class="access_title">
-                        <h3>Accessibility</h3>
-                        <p>Please inquire at the Visitor Desk for any assistance you may require.</p>
-                    </div>
-                    <div class="access_wrapper">
-                        <div class="access_item">
-                            <div class="access_icon">
-                                <img src="img/icon/100/ear.svg" alt="hearing">
+                <div class="access_title">
+                    <h3>Accessibility</h3>
+                    <p>Please inquire at the Visitor Desk for any assistance you may require.</p>
+                </div>
+                <div class="access_wrapper">
+                    <div class="access_item">
+                        <div class="access_icon">
+                            <img src="img/icon/60/ear.svg" alt="hearing">
+                        </div>
+                        <div class="access_info">
+                            <div class="title">
+                                <h4>HEARING</h4>
                             </div>
-                            <div class="access_info">
-                                <div class="title">
-                                    <h4>HEARING</h4>
-                                </div>
-                                <div class="txt">
-                                    <p>Assistive listening devices, headsets, and neck loops are available for most
-                                        programs
-                                        at the yeesiàsià gallery.</p>
-                                </div>
+                            <div class="txt">
+                                <p>Assistive listening devices, headsets, and neck loops are available for most
+                                    programs
+                                    at the yeesiàsià gallery.</p>
                             </div>
                         </div>
-                        <div class="access_item">
-                            <div class="access_icon">
-                                <img src="img/icon/100/wheelchair.svg" alt="wheelchair">
+                    </div>
+                    <div class="access_item">
+                        <div class="access_icon">
+                            <img src="img/icon/60/wheelchair.svg" alt="wheelchair">
+                        </div>
+                        <div class="access_info">
+                            <div class="title">
+                                <h4>WHEELCHAIRS</h4>
                             </div>
-                            <div class="access_info">
-                                <div class="title">
-                                    <h4>WHEELCHAIRS</h4>
-                                </div>
-                                <div class="txt">
-                                    <p>The gallery is wheelchair accessible. Two wheelchairs are available in the Coat
-                                        Check
-                                        free of charge. Please call in advance to reserve one if you need a wheelchair
-                                        during your visit.</p>
-                                </div>
+                            <div class="txt">
+                                <p>The gallery is wheelchair accessible. Two wheelchairs are available in the
+                                    Coat
+                                    Check
+                                    free of charge. Please call in advance to reserve one if you need it
+                                    during your visit.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </section>
 
         <!-- route -->
         <section class="route">
-            <div class="route_title">
-                <h2>Route</h2>
-            </div>
-            <div class="route_wrapper">
+            <div class="container">
+                <div class="route_title">
+                    <h2>ROUTE</h2>
+                </div>
+
                 <div class="transportation">
                     <div class="means_item">
                         <div class="meams_icon">
-                            <img src="img/icon/80/bus.svg" alt="bus">
+                            <img src="img/icon/60/bus.svg" alt="bus">
                         </div>
                         <div class="means_info">
-                            <h4>BUS</h4>
-                            <p>Take bus number X from A to the museum. The bus stop is located at street and
-                                intersection, near landmark. You can check the bus schedule or use a transportation app
-                                to plan your trip. Once you get off the bus, the gallery is just a short walk away. You
-                                can follow the signs or ask a local for directions if you need help finding it.</p>
-                        </div>
-                    </div>
-                    <div class="means_item">
-                        <div class="meams_icon">
-                            <img src="img/icon/80/subway.svg" alt="bus">
-                        </div>
-                        <div class="means_info">
-                            <h4>SUBWAY</h4>
-                            <p>Take the MRT from location to station. You can check the MRT map or use a transportation
-                                app to plan your route. When you get off at the station, follow the signs or ask a
-                                station employee for directions to the gallery. The gallery is just a short walk from
-                                the station.</p>
-                        </div>
-                    </div>
-                    <div class="means_item">
-                        <div class="meams_icon">
-                            <img src="img/icon/80/car.svg" alt="bus">
-                        </div>
-                        <div class="means_info">
-                            <h4>CAR</h4>
-                            <p>From major road, take exit num and follow the signs to the gallery. The gallery is
-                                located at address and has ample parking available in the surrounding area. You can use
-                                a map or navigation app to plan your
-                                route and find the best place to park. Please be aware of any parking restrictions or
-                                fees that may apply.
+                            <h4>Bus</h4>
+                            <p>Take bus number X to the museum. The bus stop is located at street X and Y intersection,
+                                near the Z landmark. Once getting off the bus, please follow the signs to the gallery.
                             </p>
+                        </div>
+                    </div>
+                    <div class="means_item">
+                        <div class="meams_icon">
+                            <img src="img/icon/60/subway.svg" alt="bus">
+                        </div>
+                        <div class="means_info">
+                            <h4>Subway</h4>
+                            <p>Take the MRT X-line to Y station. When getting off at the station, please follow the
+                                signs to the gallery.</p>
+                        </div>
+                    </div>
+                    <div class="means_item">
+                        <div class="meams_icon">
+                            <img src="img/icon/60/car.svg" alt="bus">
+                        </div>
+                        <div class="means_info">
+                            <h4>Car</h4>
+                            <p>From major road, take exit num and follow the signs to the gallery. There are ample
+                                parking lots in the surrounding area.</p>
                         </div>
                     </div>
                 </div>
@@ -439,6 +421,7 @@
 
 
                 </div>
+
             </div>
         </section>
 

@@ -57,6 +57,7 @@ header {
     justify-content: space-between;
     padding: 40px;
     z-index: 1;
+    margin-bottom: 40px;
 
     .logo {
         width: 150px;
@@ -76,10 +77,12 @@ header {
                     font-family: 'Unna', serif;
                     font-style: italic;
                     font-size: 24px;
+                    padding: 0 4px;
                     color: #08192D;
+                    z-index: 1;
                     position: relative;
                     transition: all .5s;
-                    padding: 0 4px;
+                    
 
 
                     &::before {
@@ -102,7 +105,7 @@ header {
                     &:hover {
                         // color: #FCFAF2;
                         // padding: 0 4px;
-                        z-index: 1;
+                        
                         transition: all .5s;
                     }
 
