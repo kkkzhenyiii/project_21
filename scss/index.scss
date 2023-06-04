@@ -36,41 +36,33 @@ header {
     position: absolute;
     top: 0;
 
-    nav ul li a {
-        color: #ffffff;
-        font-weight: bold;
-        z-index: 3;
-
-        &:hover {
-            color: #222;
-        }
-    }
+    
 }
 
 
 
 // what'on ------ centerMode carousel
 .whatson {
+    margin-bottom: 200px;
+
     h2 {
         font-size: 160px;
         text-align: center;
         padding-top: 40px;
         // position: relative;
         // bottom: -20px;
-        font-family: 'Josefin Sans', sans-serif;
-        color: #fefefe;
+        color: #08192D;
     }
 
     .whatson_wrapper {
         width: 80%;
         margin: 0 auto;
-        // background-color: #ddd;
-        // padding: 20px;
 
         .whatson_slider {
 
             .whatson_item {
                 // background-color: cadetblue;
+                transition: all .5s;
 
                 a {
                     display: inline-block;
@@ -80,39 +72,56 @@ header {
                         object-fit: cover;
                         object-position: center;
                     }
+
+                    .whatson_intro {
+                        width: 100%;
+                        text-align: center;
+                        line-height: 1.5;
+                        color: #08192D;
+                        font-size: 24px;
+                        padding: 10px 0;
+                        transition: all .5s;
+                        
+
+                        h4 {
+                            font-family: 'Noto Sans', sans-serif;
+                            font-size: 20px;
+                        }
+                    }
                 }
 
 
                 &:hover {
                     filter: grayscale(1);
+                    position: relative;
+                    transition: all 1s;
 
-                    // .whatson_intro {
-                    //     display: block;
-                    //     color: #222;
-                    // }
+                    .whatson_intro {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        right: 0;
+                        font-weight: bold;
+                        background-color: rgba($color: #FCFAF2, $alpha: .3);
+                        transition: all .5s;
+                    }
                 }
 
-                .whatson_intro {
-                    position: absolute;
-                    left: 0;
-                    bottom: 20px;
-                    width: 100%;
-                    text-align: center;
-                    line-height: 1.5;
-                    color: red;
-                    font-size: 20px;
-                }
+
             }
         }
     }
 }
 
 // whats on slider 
+.slick-list {
+    padding-bottom: 40px !important;
+}
+
 .slick-slide {
     transform: scale(0.8);
     transition: all 0.4s ease-in-out;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    padding: 80px 0px;
 }
 
 .slick-slide img {
@@ -144,30 +153,45 @@ header {
 // NEWS
 
 .news {
+
     position: relative;
     display: flex;
     justify-content: center;
+    background-color: rgba($color: #08192D, $alpha: .6);
+    padding: 80px 0;
+    box-sizing: border-box;
 
     .page_link {
         position: absolute;
-        left: 100px;
-        bottom: 0;
-
+        left: 160px;
+        bottom: 86px;
 
         a {
             display: inline-block;
             padding: 10px;
+            color: #FCFAF2;
+            font-style: italic;
+            font-size: 32px;
+            transition: all .5s;
 
             &::before {
                 position: absolute;
                 content: "";
                 display: block;
-                width: 100px;
+                width: 160px;
                 height: 2px;
-                background-color: #1c1c1c;
+                background-color: #FCFAF2;
                 top: 50%;
-                left: -100px;
+                left: -160px;
             }
+        }
+
+        &:hover {
+            a {
+                font-size: 40px;
+                transition: all .5s;
+            }
+            
         }
 
     }
@@ -175,16 +199,34 @@ header {
     .news_title {
         width: 30%;
         box-sizing: border-box;
+        font-style: italic;
+        font-size: 40px;
+        color: #FCFAF2;
     }
 
     .news_list {
         width: 60%;
         box-sizing: border-box;
 
-        ul li a {
-            display: flex;
-            gap: 40px;
-            padding: 40px 0;
+        ul li {
+            border-bottom: 1px solid #FCFAF2;
+            box-sizing: border-box;
+
+            a {
+                display: flex;
+                gap: 40px;
+                padding: 40px 0;
+                color: #FCFAF2;
+                font-size: 24px;
+                transition: all .5s;
+
+                &:hover {
+                    font-size: 28px;
+                    transition: all .5s;
+                }
+            }
+
+
         }
     }
 }
@@ -192,39 +234,58 @@ header {
 
 // subscribe
 .subscribe {
-    width: 80%;
-    margin: 0 auto;
+    margin: 100px 0;
 
     .subscirbe_wrapper {
+        width: 80%;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 60px;
+        font-size: 20px;
 
         .subscribe_intro {
-            width: 45%;
+            width: 480px;
+            text-align: justify;
         }
 
         .subscribe_input {
-            width: 50%;
+            // width: 500px;
+            border-bottom: 3px solid #08192D;
+
 
             input[type=text] {
-                width: 60%;
-                padding: 12px;
+                width: 320px;
+                padding: 20px;
                 display: inline-block;
                 border: none;
                 box-sizing: border-box;
+                background-color: rgba($color: #08192D, $alpha: .0);
+                font-family: 'Unna', serif;
+                font-size: 20px;
+                box-sizing: border-box;
+
             }
 
             input[type=submit] {
+                margin: 0 auto;
                 padding: 10px 40px;
-                
                 display: inline-block;
                 border: 1px solid #ccc;
                 border-radius: 40px;
                 box-sizing: border-box;
                 background-color: rgba(8, 25, 45, 0.6);
                 color: #fff;
+                font-family: 'Unna', serif;
+                font-style: italic;
+                font-size: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(8, 25, 45, 0.3);
+                    color: #08192D;
+                }
 
             }
 

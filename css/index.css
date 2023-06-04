@@ -38,25 +38,23 @@ header {
   position: absolute;
   top: 0;
 }
-header nav ul li a {
-  color: #ffffff;
-  font-weight: bold;
-  z-index: 3;
-}
-header nav ul li a:hover {
-  color: #222;
-}
 
+.whatson {
+  margin-bottom: 200px;
+}
 .whatson h2 {
   font-size: 160px;
   text-align: center;
   padding-top: 40px;
-  font-family: "Josefin Sans", sans-serif;
-  color: #fefefe;
+  color: #08192D;
 }
 .whatson .whatson_wrapper {
   width: 80%;
   margin: 0 auto;
+}
+.whatson .whatson_wrapper .whatson_slider .whatson_item {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .whatson .whatson_wrapper .whatson_slider .whatson_item a {
   display: inline-block;
@@ -68,19 +66,40 @@ header nav ul li a:hover {
   -o-object-position: center;
      object-position: center;
 }
-.whatson .whatson_wrapper .whatson_slider .whatson_item:hover {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-}
-.whatson .whatson_wrapper .whatson_slider .whatson_item .whatson_intro {
-  position: absolute;
-  left: 0;
-  bottom: 20px;
+.whatson .whatson_wrapper .whatson_slider .whatson_item a .whatson_intro {
   width: 100%;
   text-align: center;
   line-height: 1.5;
-  color: red;
+  color: #08192D;
+  font-size: 24px;
+  padding: 10px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.whatson .whatson_wrapper .whatson_slider .whatson_item a .whatson_intro h4 {
+  font-family: "Noto Sans", sans-serif;
   font-size: 20px;
+}
+.whatson .whatson_wrapper .whatson_slider .whatson_item:hover {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.whatson .whatson_wrapper .whatson_slider .whatson_item:hover .whatson_intro {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+  background-color: rgba(252, 250, 242, 0.3);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.slick-list {
+  padding-bottom: 40px !important;
 }
 
 .slick-slide {
@@ -90,7 +109,6 @@ header nav ul li a:hover {
   transition: all 0.4s ease-in-out;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  padding: 80px 0px;
 }
 
 .slick-slide img {
@@ -129,33 +147,55 @@ header nav ul li a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: rgba(8, 25, 45, 0.6);
+  padding: 80px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .news .page_link {
   position: absolute;
-  left: 100px;
-  bottom: 0;
+  left: 160px;
+  bottom: 86px;
 }
 .news .page_link a {
   display: inline-block;
   padding: 10px;
+  color: #FCFAF2;
+  font-style: italic;
+  font-size: 32px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .news .page_link a::before {
   position: absolute;
   content: "";
   display: block;
-  width: 100px;
+  width: 160px;
   height: 2px;
-  background-color: #1c1c1c;
+  background-color: #FCFAF2;
   top: 50%;
-  left: -100px;
+  left: -160px;
+}
+.news .page_link:hover a {
+  font-size: 40px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .news .news_title {
   width: 30%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-style: italic;
+  font-size: 40px;
+  color: #FCFAF2;
 }
 .news .news_list {
   width: 60%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.news .news_list ul li {
+  border-bottom: 1px solid #FCFAF2;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -165,13 +205,23 @@ header nav ul li a:hover {
   display: flex;
   gap: 40px;
   padding: 40px 0;
+  color: #FCFAF2;
+  font-size: 24px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.news .news_list ul li a:hover {
+  font-size: 28px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .subscribe {
-  width: 80%;
-  margin: 0 auto;
+  margin: 100px 0;
 }
 .subscribe .subscirbe_wrapper {
+  width: 80%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,22 +232,29 @@ header nav ul li a:hover {
       -ms-flex-align: center;
           align-items: center;
   gap: 60px;
+  font-size: 20px;
 }
 .subscribe .subscirbe_wrapper .subscribe_intro {
-  width: 45%;
+  width: 480px;
+  text-align: justify;
 }
 .subscribe .subscirbe_wrapper .subscribe_input {
-  width: 50%;
+  border-bottom: 3px solid #08192D;
 }
 .subscribe .subscirbe_wrapper .subscribe_input input[type=text] {
-  width: 60%;
-  padding: 12px;
+  width: 320px;
+  padding: 20px;
   display: inline-block;
   border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: rgba(8, 25, 45, 0);
+  font-family: "Unna", serif;
+  font-size: 20px;
+  box-sizing: border-box;
 }
 .subscribe .subscirbe_wrapper .subscribe_input input[type=submit] {
+  margin: 0 auto;
   padding: 10px 40px;
   display: inline-block;
   border: 1px solid #ccc;
@@ -206,4 +263,12 @@ header nav ul li a:hover {
           box-sizing: border-box;
   background-color: rgba(8, 25, 45, 0.6);
   color: #fff;
+  font-family: "Unna", serif;
+  font-style: italic;
+  font-size: 20px;
+}
+.subscribe .subscirbe_wrapper .subscribe_input input[type=submit]:hover {
+  cursor: pointer;
+  background-color: rgba(8, 25, 45, 0.3);
+  color: #08192D;
 }

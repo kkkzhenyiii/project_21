@@ -14,10 +14,14 @@
     background-size: cover;
 }
 
-h2,
-h3 {
+h2 {
     font-family: 'Unna', serif;
     font-style: italic;
+}
+
+h3,
+h4 {
+    font-family: 'Unna', serif;
 }
 
 p {
@@ -68,9 +72,10 @@ header {
 
             li {
                 a {
-                    text-decoration: none;
+                    font-family: 'Unna', serif;
+                    font-style: italic;
                     font-size: 24px;
-                    color: #222;
+                    color: #08192D;
                     transition: all 0.3s;
 
                     &:hover {
@@ -88,13 +93,13 @@ footer {
     margin-top: 60px;
     background: rgba($color: #FCFAF2, $alpha: 0.3);
     backdrop-filter: blur(4px);
-    
+
 
     .footer_wrapper {
         display: flex;
         justify-content: space-between;
         // align-items: flex-start;
-        font-size: 16px;
+        font-size: 20px;
         color: #08192D;
 
         h4,
@@ -107,11 +112,11 @@ footer {
         }
 
         .footer_logo {
-            padding: 40px;
+            padding: 80px 40px;
         }
 
         .footer_info {
-            padding: 40px 0;
+            padding: 80px 0 40px;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -131,11 +136,38 @@ footer {
 
             .footer_nav {
                 flex-grow: 1;
+
                 .footer_content {
-                    a {
+                    ul li a {
                         color: #08192D;
                         font-family: 'Noto Sans', sans-serif;
                         line-height: 1.5;
+                        position: relative;
+                        transition: all .5s;
+
+
+                        &::before {
+                            background-color: #08192D;
+                            content: "";
+                            inset: 0;
+                            position: absolute;
+                            transform: scaleX(0);
+                            transform-origin: right;
+                            transition: transform 0.5s ease-in-out;
+                            z-index: -1;
+                        }
+
+                        &:hover::before {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                            
+                        }
+
+                        &:hover {
+                            color: #FCFAF2;
+                            padding: 0 4px;
+                            transition: all .5s;
+                        }
                     }
                 }
             }
@@ -144,19 +176,19 @@ footer {
                 display: flex;
                 gap: 20px;
             }
-            
+
 
         }
-        
-        .footer_img {
-                width: 33%;
 
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                }
+        .footer_img {
+            width: 33%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
             }
+        }
     }
 
 }
