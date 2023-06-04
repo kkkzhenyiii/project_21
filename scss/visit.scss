@@ -1,4 +1,4 @@
-// banner
+// banner ----------
 .visit_banner {
     position: relative;
 
@@ -23,134 +23,156 @@
 
 }
 
-// opening hours
+// opening hours ----------
 .opening_info {
-    margin: 100px 0;
+    margin: 160px 0;
+    color: #08192D;
 
     .opening_info_title {
         h2 {
             font-size: 60px;
+            text-align: center;
         }
     }
 
     .opening_info_wrapper {
-        width: 500px;
-        padding: 0 40px;
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        .opening_item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            p {
-                font-weight: bold;
-                font-size: 20px;
-            }
-        }
-    }
-}
-
-// calendar
-.calendar_wrapper {
-    width: 450px;
-    background-color: #FCFAF2;
-    border-radius: 10px;
-    font-family: 'Noto Sans', sans-serif;
-
-    .calender_header {
-        display: flex;
+        justify-content: space-evenly;
         align-items: center;
-        justify-content: space-between;
-        padding: 25px 30px 10px;
+        padding: 80px 0;
 
-        .current_date {
-            font-size: 1.45rem;
-            font-weight: 500;
-        }
-
-        .icons span {
-            height: 38px;
-            width: 38px;
-            margin: 0 1px;
-            color: #878787;
-            font-size: 1.9rem;
-            text-align: center;
-            line-height: 38px;
-            border-radius: 50%;
-            cursor: pointer;
-
-            &:last-child {
-                margin-right: -10px;
-            }
-
-            &:hover {
-                background-color: #aaa;
-            }
-        }
-    }
-
-    .calendar_box {
-        padding: 20px;
-
-        ul {
+        .opening_hours_wrapper {
+            width: 500px;
+            padding: 0 40px;
             display: flex;
-            flex-wrap: wrap;
-            text-align: center;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 20px;
 
-            li {
-                width: calc(100% / 7);
+            .opening_item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: bold;
             }
+
+            .opening_txt {
+                p {
+                    padding: 8px 0;
+                    &::before {
+                        content: '>';
+                    }
+                }
+            }
+            
         }
 
-        .weeks li {
-            font-weight: bold;
-        }
+        // calendar ----------
+        .calendar_wrapper {
+            width: 500px;
+            background-color: #FCFAF2;
+            border-radius: 10px;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-        .days {
-            margin-bottom: 20px;
 
-            li {
-                margin-top: 30px;
-                cursor: pointer;
-                position: relative;
-                z-index: 1;
+            .calender_header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 25px 30px 10px;
 
-                &::before {
-                    position: absolute;
-                    content: "";
-                    height: 40px;
-                    width: 40px;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                .current_date {
+                    font-size: 1.45rem;
+                    font-weight: 500;
+                }
+
+                .icons span {
+                    height: 38px;
+                    width: 38px;
+                    margin: 0 1px;
+                    color: #878787;
+                    font-size: 1.9rem;
+                    text-align: center;
+                    line-height: 38px;
                     border-radius: 50%;
-                    z-index: -1;
-                }
+                    cursor: pointer;
 
-                &:hover::before {
-                    background-color: #ddd;
+                    &:last-child {
+                        margin-right: -10px;
+                    }
+
+                    &:hover {
+                        background-color: #aaa;
+                    }
                 }
             }
 
-            li.inactive {
-                color: #aaa;
-            }
+            .calendar_box {
+                padding: 20px;
 
-            li.active {
-                color: #FCFAF2;
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: center;
 
-                &::before {
-                    background-color: cadetblue;
+                    li {
+                        width: calc(100% / 7);
+                    }
                 }
+
+                .weeks li {
+                    font-weight: bold;
+                }
+
+                .days {
+                    margin-bottom: 20px;
+
+                    li {
+                        margin-top: 30px;
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 1;
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            height: 40px;
+                            width: 40px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            border-radius: 50%;
+                            z-index: -1;
+                        }
+
+                        &:hover::before {
+                            background-color: #ddd;
+                        }
+                    }
+
+                    li.inactive {
+                        color: #aaa;
+                    }
+
+                    li.active {
+                        color: #FCFAF2;
+
+                        &::before {
+                            background-color: cadetblue;
+                        }
+                    }
+                }
+
+
             }
         }
-
 
     }
 }
+
+
 
 
 

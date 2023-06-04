@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Unna:ital@0;1&display=swap");
-* {
-  outline: 1px solid darkcyan;
-}
-
 .main_container {
   width: 100%;
   position: relative;
@@ -10,6 +6,7 @@
   background-image: url(../img/bg/all_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Unna", serif;
 }
 
 .container {
@@ -19,18 +16,11 @@
 }
 
 h2 {
-  font-family: "Unna", serif;
   font-style: italic;
-}
-
-h3,
-h4 {
-  font-family: "Unna", serif;
 }
 
 p {
   line-height: 1.5;
-  font-family: "Unna", serif;
   text-align: justify;
 }
 

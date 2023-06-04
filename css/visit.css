@@ -19,12 +19,26 @@
 }
 
 .opening_info {
-  margin: 100px 0;
+  margin: 160px 0;
+  color: #08192D;
 }
 .opening_info .opening_info_title h2 {
   font-size: 60px;
+  text-align: center;
 }
 .opening_info .opening_info_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 0;
+}
+.opening_info .opening_info_wrapper .opening_hours_wrapper {
   width: 500px;
   padding: 0 40px;
   display: -webkit-box;
@@ -35,8 +49,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  font-size: 20px;
 }
-.opening_info .opening_info_wrapper .opening_item {
+.opening_info .opening_info_wrapper .opening_hours_wrapper .opening_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,19 +61,24 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.opening_info .opening_info_wrapper .opening_item p {
   font-weight: bold;
-  font-size: 20px;
 }
-
-.calendar_wrapper {
-  width: 450px;
+.opening_info .opening_info_wrapper .opening_hours_wrapper .opening_txt p {
+  padding: 8px 0;
+}
+.opening_info .opening_info_wrapper .opening_hours_wrapper .opening_txt p::before {
+  content: ">";
+}
+.opening_info .opening_info_wrapper .calendar_wrapper {
+  width: 500px;
   background-color: #FCFAF2;
   border-radius: 10px;
   font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.calendar_wrapper .calender_header {
+.opening_info .opening_info_wrapper .calendar_wrapper .calender_header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,11 +90,11 @@
           justify-content: space-between;
   padding: 25px 30px 10px;
 }
-.calendar_wrapper .calender_header .current_date {
+.opening_info .opening_info_wrapper .calendar_wrapper .calender_header .current_date {
   font-size: 1.45rem;
   font-weight: 500;
 }
-.calendar_wrapper .calender_header .icons span {
+.opening_info .opening_info_wrapper .calendar_wrapper .calender_header .icons span {
   height: 38px;
   width: 38px;
   margin: 0 1px;
@@ -85,16 +105,16 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.calendar_wrapper .calender_header .icons span:last-child {
+.opening_info .opening_info_wrapper .calendar_wrapper .calender_header .icons span:last-child {
   margin-right: -10px;
 }
-.calendar_wrapper .calender_header .icons span:hover {
+.opening_info .opening_info_wrapper .calendar_wrapper .calender_header .icons span:hover {
   background-color: #aaa;
 }
-.calendar_wrapper .calendar_box {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box {
   padding: 20px;
 }
-.calendar_wrapper .calendar_box ul {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,22 +122,22 @@
       flex-wrap: wrap;
   text-align: center;
 }
-.calendar_wrapper .calendar_box ul li {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box ul li {
   width: 14.2857142857%;
 }
-.calendar_wrapper .calendar_box .weeks li {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box .weeks li {
   font-weight: bold;
 }
-.calendar_wrapper .calendar_box .days {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box .days {
   margin-bottom: 20px;
 }
-.calendar_wrapper .calendar_box .days li {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box .days li {
   margin-top: 30px;
   cursor: pointer;
   position: relative;
   z-index: 1;
 }
-.calendar_wrapper .calendar_box .days li::before {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box .days li::before {
   position: absolute;
   content: "";
   height: 40px;
@@ -129,16 +149,16 @@
   border-radius: 50%;
   z-index: -1;
 }
-.calendar_wrapper .calendar_box .days li:hover::before {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box .days li:hover::before {
   background-color: #ddd;
 }
-.calendar_wrapper .calendar_box .days li.inactive {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box .days li.inactive {
   color: #aaa;
 }
-.calendar_wrapper .calendar_box .days li.active {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box .days li.active {
   color: #FCFAF2;
 }
-.calendar_wrapper .calendar_box .days li.active::before {
+.opening_info .opening_info_wrapper .calendar_wrapper .calendar_box .days li.active::before {
   background-color: cadetblue;
 }
 
