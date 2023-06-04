@@ -1,55 +1,31 @@
 @charset "UTF-8";
-p {
-  text-align: justify;
-  line-height: 1.5;
+.visit_banner {
+  position: relative;
+}
+.visit_banner .banner_img {
+  width: 100%;
+}
+.visit_banner .banner_img img {
+  width: 100%;
+}
+.visit_banner .banner_title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 280px;
+  text-align: center;
+  font-size: 60px;
+  color: #FCFAF2;
 }
 
-.visit_tickets {
-  width: 80%;
-  margin: 0 auto;
+.opening_info {
+  margin: 100px 0;
 }
-.visit_tickets .visit_tickets_title {
-  padding: 40px 0;
+.opening_info .opening_info_title h2 {
+  font-size: 60px;
 }
-.visit_tickets .visit_tickets_title h2 {
-  font-size: 100px;
-  text-align: center;
-}
-.visit_tickets .visit_tickets_title h2 span {
-  font-size: 100px;
-  position: relative;
-  left: 25%;
-  color: #fefefe;
-  text-shadow: 1px 1px #222, -1px -1px #222, 1px -1px #222, -1px 1px #222;
-}
-.visit_tickets .visit_tickets_title h2 span small {
-  font-size: 50px;
-}
-.visit_tickets .visit_tickets_wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.visit_tickets .visit_tickets_wrapper .opening_info {
-  width: 50%;
-  border-right: 1px solid #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_title {
-  padding: 20px 0;
-}
-.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_title h3 {
-  font-weight: bold;
-  font-size: 36px;
-  text-align: center;
-}
-.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_wrapper {
+.opening_info .opening_info_wrapper {
+  width: 500px;
   padding: 0 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,7 +36,7 @@ p {
           flex-direction: column;
   gap: 20px;
 }
-.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_wrapper .opening_item {
+.opening_info .opening_info_wrapper .opening_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,9 +47,109 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.visit_tickets .visit_tickets_wrapper .opening_info .opening_info_wrapper .opening_item p {
+.opening_info .opening_info_wrapper .opening_item p {
   font-weight: bold;
   font-size: 20px;
+}
+
+.calendar_wrapper {
+  width: 450px;
+  background-color: #FCFAF2;
+  border-radius: 10px;
+  font-family: "Noto Sans", sans-serif;
+}
+.calendar_wrapper .calender_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 30px 10px;
+}
+.calendar_wrapper .calender_header .current_date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar_wrapper .calender_header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  color: #878787;
+  font-size: 1.9rem;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.calendar_wrapper .calender_header .icons span:last-child {
+  margin-right: -10px;
+}
+.calendar_wrapper .calender_header .icons span:hover {
+  background-color: #aaa;
+}
+.calendar_wrapper .calendar_box {
+  padding: 20px;
+}
+.calendar_wrapper .calendar_box ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+.calendar_wrapper .calendar_box ul li {
+  width: 14.2857142857%;
+}
+.calendar_wrapper .calendar_box .weeks li {
+  font-weight: bold;
+}
+.calendar_wrapper .calendar_box .days {
+  margin-bottom: 20px;
+}
+.calendar_wrapper .calendar_box .days li {
+  margin-top: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.calendar_wrapper .calendar_box .days li::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+.calendar_wrapper .calendar_box .days li:hover::before {
+  background-color: #ddd;
+}
+.calendar_wrapper .calendar_box .days li.inactive {
+  color: #aaa;
+}
+.calendar_wrapper .calendar_box .days li.active {
+  color: #FCFAF2;
+}
+.calendar_wrapper .calendar_box .days li.active::before {
+  background-color: cadetblue;
+}
+
+.visit_tickets {
+  width: 80%;
+  margin: 0 auto;
+}
+.visit_tickets .visit_tickets_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .visit_tickets .tickets {
   width: 50%;

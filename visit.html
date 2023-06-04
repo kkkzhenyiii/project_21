@@ -7,100 +7,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>visit | yeesiàsià gallery</title>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <!-- google font link for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/visit.css">
+    <script src="js/calendar.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="main_container">
         <!-- header -->
         <header>
             <div class="logo">
-                <h1><a href="index.html"><img src="img/logo/logo_hz.svg" alt="yeesiàsià gallery"></a></h1>
+                <h1><a href="index.html"><img src="img/logo/logo_vector.svg" alt="yeesiàsià gallery"></a></h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="visit.html">visit</a></li>
-                    <li><a href="exhibition.html">exhibition</a></li>
-                    <li><a href="#">event</a></li>
+                    <li><a href="exhibition.html">exhibition&event</a></li>
+                    <li><a href="#">tickets</a></li>
                     <li><a href="#">news</a></li>
                     <li><a href="about.html">about</a></li>
                 </ul>
             </nav>
         </header>
 
-        <!-- visit & tickets -->
-        <section class="visit_tickets">
-            <div class="visit_tickets_title">
-                <h2>Visit<br><span><small>&</small>Tickets</span></h2>
-                
+        <!-- banner -->
+        <section class="visit_banner">
+            <div class="banner_img">
+                <img src="img/bg/banner_visit.jpg" alt="visit information">
             </div>
-            <div class="visit_tickets_wrapper">
-                <div class="opening_info">
-                    <div class="opening_info_title">
-                        <h3>OPENING HOURS</h3>
-                    </div>
-                    <div class="opening_info_wrapper">
-                        <div class="opening_item">
-                            <div class="opening_day">
-                                <p>Sunday</p>
-                            </div>
-                            <div class="opening_hours">
-                                <p>11 AM- 6 PM</p>
-                            </div>
-                        </div>
-                        <div class="opening_item">
-                            <div class="opening_day">
-                                <p>Monday</p>
-                            </div>
-                            <div class="opening_hours">
-                                <p>CLOSED</p>
-                            </div>
-                        </div>
-                        <div class="opening_item">
-                            <div class="opening_day">
-                                <p>Tuesday</p>
-                            </div>
-                            <div class="opening_hours">
-                                <p>11 AM- 6 PM</p>
-                            </div>
-                        </div>
-                        <div class="opening_item">
-                            <div class="opening_day">
-                                <p>Wednesday</p>
-                            </div>
-                            <div class="opening_hours">
-                                <p>11 AM- 6 PM</p>
-                            </div>
-                        </div>
-                        <div class="opening_item">
-                            <div class="opening_day">
-                                <p>Thursday</p>
-                            </div>
-                            <div class="opening_hours">
-                                <p>11 AM- 6 PM</p>
-                            </div>
-                        </div>
-                        <div class="opening_item">
-                            <div class="opening_day">
-                                <p>Friday</p>
-                            </div>
-                            <div class="opening_hours">
-                                <p>11 AM- 6 PM</p>
-                            </div>
-                        </div>
-                        <div class="opening_item">
-                            <div class="opening_day">
-                                <p>Saturday</p>
-                            </div>
-                            <div class="opening_hours">
-                                <p>11 AM- 6 PM</p>
-                            </div>
-                        </div>
+            <div class="banner_title">
+                <h2>visit information</h2>
+            </div>
+        </section>
 
+        <!-- opening hours -->
+        <section class="opening_info">
+            <div class="container">
+                <div class="opening_info_title">
+                    <h2>OPENING HOURS</h2>
+                </div>
+                <div class="opening_info_wrapper">
+                    <div class="opening_item">
+                        <div class="opening_day">
+                            <p>Sunday</p>
+                        </div>
+                        <div class="opening_hours">
+                            <p>CLOSED</p>
+                        </div>
+                    </div>
+                    <div class="opening_item">
+                        <div class="opening_day">
+                            <p>Monday</p>
+                        </div>
+                        <div class="opening_hours">
+                            <p>11:00 AM - 06:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="opening_item">
+                        <div class="opening_day">
+                            <p>Tuesday</p>
+                        </div>
+                        <div class="opening_hours">
+                            <p>11:00 AM - 06:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="opening_item">
+                        <div class="opening_day">
+                            <p>Wednesday</p>
+                        </div>
+                        <div class="opening_hours">
+                            <p>11:00 AM - 06:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="opening_item">
+                        <div class="opening_day">
+                            <p>Thursday</p>
+                        </div>
+                        <div class="opening_hours">
+                            <p>11:00 AM - 06:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="opening_item">
+                        <div class="opening_day">
+                            <p>Friday</p>
+                        </div>
+                        <div class="opening_hours">
+                            <p>11:00 AM - 06:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="opening_item">
+                        <div class="opening_day">
+                            <p>Saturday</p>
+                        </div>
+                        <div class="opening_hours">
+                            <p>11:00 AM - 06:00 PM</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="calendar_wrapper">
+                    <div class="calender_header">
+                        <p class="current_date">
+                            <!-- September 2022 -->
+                        </p>
+                        <div class="icons">
+                            <span id="prev" class="material-symbols-rounded">
+                                chevron_left
+                            </span>
+                            <span id="next" class="material-symbols-rounded">
+                                chevron_right
+                            </span>
+                        </div>
+                    </div>
+                    <div class="calendar_box">
+                        <ul class="weeks">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                        </ul>
+                        <ul class="days">
+                            <!-- <li class="inactive">28</li>
+                            <li class="inactive">29</li>
+                            <li class="inactive">30</li>
+                            <li class="inactive">31</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>11</li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>14</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li class="active">22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>27</li>
+                            <li>28</li>
+                            <li>29</li>
+                            <li>30</li>
+                            <li class="inactive">1</li> -->
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- visit & tickets -->
+        <section class="visit_tickets">
+            <div class="visit_tickets_wrapper">
+
                 <div class="tickets">
                     <div class="tickets_title">
                         <h3>ADMISSION PRICES</h3>
@@ -162,7 +239,7 @@
         <section class="policies">
             <div class="policies_title">
                 <h2>Visitor<br><span>Policies</span></h2>
-                
+
             </div>
             <div class="policies_wrapper">
                 <div class="policies_basic">
@@ -356,7 +433,104 @@
         </section>
 
         <!-- footer -->
-        
+        <footer>
+            <div class="footer_wrapper">
+                <div class="footer_logo">
+                    <a href="index.html">
+                        <img src="img/logo/logo_vertiacl.svg" alt="yeesiàsià gallery">
+                    </a>
+                </div>
+                <div class="footer_info">
+                    <div class="footer_openinghours">
+                        <div class="footer_title">
+                            <h4>OPENING HOURS</h4>
+                        </div>
+                        <div class="footer_content">
+                            <div class="footer_openinghoursinfo">
+                                <div class="footer_date">
+                                    <p>SUNDAY</p>
+                                </div>
+                                <div class="footer_time">
+                                    <p>CLOSED</p>
+                                </div>
+                            </div>
+                            <div class="footer_openinghoursinfo">
+                                <div class="footer_date">
+                                    <p>MONDAY - SATURDAY</p>
+                                </div>
+                                <div class="footer_time">
+                                    <p>11:00 am - 06:00 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_address">
+                        <div class="footer_title">
+                            <h4>ADDRESS</h4>
+                        </div>
+                        <div class="footer_content">
+                            <P>Trekanten C 1, 2630 Taastrup Nykirke Høje Taastrup, Denmark</P>
+                        </div>
+                    </div>
+                    <div class="footer_nav">
+                        <div class="footer_title">
+                            <h4>MORE ABOUT</h4>
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        # concept & space
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        # visit information
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        # exhibition & event
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        # tickets & FAQ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        # news
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_socialmedia">
+                        <div class="footer_title">
+                            <h4>FOLLOW US</h4>
+                        </div>
+                        <div class="footer_content">
+                            <div class="socialmedia_icon">
+                                <a href="#"><img src="img/icon/40/line.svg" alt="LINE"></a>
+                                <a href="#"><img src="img/icon/40/instagram.svg" alt="INSTAGRAM"></a>
+                                <a href="#"><img src="img/icon/40/facebook.svg" alt="FACEBOOK"></a>
+                                <a href="#"><img src="img/icon/40/mail.svg" alt="MAIL"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tibame">
+                        <p>本網站為緯育TibaMe前端工程師班第XX期學員專題作品</p>
+                        <p>本平台僅供學習、展示之用</p>
+                    </div>
+
+                </div>
+                <div class="footer_img">
+                    <img src="img/about/concept03.jpg" alt="inner peace">
+                </div>
+            </div>
+        </footer>
+
 
     </div>
 

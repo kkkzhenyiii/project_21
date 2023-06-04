@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Unna:ital@0;1&display=swap');
 
-// * {
-//     outline: 1px solid darkcyan;
-// }
+* {
+    outline: 1px solid darkcyan;
+}
 
-.container {
+.main_container {
     // max-width: 1200px;
     width: 100%;
     position: relative;
@@ -12,6 +12,12 @@
     background-image: url(../img/bg/all_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 h2 {
@@ -27,6 +33,9 @@ h4 {
 p {
     line-height: 1.5;
     font-family: 'Unna', serif;
+    text-align: justify;
+
+
 }
 
 a {
@@ -76,11 +85,35 @@ header {
                     font-style: italic;
                     font-size: 24px;
                     color: #08192D;
-                    transition: all 0.3s;
+                    position: relative;
+                    transition: all .5s;
+                    padding: 0 4px;
+
+
+                    &::before {
+                        background-color: #91989F;
+                        content: "";
+                        inset: 50% 0 0 0;
+                        position: absolute;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.5s ease-in-out;
+                        z-index: -1;
+                    }
+
+                    &:hover::before {
+                        transform: scaleX(1);
+                        transform-origin: left;
+
+                    }
 
                     &:hover {
-                        font-weight: bold;
+                        // color: #FCFAF2;
+                        // padding: 0 4px;
+                        z-index: 1;
+                        transition: all .5s;
                     }
+
                 }
             }
 
@@ -142,14 +175,15 @@ footer {
                         color: #08192D;
                         font-family: 'Noto Sans', sans-serif;
                         line-height: 1.5;
+                        padding: 0 4px;
                         position: relative;
                         transition: all .5s;
 
 
                         &::before {
-                            background-color: #08192D;
+                            background-color: #91989F;
                             content: "";
-                            inset: 0;
+                            inset: 50% 0 0 0;
                             position: absolute;
                             transform: scaleX(0);
                             transform-origin: right;
@@ -160,12 +194,12 @@ footer {
                         &:hover::before {
                             transform: scaleX(1);
                             transform-origin: left;
-                            
+
                         }
 
                         &:hover {
-                            color: #FCFAF2;
-                            padding: 0 4px;
+                            // color: #FCFAF2;
+                            // padding: 0 4px;
                             transition: all .5s;
                         }
                     }
