@@ -165,7 +165,7 @@ footer .footer_wrapper .footer_info .footer_nav .footer_content ul li a {
   color: #08192D;
   font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
-  padding: 0 4px;
+  padding: 4px;
   position: relative;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
