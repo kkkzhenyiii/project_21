@@ -1,0 +1,24 @@
+// banner ----------
+.visit_banner {
+    position: relative;
+
+    .banner_img {
+        width: 100%;
+
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .banner_title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 280px;
+        text-align: center;
+        font-size: 60px;
+        color: #FCFAF2;
+    }
+
+}

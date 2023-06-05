@@ -1,46 +1,37 @@
-.banner {
+.banner_wrapper {
   width: 100%;
-  height: 480px;
   margin: 0 auto;
-  position: relative;
-  text-align: center;
 }
-.banner img {
+.banner_wrapper .banner_item {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+}
+.banner_wrapper .banner_item .banner_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.banner_wrapper .banner_item .banner_card .banner_img {
+  width: 70%;
+  height: 600px;
+}
+.banner_wrapper .banner_item .banner_card .banner_img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
 }
-.banner .exhibition_name {
-  position: absolute;
-  top: 10%;
-  left: 0;
-  right: 0;
-}
-.banner .exhibition_name h2 {
-  font-size: 80px;
-  color: #222;
-}
-.banner .exhibiton_date {
-  position: absolute;
-  top: 150px;
-  left: 0;
-  right: 0;
-}
-.banner .exhibiton_date p {
-  text-align: center;
-  font-size: 80px;
-  color: #222;
-  font-weight: 300;
-}
-
-article {
-  width: 80%;
-  margin: 0 auto;
-  text-align: justify;
-  font-size: 24px;
+.banner_wrapper .banner_item .banner_card .banner_info {
+  width: 30%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #08192D;
+  padding: 40px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,17 +39,58 @@ article {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
-  padding: 60px 0;
+  gap: 40px;
 }
-article p {
-  padding: 20px 0;
+.banner_wrapper .banner_item .banner_card .banner_info h4 {
+  font-size: 40px;
+}
+.banner_wrapper .banner_item .banner_card .banner_info span {
+  font-size: 20px;
+}
+.banner_wrapper .banner_item .banner_card .banner_info p {
+  font-size: 20px;
+  color: #91989F;
+  text-align: justify;
 }
 
-.btn_tickets {
+.intro_article {
+  padding: 80px 0;
+}
+.intro_article .intro_title h2 {
+  font-size: 60px;
+  color: #08192D;
+}
+.intro_article .intro_wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #91989F;
+  margin: 60px 0;
+}
+.intro_article .intro_wrapper .intro_sidebar {
+  width: 500px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-left: 1px solid #91989F;
+  padding: 0 60px 40px;
+  -ms-flex-item-align: start;
+      align-self: flex-start; /* for Safari */
+  position: sticky;
+  top: 0;
+}
+.intro_article .intro_wrapper .intro_sidebar span {
+  font-size: 40px;
+  font-style: italic;
+}
+.intro_article .intro_wrapper .intro_sidebar h3 {
+  font-size: 24px;
+  padding: 20px;
+}
+.intro_article .intro_wrapper .intro_sidebar .btn_tickets {
   text-align: center;
 }
-.btn_tickets a {
+.intro_article .intro_wrapper .intro_sidebar .btn_tickets a {
   text-align: center;
   display: inline-block;
   background-color: #222;
@@ -68,7 +100,7 @@ article p {
   color: #fefefe;
   font-weight: 400;
 }
-.btn_tickets a .link_tickets {
+.intro_article .intro_wrapper .intro_sidebar .btn_tickets a .link_tickets {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,6 +108,15 @@ article p {
       -ms-flex-align: center;
           align-items: center;
   gap: 4px;
+}
+.intro_article .intro_wrapper article {
+  width: 70%;
+  padding: 0 80px;
+  text-align: center;
+}
+.intro_article .intro_wrapper article p {
+  font-size: 20px;
+  padding: 20px 0;
 }
 
 .ex_slider_wrapper {
