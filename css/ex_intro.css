@@ -67,6 +67,7 @@
   display: flex;
   color: #91989F;
   margin: 60px 0;
+  overflow: auto;
 }
 .intro_article .intro_wrapper .intro_sidebar {
   width: 500px;
