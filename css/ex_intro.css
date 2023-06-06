@@ -54,7 +54,7 @@
 }
 
 .intro_article {
-  padding: 80px 0;
+  margin: 160px 0;
 }
 .intro_article .intro_title h2 {
   font-size: 60px;
@@ -72,7 +72,7 @@
   color: #08192D;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-left: 0.5px solid #08192D;
+  border-right: 0.5px solid #08192D;
   padding: 40px 60px;
   -ms-flex-item-align: start;
       align-self: flex-start; /* for Safari */
@@ -87,28 +87,61 @@
   font-size: 24px;
   padding: 20px;
 }
-.intro_article .intro_wrapper .intro_aside .btn_tickets {
+.intro_article .intro_wrapper .intro_aside .page_link {
+  padding: 100px 0;
   text-align: center;
-  display: none;
 }
-.intro_article .intro_wrapper .intro_aside .btn_tickets a {
-  text-align: center;
+.intro_article .intro_wrapper .intro_aside .page_link a {
   display: inline-block;
-  background-color: #222;
-  padding: 4px 12px;
-  border: 1px solid #222;
-  border-radius: 10px;
-  color: #fefefe;
-  font-weight: 400;
+  padding: 20px 30px;
+  font-size: 40px;
+  font-style: italic;
+  color: #08192D;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.intro_article .intro_wrapper .intro_aside .btn_tickets a .link_tickets {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 4px;
+.intro_article .intro_wrapper .intro_aside .page_link a::after {
+  content: "\f02b";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-style: normal;
+  padding-left: 10px;
+}
+.intro_article .intro_wrapper .intro_aside .page_link a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 80/80;
+  border-radius: 50px;
+  background-color: rgba(8, 25, 45, 0.3);
+  z-index: -1;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.intro_article .intro_wrapper .intro_aside .page_link a:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.intro_article .intro_wrapper .intro_aside .page_link a:hover::before {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .intro_article .intro_wrapper article {
   width: 70%;

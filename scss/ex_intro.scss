@@ -55,7 +55,7 @@
 }
 
 .intro_article {
-    padding: 80px 0;
+    margin: 160px 0;
 
     .intro_title {
         
@@ -74,7 +74,7 @@
             width: 500px;
             color: #08192D;
             box-sizing: border-box;
-            border-left: 0.5px solid #08192D;
+            border-right: 0.5px solid #08192D;
             padding: 40px 60px ;
             align-self: flex-start;
             position: -webkit-sticky; /* for Safari */
@@ -91,25 +91,58 @@
                 padding: 20px;
             }
 
-            .btn_tickets {
+            .page_link {
+                padding: 100px 0;
                 text-align: center;
-                display: none;
-
+        
                 a {
-                    text-align: center;
                     display: inline-block;
-                    background-color: #222;
-                    padding: 4px 12px;
-                    border: 1px solid #222;
-                    border-radius: 10px;
-                    color: #fefefe;
-                    font-weight: 400;
-
-                    .link_tickets {
-                        display: flex;
-                        align-items: center;
-                        gap: 4px;
+                    padding: 20px 30px;
+                    font-size: 40px;
+                    font-style: italic;
+                    color: #08192D;
+                    position: relative;
+                    z-index: 1;
+                    transform: translate(0);
+                    transition: all .5s ease-in-out;
+        
+        
+                    &::after {
+                        content: "\f02b";
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 600;
+                        font-style: normal;
+                        padding-left: 10px;
                     }
+        
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: "";
+                        width: 80px;
+                        height: 80px;
+                        aspect-ratio: 80/80;
+                        border-radius: 50px;
+                        // border: 1px solid #08192D;
+                        background-color: rgba($color: #08192D, $alpha: .3);
+                        z-index: -1;
+                        transform-origin: left;
+                        transform: scale(1);
+                        transition: all .5s ease-in-out;
+                    }
+        
+                    &:hover {
+                        transform: translateX(10px);
+                        transition: all .5s ease-in-out;
+                    }
+        
+                    &:hover::before {
+                        transform-origin: left;
+                        transform: scale(1.5);
+                        transition: all .5s ease-in-out;
+                    }
+        
                 }
             }
 

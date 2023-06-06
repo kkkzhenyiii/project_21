@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/ex_intro.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
@@ -29,8 +31,8 @@
                 <ul>
                     <li><a href="visit.html">visit</a></li>
                     <li><a href="exhibition.html">exhibition&event</a></li>
-                    <li><a href="#">tickets</a></li>
-                    <li><a href="#">news</a></li>
+                    <li><a href="tickets.html">tickets</a></li>
+                    <li><a href="news.html">news</a></li>
                     <li><a href="about.html">about</a></li>
                 </ul>
             </nav>
@@ -65,7 +67,74 @@
                     <h2>Dreamscape - Where Fantasy and Reality Converge</h2>
                 </div>
                 <div class="intro_wrapper">
+                    <div class="intro_aside">
+                        <span>Exhibition</    .page_link {
+                            padding: 80px 0;
+                            text-align: center;
+                    
+                            a {
+                                display: inline-block;
+                                padding: 20px 30px;
+                                font-size: 40px;
+                                font-style: italic;
+                                color: #08192D;
+                                position: relative;
+                                z-index: 1;
+                                transform: translate(0);
+                                transition: all .5s ease-in-out;
+                    
+                    
+                                &::after {
+                                    content: "\f02b";
+                                    font-family: "Font Awesome 6 Free";
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    padding-left: 10px;
+                                }
+                    
+                                &::before {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    content: "";
+                                    width: 80px;
+                                    height: 80px;
+                                    aspect-ratio: 80/80;
+                                    border-radius: 50px;
+                                    // border: 1px solid #08192D;
+                                    background-color: rgba($color: #08192D, $alpha: .3);
+                                    z-index: -1;
+                                    transform-origin: left;
+                                    transform: scale(1);
+                                    transition: all .5s ease-in-out;
+                                }
+                    
+                                &:hover {
+                                    transform: translateX(10px);
+                                    transition: all .5s ease-in-out;
+                                }
+                    
+                                &:hover::before {
+                                    transform-origin: left;
+                                    transform: scale(1.5);
+                                    transition: all .5s ease-in-out;
+                                }
+                    
+                            }
+                        }span>
+                        <h3>Dreamscape series</h3>
 
+                        <span>Date</span>
+                        <h3>2023.04.18 - 2023.06.13</h3>
+
+                        <span>Artist</span>
+                        <h3>KANGthreeTHREE</h3>
+
+                        <div class="page_link">
+                            <a href="tickets.html">Get tickets</a>
+                        </div>
+                    </div>
+                    
                     <article>
                         <p>
                             In the "Dreamscape: Where Fantasy and Reality Converge" exhibition, we invite you to enter a
@@ -95,30 +164,7 @@
                         </p>
                     </article>
 
-                    <div class="intro_aside">
-                        <span>Exhibition</span>
-                        <h3>Dreamscape series</h3>
 
-                        <span>Date</span>
-                        <h3>2023.04.18 - 2023.06.13</h3>
-
-                        <span>Artist</span>
-                        <h3>KANGthreeTHREE</h3>
-
-                        <!-- btn_tickets -->
-                        <div class="btn_tickets">
-                            <a href="#">
-                                <div class="link_tickets">
-                                    <div class="icon_tickets">
-                                        <img src="img/icon/40/tickets.svg" alt="tickets">
-                                    </div>
-                                    <div class="txt_tickets">
-                                        <p>Get Tickets</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

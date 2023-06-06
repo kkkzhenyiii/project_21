@@ -31,7 +31,6 @@
   background-color: rgba(255, 255, 255, 0.5);
   color: #08192D;
   padding: 40px;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,6 +39,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 40px;
+  position: relative;
 }
 .banner_wrapper .banner_item .banner_card .banner_info h4 {
   font-size: 40px;
@@ -53,33 +53,63 @@
   text-align: justify;
 }
 .banner_wrapper .banner_item .banner_card .banner_info .page_link {
+  text-align: center;
+  padding: 40px;
   position: absolute;
-  right: 160px;
-  top: 500px;
+  right: 0;
+  bottom: 0;
 }
 .banner_wrapper .banner_item .banner_card .banner_info .page_link a {
   display: inline-block;
-  padding: 10px;
-  color: #91989F;
+  padding: 20px 30px;
+  font-size: 20px;
   font-style: italic;
-  font-size: 32px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  color: #08192D;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .banner_wrapper .banner_item .banner_card .banner_info .page_link a::after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 160px;
-  height: 2px;
-  background-color: #91989F;
-  top: 50%;
-  right: -160px;
+  content: "\f178";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-style: normal;
+  padding-left: 10px;
 }
-.banner_wrapper .banner_item .banner_card .banner_info .page_link:hover a {
-  font-size: 40px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+.banner_wrapper .banner_item .banner_card .banner_info .page_link a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 60/60;
+  border-radius: 50px;
+  border: 1px solid #08192D;
+  z-index: -1;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.banner_wrapper .banner_item .banner_card .banner_info .page_link a:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.banner_wrapper .banner_item .banner_card .banner_info .page_link a:hover::before {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .past {
@@ -183,22 +213,56 @@
   -webkit-transform-origin: left;
           transform-origin: left;
 }
-.past .btn_more {
+.past .page_link {
   text-align: center;
 }
-.past .btn_more a {
-  font-family: "Noto Sans", sans-serif;
-  color: #FCFAF2;
-  background-color: rgba(8, 25, 45, 0.7);
-  font-size: 20px;
-  padding: 8px 20px;
-  border-radius: 10px;
+.past .page_link a {
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 40px;
+  color: #08192D;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.past .btn_more a:hover {
-  color: #08192D;
+.past .page_link a::after {
+  content: "\f70e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-style: normal;
+  padding-left: 10px;
+}
+.past .page_link a::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 60/60;
+  border-radius: 50%;
   background-color: rgba(8, 25, 45, 0.3);
+  z-index: -1;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.past .page_link a:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  color: #91989F;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.past .page_link a:hover::before {
+  -webkit-transform: scale(2.4);
+          transform: scale(2.4);
+  background-color: rgba(145, 152, 159, 0.3);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }

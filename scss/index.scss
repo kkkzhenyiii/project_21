@@ -75,7 +75,7 @@ header {
                         width: 100%;
                         text-align: center;
                         line-height: 1.5;
-                        color: #08192D;
+                        color: #91989F;
                         font-size: 24px;
                         padding: 10px 0;
 
@@ -91,6 +91,9 @@ header {
                 &:hover {
                     filter: grayscale(1);
                     transition: all 1s;
+                    .whatson_intro {
+                        color: #08192D;
+                    }
 
                 }
 
@@ -155,7 +158,7 @@ header {
         box-sizing: border-box;
         font-style: italic;
         font-size: 40px;
-        color: #FCFAF2;
+        color: #fefefe;
         position: relative;
 
         .page_link {
@@ -168,7 +171,7 @@ header {
                 display: inline-block;
                 padding: 20px 30px;
                 font-size: 20px;
-                color: #FCFAF2;
+                color: #fefefe;
                 position: relative;
                 z-index: 1;
                 transform: translate(0);
@@ -191,7 +194,7 @@ header {
                     width: 60px;
                     height: 60px;aspect-ratio: 60/60;
                     border-radius: 50px;
-                    border: 1px solid #FCFAF2;
+                    border: 1px solid #fefefe;
                     z-index: -1;
                     transform-origin: left;
                     transform: scale(1);
@@ -217,14 +220,14 @@ header {
         box-sizing: border-box;
 
         ul li {
-            border-bottom: 1px solid #FCFAF2;
+            border-bottom: 1px solid #fefefe;
             box-sizing: border-box;
 
             a {
                 display: flex;
                 gap: 40px;
                 padding: 40px 0;
-                color: #FCFAF2;
+                color: #fefefe;
                 font-size: 24px;
                 transform-origin: left;
                 transform: scale(1);
@@ -287,7 +290,7 @@ header {
                 border-radius: 40px;
                 box-sizing: border-box;
                 background-color: rgba(8, 25, 45, 0.6);
-                color: #fff;
+                color: #fefefe;
                 font-family: 'Unna', serif;
                 font-style: italic;
                 font-size: 20px;

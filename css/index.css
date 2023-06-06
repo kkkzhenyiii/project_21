@@ -70,7 +70,7 @@ header {
   width: 100%;
   text-align: center;
   line-height: 1.5;
-  color: #08192D;
+  color: #91989F;
   font-size: 24px;
   padding: 10px 0;
 }
@@ -83,6 +83,9 @@ header {
           filter: grayscale(1);
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+.whatson .whatson_wrapper .whatson_slider .whatson_item:hover .whatson_intro {
+  color: #08192D;
 }
 
 .slick-list {
@@ -144,7 +147,7 @@ header {
           box-sizing: border-box;
   font-style: italic;
   font-size: 40px;
-  color: #FCFAF2;
+  color: #fefefe;
   position: relative;
 }
 .news .news_title .page_link {
@@ -156,7 +159,7 @@ header {
   display: inline-block;
   padding: 20px 30px;
   font-size: 20px;
-  color: #FCFAF2;
+  color: #fefefe;
   position: relative;
   z-index: 1;
   -webkit-transform: translate(0);
@@ -180,7 +183,7 @@ header {
   height: 60px;
   aspect-ratio: 60/60;
   border-radius: 50px;
-  border: 1px solid #FCFAF2;
+  border: 1px solid #fefefe;
   z-index: -1;
   -webkit-transform-origin: left;
           transform-origin: left;
@@ -209,7 +212,7 @@ header {
           box-sizing: border-box;
 }
 .news .news_list ul li {
-  border-bottom: 1px solid #FCFAF2;
+  border-bottom: 1px solid #fefefe;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -219,7 +222,7 @@ header {
   display: flex;
   gap: 40px;
   padding: 40px 0;
-  color: #FCFAF2;
+  color: #fefefe;
   font-size: 24px;
   -webkit-transform-origin: left;
           transform-origin: left;
@@ -283,7 +286,7 @@ header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: rgba(8, 25, 45, 0.6);
-  color: #fff;
+  color: #fefefe;
   font-family: "Unna", serif;
   font-style: italic;
   font-size: 20px;

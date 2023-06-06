@@ -63,7 +63,11 @@ section {
                     padding: 8px 0;
 
                     &::before {
-                        content: '>';
+                        content: '\f186';
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+                        
+                        padding-left: 10px;
                     }
                 }
             }
@@ -230,29 +234,56 @@ section {
     }
 
 
-    .btn_tickets {
-        width: 400px;
-        margin: 0 auto;
+    .page_link {
         padding: 80px 0;
+        text-align: center;
 
         a {
-            padding: 10px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            border: 1px solid #ccc;
-            border-radius: 40px;
-            box-sizing: border-box;
-            background-color: rgba(8, 25, 45, 0.6);
-            color: #fefefe;
-            font-family: 'Unna', serif;
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 40px;
             font-style: italic;
-            font-size: 28px;
+            color: #08192D;
+            position: relative;
+            z-index: 1;
+            transform: translate(0);
+            transition: all .5s ease-in-out;
+
+
+            &::after {
+                content: "\f02b";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 600;
+                font-style: normal;
+                padding-left: 10px;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                width: 80px;
+                height: 80px;
+                aspect-ratio: 80/80;
+                border-radius: 50px;
+                // border: 1px solid #08192D;
+                background-color: rgba($color: #08192D, $alpha: .3);
+                z-index: -1;
+                transform-origin: left;
+                transform: scale(1);
+                transition: all .5s ease-in-out;
+            }
 
             &:hover {
-                background-color: rgba(8, 25, 45, 0.3);
-                color: #08192D;
+                transform: translateX(10px);
+                transition: all .5s ease-in-out;
+            }
+
+            &:hover::before {
+                transform-origin: left;
+                transform: scale(1.5);
+                transition: all .5s ease-in-out;
             }
 
         }

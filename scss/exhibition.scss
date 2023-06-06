@@ -28,10 +28,10 @@
                 background-color: rgba($color: #fff, $alpha: 0.5);
                 color: #08192D;
                 padding: 40px;
-                position: relative;
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
+                position: relative;
 
 
                 h4 {
@@ -48,35 +48,59 @@
                     text-align: justify;
                 }
 
+
                 .page_link {
+                    text-align: center;
+                    padding: 40px;
                     position: absolute;
-                    right: 160px;
-                    top: 500px;
+                    right: 0;
+                    bottom: 0;
 
                     a {
                         display: inline-block;
-                        padding: 10px;
-                        color: #91989F;
+                        padding: 20px 30px;
+                        font-size: 20px;
                         font-style: italic;
-                        font-size: 32px;
-                        transition: all .5s;
+                        color: #08192D;
+                        position: relative;
+                        z-index: 1;
+                        transform: translate(0);
+                        transition: all .5s ease-in-out;
+
 
                         &::after {
-                            position: absolute;
-                            content: "";
-                            display: block;
-                            width: 160px;
-                            height: 2px;
-                            background-color: #91989F;
-                            top: 50%;
-                            right: -160px;
+                            content: "\f178";
+                            font-family: "Font Awesome 6 Free";
+                            font-weight: 600;
+                            font-style: normal;
+                            padding-left: 10px;
                         }
-                    }
 
-                    &:hover {
-                        a {
-                            font-size: 40px;
-                            transition: all .5s;
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            content: "";
+                            width: 60px;
+                            height: 60px;
+                            aspect-ratio: 60/60;
+                            border-radius: 50px;
+                            border: 1px solid #08192D;
+                            z-index: -1;
+                            transform-origin: left;
+                            transform: scale(1);
+                            transition: all .5s ease-in-out;
+                        }
+
+                        &:hover {
+                            transform: translateX(10px);
+                            transition: all .5s ease-in-out;
+                        }
+
+                        &:hover::before {
+                            transform-origin: left;
+                            transform: scale(1.5);
+                            transition: all .5s ease-in-out;
                         }
 
                     }
@@ -193,22 +217,53 @@
 
     }
 
-    .btn_more {
+    .page_link {
         text-align: center;
 
         a {
-            font-family: 'Noto Sans', sans-serif;
-            
-            color: #FCFAF2;
-            background-color: rgba($color: #08192D, $alpha: 0.7);
-            font-size: 20px;
-            padding: 8px 20px;
-            border-radius: 10px;
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 40px;
+            color: #08192D;
+            position: relative;
+            z-index: 1;
+            transform: translate(0);
             transition: all .5s ease-in-out;
 
+
+            &::after {
+                content: "\f70e";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 600;
+                font-style: normal;
+                padding-left: 10px;
+            }
+
+            &::before {
+                position: absolute;
+                inset: 0;
+                content: "";
+                width: 60px;
+                height: 60px;
+                aspect-ratio: 60/60;
+                border-radius: 50%;
+
+                background-color: rgba($color: #08192D, $alpha: .3);
+                z-index: -1;
+                transform-origin: left;
+                transform: scale(1);
+                transition: all .5s ease-in-out;
+            }
+
             &:hover {
-                color: #08192D;
-                background-color: rgba($color: #08192D, $alpha: 0.3);
+                transform: translateY(10px);
+                color: #91989F;
+                transition: all .5s linear;
+            }
+
+            &:hover::before {
+                transform: scale(2.4);
+                background-color: rgba($color: #91989F, $alpha: .3);
                 transition: all .5s ease-in-out;
             }
 
