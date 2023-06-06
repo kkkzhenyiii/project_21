@@ -73,8 +73,6 @@ header {
   color: #08192D;
   font-size: 24px;
   padding: 10px 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 .whatson .whatson_wrapper .whatson_slider .whatson_item a .whatson_intro h4 {
   font-family: "Noto Sans", sans-serif;
@@ -83,19 +81,8 @@ header {
 .whatson .whatson_wrapper .whatson_slider .whatson_item:hover {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
-  position: relative;
   -webkit-transition: all 1s;
   transition: all 1s;
-}
-.whatson .whatson_wrapper .whatson_slider .whatson_item:hover .whatson_intro {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  font-weight: bold;
-  background-color: rgba(252, 250, 242, 0.3);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .slick-list {
@@ -140,7 +127,6 @@ header {
 }
 
 .news {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,35 +138,6 @@ header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.news .page_link {
-  position: absolute;
-  left: 160px;
-  bottom: 86px;
-}
-.news .page_link a {
-  display: inline-block;
-  padding: 10px;
-  color: #FCFAF2;
-  font-style: italic;
-  font-size: 32px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.news .page_link a::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 160px;
-  height: 2px;
-  background-color: #FCFAF2;
-  top: 50%;
-  left: -160px;
-}
-.news .page_link:hover a {
-  font-size: 40px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
 .news .news_title {
   width: 30%;
   -webkit-box-sizing: border-box;
@@ -188,6 +145,63 @@ header {
   font-style: italic;
   font-size: 40px;
   color: #FCFAF2;
+  position: relative;
+}
+.news .news_title .page_link {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.news .news_title .page_link a {
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 20px;
+  color: #FCFAF2;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.news .news_title .page_link a::after {
+  content: "\f178";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-style: normal;
+  padding-left: 10px;
+}
+.news .news_title .page_link a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 60/60;
+  border-radius: 50px;
+  border: 1px solid #FCFAF2;
+  z-index: -1;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.news .news_title .page_link a:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.news .news_title .page_link a:hover::before {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .news .news_list {
   width: 60%;
@@ -207,11 +221,18 @@ header {
   padding: 40px 0;
   color: #FCFAF2;
   font-size: 24px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 .news .news_list ul li a:hover {
-  font-size: 28px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -266,9 +287,13 @@ header {
   font-family: "Unna", serif;
   font-style: italic;
   font-size: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .subscribe .subscirbe_wrapper .subscribe_input input[type=submit]:hover {
   cursor: pointer;
   background-color: rgba(8, 25, 45, 0.3);
   color: #08192D;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }

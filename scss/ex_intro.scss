@@ -58,6 +58,7 @@
     padding: 80px 0;
 
     .intro_title {
+        
         h2 {
             font-size: 60px;
             color: #08192D;
@@ -67,15 +68,14 @@
     .intro_wrapper {
         width: 100%;
         display: flex;
-        color: #91989F;
         margin: 60px 0;
-        overflow: auto;
 
-        .intro_sidebar {
+        .intro_aside {
             width: 500px;
+            color: #08192D;
             box-sizing: border-box;
-            border-left: 1px solid #91989F;
-            padding: 0 60px 40px;
+            border-left: 0.5px solid #08192D;
+            padding: 40px 60px ;
             align-self: flex-start;
             position: -webkit-sticky; /* for Safari */
             position: sticky;
@@ -93,6 +93,7 @@
 
             .btn_tickets {
                 text-align: center;
+                display: none;
 
                 a {
                     text-align: center;
@@ -116,12 +117,18 @@
 
         article {
             width: 70%;
-            padding: 0 80px;
+            padding: 80px;
             text-align: center;
 
+            img {
+                border-radius: 10px;
+                box-shadow: 2px 2px 15px #9198;
+                margin: 40px 0;
+            }
+
             p {
-                font-size: 20px;
-                padding: 20px 0;
+                font-size: 24px;
+                color: #91989F;
             }
         }
     }
