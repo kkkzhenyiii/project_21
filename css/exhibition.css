@@ -119,14 +119,16 @@
 .past .past_title h2 {
   font-size: 60px;
 }
-.past .btn_wrapper {
+.past #btnWrapper {
   padding-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
-.past .btn_wrapper .btn_category a {
+.past #btnWrapper .btn {
+  cursor: pointer;
+  border: none;
   font-family: "Noto Sans", sans-serif;
   color: #FCFAF2;
   background-color: rgba(8, 25, 45, 0.7);
@@ -136,42 +138,51 @@
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.past .btn_wrapper .btn_category a:hover {
+.past #btnWrapper .btn:hover {
   color: #08192D;
   background-color: rgba(8, 25, 45, 0.3);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.past .past_wrapper {
-  padding: 80px 0;
+.past #btnWrapper .active {
+  color: #08192D;
+  background-color: rgba(8, 25, 45, 0.3);
+}
+
+.past_wrapper {
+  padding: 80px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 20px;
 }
-.past .past_wrapper .past_item {
+.past_wrapper .pastItem {
   width: 300px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   margin: 20px 0;
+  display: none;
 }
-.past .past_wrapper .past_item .past_img {
+.past_wrapper .pastItem .past_img {
   width: 300px;
   height: 300px;
 }
-.past .past_wrapper .past_item .past_img img {
+.past_wrapper .pastItem .past_img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  border-radius: 0px 20px 100px 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.past .past_wrapper .past_item .past_ex_intro {
+.past_wrapper .pastItem .past_ex_intro {
   color: #08192D;
   font-size: 32px;
   text-align: center;
@@ -181,7 +192,7 @@
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.past .past_wrapper .past_item .past_ex_intro::before {
+.past_wrapper .pastItem .past_ex_intro::before {
   background-color: #91989F;
   content: "";
   inset: 50% 0 0 0;
@@ -196,27 +207,36 @@
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   z-index: -1;
 }
-.past .past_wrapper .past_item:hover {
+.past_wrapper .pastItem:hover {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.past .past_wrapper .past_item:hover .past_ex_intro {
+.past_wrapper .pastItem:hover img {
+  border-radius: 0px 20px 0px 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.past_wrapper .pastItem:hover .past_ex_intro {
   position: relative;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.past .past_wrapper .past_item:hover .past_ex_intro::before {
+.past_wrapper .pastItem:hover .past_ex_intro::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
 }
-.past .page_link {
+.past_wrapper .show {
+  display: block;
+}
+
+.more_link {
   text-align: center;
 }
-.past .page_link a {
+.more_link a {
   display: inline-block;
   padding: 20px 30px;
   font-size: 40px;
@@ -228,14 +248,14 @@
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.past .page_link a::after {
+.more_link a::after {
   content: "\f70e";
   font-family: "Font Awesome 6 Free";
   font-weight: 600;
   font-style: normal;
   padding-left: 10px;
 }
-.past .page_link a::before {
+.more_link a::before {
   position: absolute;
   inset: 0;
   content: "";
@@ -252,14 +272,14 @@
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.past .page_link a:hover {
+.more_link a:hover {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
   color: #91989F;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
-.past .page_link a:hover::before {
+.more_link a:hover::before {
   -webkit-transform: scale(2.4);
           transform: scale(2.4);
   background-color: rgba(145, 152, 159, 0.3);

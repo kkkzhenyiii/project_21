@@ -131,20 +131,21 @@
                 <div class="past_title">
                     <h2>EXHIBITION & EVENT</h2>
                 </div>
-                <div class="btn_wrapper">
-                    <div class="btn_category">
-                        <a href="#">ALL</a>
-                    </div>
-                    <div class="btn_category">
-                        <a href="#">EXHIBITION</a>
-                    </div>
-                    <div class="btn_category">
-                        <a href="#">EVENT</a>
-                    </div>
+                <div id="btnWrapper">
+                    <button class="btn active" onclick="filterSelection('all')">
+                        ALL
+                    </button>
+                    <button class="btn" onclick="filterSelection('exhibition')">
+                        EXHIBITION
+                    </button>
+                    <button class="btn" onclick="filterSelection('event')">
+                        EVENT
+                    </button>
                 </div>
+
                 <div class="past_wrapper">
 
-                    <div class="past_item">
+                    <div class="pastItem event">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/event/event01.jpg" alt="exhibition">
@@ -155,7 +156,7 @@
                         </a>
                     </div>
 
-                    <div class="past_item">
+                    <div class="pastItem event">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/exhibition/past/past01.jpg" alt="exhibition">
@@ -167,7 +168,7 @@
                     </div>
 
 
-                    <div class="past_item">
+                    <div class="pastItem exhibition">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/exhibition/past/past02.jpg" alt="exhibition">
@@ -178,7 +179,7 @@
                         </a>
                     </div>
 
-                    <div class="past_item">
+                    <div class="pastItem exhibition">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/exhibition/past/past03.jpg" alt="exhibition">
@@ -189,7 +190,7 @@
                         </a>
                     </div>
 
-                    <div class="past_item ">
+                    <div class="pastItem exhibition">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/exhibition/past/past04.jpg" alt="exhibition">
@@ -200,7 +201,7 @@
                         </a>
                     </div>
 
-                    <div class="past_item">
+                    <div class="pastItem event">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/exhibition/past/past05.jpg" alt="exhibition">
@@ -211,7 +212,7 @@
                         </a>
                     </div>
 
-                    <div class="past_item">
+                    <div class="pastItem event">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/event/event02.jpg" alt="exhibition">
@@ -222,7 +223,7 @@
                         </a>
                     </div>
 
-                    <div class="past_item">
+                    <div class="pastItem exhibition">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/exhibition/past/past06.jpg" alt="exhibition">
@@ -233,7 +234,7 @@
                         </a>
                     </div>
 
-                    <div class="past_item">
+                    <div class="pastItem exhibition">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/exhibition/past/past07.jpg" alt="exhibition">
@@ -244,7 +245,7 @@
                         </a>
                     </div>
 
-                    <div class="past_item">
+                    <div class="pastItem exhibition">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/exhibition/past/past08.jpg" alt="exhibition">
@@ -255,7 +256,7 @@
                         </a>
                     </div>
 
-                    <div class="past_item">
+                    <div class="pastItem exhibition">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/exhibition/past/past09.jpg" alt="exhibition">
@@ -266,10 +267,7 @@
                         </a>
                     </div>
 
-
-
-
-                    <div class="past_item ">
+                    <div class="pastItem event">
                         <a href="ex_intro.html">
                             <div class="past_img">
                                 <img src="img/event/event03.jpg" alt="exhibition">
@@ -282,7 +280,7 @@
 
                 </div>
 
-                <div class="page_link">
+                <div class="more_link">
                     <a href="#">more</a>
                 </div>
 
@@ -414,7 +412,51 @@
 
     </script>
 
+    <!-- filter btn -->
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("pastItem");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
 
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("btnWrapper");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
 
 </body>
 

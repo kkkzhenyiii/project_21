@@ -46,9 +46,7 @@ header {
     h2 {
         font-size: 160px;
         text-align: center;
-        padding-top: 40px;
-        // position: relative;
-        // bottom: -20px;
+        padding-bottom: 40px;
         color: #08192D;
     }
 
@@ -69,6 +67,8 @@ header {
                         width: 100%;
                         object-fit: cover;
                         object-position: center;
+                        border-radius: 0px 20px 100px 20px;
+                transition: all .5s ease-in-out;
                     }
 
                     .whatson_intro {
@@ -91,6 +91,12 @@ header {
                 &:hover {
                     filter: grayscale(1);
                     transition: all 1s;
+                    
+                    img {
+                        border-radius: 0px 20px 0px 20px;
+                transition: all .5s ease-in-out;
+                    }
+
                     .whatson_intro {
                         color: #08192D;
                     }
@@ -286,7 +292,7 @@ header {
                 margin: 0 auto;
                 padding: 10px 40px;
                 display: inline-block;
-                border: 1px solid #ccc;
+                border: none;
                 border-radius: 40px;
                 box-sizing: border-box;
                 background-color: rgba(8, 25, 45, 0.6);
