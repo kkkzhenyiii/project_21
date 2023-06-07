@@ -91,13 +91,9 @@
   color: #08192D;
   position: relative;
   z-index: 1;
-  -webkit-transform: translate(0);
-          transform: translate(0);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 .news_wrapper .news_card .page_link a::after {
-  content: "\f178";
+  content: "\f1ea";
   font-family: "Font Awesome 6 Free";
   font-weight: 600;
   font-style: normal;
@@ -118,12 +114,6 @@
           transform-origin: left;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-.news_wrapper .news_card .page_link a:hover {
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
