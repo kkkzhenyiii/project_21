@@ -3,13 +3,16 @@ html {
   scroll-behavior: smooth;
 }
 
-.main_container {
-  width: 100%;
+body {
   position: relative;
   background-image: url(../img/bg/all_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.main_container {
+  width: 100%;
   font-family: "Unna", serif;
 }
 

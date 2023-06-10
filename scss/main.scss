@@ -8,14 +8,23 @@ html {
     scroll-behavior: smooth;
 }
 
-.main_container {
-    width: 100%;
+body {
     position: relative;
     // overflow: hidden;
     background-image: url(../img/bg/all_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.main_container {
+    width: 100%;
+    // position: relative;
+    // // overflow: hidden;
+    // background-image: url(../img/bg/all_bg.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
     font-family: 'Unna', serif;
 }
 

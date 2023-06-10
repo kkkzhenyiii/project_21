@@ -1,13 +1,10 @@
 .home-slideshow {
     min-height: 100vh;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     overflow: hidden;
     position: relative;
     top: 0;
-
-    // text-align: center;
-    // transform: translate3d(0, 0, 0);
 }
 
 
@@ -48,7 +45,7 @@ header {
     h2 {
         font-size: 160px;
         text-align: center;
-        padding-bottom: 40px;
+        padding: 40px 0;
         color: #08192D;
     }
 
@@ -342,10 +339,6 @@ header {
         min-height: 80vh;
     }
 
-    header {
-        position: relative;
-    }
-
     // whats-on setting on the iPad device
     // change the font-size
     .whatson {
@@ -524,7 +517,7 @@ header {
 
 // ***** RWD *****
 // mini-version for iphone XS
-@media screen and (max-width:410px) and (-webkit-device-pixel-ratio : 3) {
+@media screen and (max-width:410px) {
 
     // subscribe setting on Iphone XS
     .subscribe {
