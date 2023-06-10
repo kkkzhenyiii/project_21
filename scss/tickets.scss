@@ -95,11 +95,11 @@
 }
 
 #ticket-type-1:checked+.card {
-    outline: 8px solid #fbff7f;
+    outline: 8px solid #F6C555;
 }
 
 #ticket-type-2:checked+.card {
-    outline: 8px solid #fbff7f;
+    outline: 8px solid #F6C555;
 }
 
 // above -- tab-1 ----------
@@ -313,7 +313,7 @@ input {
 
 //when getting error
 input.invalid {
-    background-color: rgba(#fbff7f, 0.7);
+    outline: 4px solid #F6C555;
 }
 
 .arrow_btn {
