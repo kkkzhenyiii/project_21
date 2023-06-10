@@ -11,16 +11,23 @@
 .slideshow-mover {
     min-height: 100%;
     width: 3973px;
-    background-image: url(../img/index/big_bg_02.png);
-    background-repeat: repeat-x;
-    background-position: left center;
-    background-size: 50%;
+    // background-image: url(../img/index/big_bg_02.png);
+    // background-repeat: repeat-x;
+    // background-position: left center;
+    // background-size: 50%;
     position: absolute;
-    top: 0;
+    top: 20vh;
     left: 0;
     z-index: 0;
     // transform: translate3d(0, 0, 0);
     animation: moveSlideshow 120s linear infinite;
+
+    img {
+        width: 50%;
+        // height: 100%;
+        // object-fit: contain;
+        
+    }
 }
 
 @keyframes moveSlideshow {
@@ -335,8 +342,10 @@ header {
 
 @media screen and (max-width:1023px) {
 
-    .home-slideshow {
-        min-height: 80vh;
+    .slideshow-mover {
+        img {
+            width: 25%;
+        }
     }
 
     // whats-on setting on the iPad device

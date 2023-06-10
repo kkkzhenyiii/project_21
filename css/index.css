@@ -10,16 +10,15 @@
 .slideshow-mover {
   min-height: 100%;
   width: 3973px;
-  background-image: url(../img/index/big_bg_02.png);
-  background-repeat: repeat-x;
-  background-position: left center;
-  background-size: 50%;
   position: absolute;
-  top: 0;
+  top: 20vh;
   left: 0;
   z-index: 0;
   -webkit-animation: moveSlideshow 120s linear infinite;
           animation: moveSlideshow 120s linear infinite;
+}
+.slideshow-mover img {
+  width: 50%;
 }
 
 @-webkit-keyframes moveSlideshow {
@@ -322,8 +321,8 @@ header {
 }
 
 @media screen and (max-width: 1023px) {
-  .home-slideshow {
-    min-height: 80vh;
+  .slideshow-mover img {
+    width: 25%;
   }
   .whatson h2 {
     font-size: 120px;
