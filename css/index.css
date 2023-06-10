@@ -412,7 +412,7 @@ header {
     bottom: -100%;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 410px) and (-webkit-device-pixel-ratio: 3) {
   .subscribe .subscribe_input {
     border-bottom: none;
     border: 1px solid #08192D;

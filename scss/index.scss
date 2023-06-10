@@ -524,7 +524,7 @@ header {
 
 // ***** RWD *****
 // mini-version for iphone XS
-@media screen and (max-width:410px) {
+@media screen and (max-width:410px) and (-webkit-device-pixel-ratio : 3) {
 
     // subscribe setting on Iphone XS
     .subscribe {
