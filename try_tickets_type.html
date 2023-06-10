@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>訂購票券</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS樣式設定 */
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .quantity button {
+            font-size: 10px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: #08192D;
+            color: #fff;
+        }
+
+        .quantity input {
+            width: 50px;
+            margin: 0 5px;
+        }
+
+        .quantity a{
+            display: inline-block;
+            text-decoration: none;
+            font-size: 10px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: #08192D;
+            color: #fff;
+        }
+
+
+        .tickets_wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .tickets_wrapper .tickets_item {
+            width: 300px;
+            height: 300px;
+            background-color: rgba(254, 254, 254, 0.7);
+            color: #08192D;
+            text-align: center;
+            border-radius: 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+            -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .tickets_wrapper .tickets_item p {
+            font-size: 32px;
+        }
+
+        .tickets_wrapper .tickets_item .tickets_price {
+            font-style: italic;
+        }
+
+        .tickets_wrapper .tickets_item .tickets_info {
+            position: absolute;
+            top: 300px;
+            padding: 10px;
+        }
+
+        .tickets_wrapper .tickets_item .tickets_info p {
+            text-align: center;
+            font-size: 20px;
+            color: #91989F;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <h1>訂購票券</h1>
+
+        <div class="card" id="card-1">
+            <h3>票種 1</h3>
+            <p>票價：$100</p>
+            <div class="quantity">
+                <button onclick="decreaseQuantity(1)">-</button>
+                <input type="number" id="quantity-1" value="0">
+                <button onclick="increaseQuantity(1)">+</button>
+            </div>
+        </div>
+
+        <div class="card" id="card-2">
+            <h3>票種 2</h3>
+            <p>票價：$200</p>
+            <div class="quantity">
+                <button onclick="decreaseQuantity(2)">-</button>
+                <input type="number" id="quantity-2" value="0">
+                <button onclick="increaseQuantity(2)">+</button>
+            </div>
+        </div>
+
+        <div class="card" id="card-3">
+            <h3>票種 3</h3>
+            <p>票價：$300</p>
+            <div class="quantity">
+                <button onclick="decreaseQuantity(3)">-</button>
+                <input type="number" id="quantity-3" value="0">
+                <button onclick="increaseQuantity(3)">+</button>
+            </div>
+        </div>
+
+        <div class="card" id="card-4">
+            <h3>票種 4</h3>
+            <p>票價：$400</p>
+            <div class="quantity">
+                <button onclick="decreaseQuantity(4)">-</button>
+                <input type="number" id="quantity-4" value="0">
+                <button onclick="increaseQuantity(4)">+</button>
+            </div>
+        </div>
+
+        <div class="total-price">總價：$<span id="total-price">0</span></div>
+
+        <div class="payment-methods">
+            <p>付款方式：</p>
+            <input type="radio" name="payment" value="credit-card"> 信用卡
+            <input type="radio" name="payment" value="paypal"> PayPal
+        </div>
+    </div> -->
+
+
+    <div class="tickets_wrapper">
+        <div class="tickets_item card-1">
+            <img src="img/icon/60/adult.svg" alt="adult">
+            <p>Adult</p>
+            <p class="tickets_price">$ 80</p>
+            <div class="quantity">
+                <a onclick="decreaseQuantity(1)"><i class="fa-solid fa-minus"></i></a>
+                <input type="number" id="quantity-1" value="0">
+                <a onclick="increaseQuantity(1)"><i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>
+        <div class="tickets_item card-2">
+            <img src="img/icon/60/student.svg" alt="adult">
+            <p>Student</p>
+            <p class="tickets_price">$ 75</p>
+            <div class="quantity">
+                <button onclick="decreaseQuantity(2)"><i class="fa-solid fa-minus"></i></button>
+                <input type="number" id="quantity-2" value="0">
+                <button onclick="increaseQuantity(2)"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="tickets_info">
+                <p>Full-time with ID, including international students</p>
+            </div>
+        </div>
+        <div class="tickets_item card-3">
+            <img src="img/icon/60/children.svg" alt="adult">
+            <p>Children</p>
+            <p class="tickets_price">$ FREE</p>
+            <div class="quantity">
+                <button onclick="decreaseQuantity(3)">-</button>
+                <input type="number" id="quantity-3" value="0">
+                <button onclick="increaseQuantity(3)">+</button>
+            </div>
+            <div class="tickets_info">
+                <p>7 and under</p>
+            </div>
+        </div>
+        <div class="tickets_item card-4">
+            <img src="img/icon/60/senior.svg" alt="adult">
+            <p>Senior</p>
+            <p class="tickets_price">$ 65</p>
+            <div class="quantity">
+                <button onclick="decreaseQuantity(4)">-</button>
+                <input type="number" id="quantity-4" value="0">
+                <button onclick="increaseQuantity(4)">+</button>
+            </div>
+            <div class="tickets_info">
+                <p>65 and over with ID</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="total-price">總價：$<span id="total-price">0</span></div>
+
+    <script>
+
+        function increaseQuantity(ticketType) {
+            var quantityInput = document.getElementById("quantity-" + ticketType);
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+            calculateTotal();
+        }
+
+        function decreaseQuantity(ticketType) {
+            var quantityInput = document.getElementById("quantity-" + ticketType);
+            if (quantityInput.value > 0) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+                calculateTotal();
+            }
+        }
+
+        function calculateTotal() {
+            var totalPrice = 0;
+            var quantities = document.querySelectorAll('input[type="number"]');
+
+            for (var i = 0; i < quantities.length; i++) {
+                var ticketType = quantities[i].id.split("-")[1];
+                var quantity = parseInt(quantities[i].value);
+
+                var price;
+                switch (ticketType) {
+                    case "1":
+                        price = 100;
+                        break;
+                    case "2":
+                        price = 200;
+                        break;
+                    case "3":
+                        price = 300;
+                        break;
+                    case "4":
+                        price = 400;
+                        break;
+                    default:
+                        price = 0;
+                        break;
+                }
+
+                totalPrice += price * quantity;
+            }
+
+            document.getElementById("total-price").textContent = totalPrice;
+        }
+    </script>
+</body>
+
+</html>

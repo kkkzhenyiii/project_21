@@ -1,7 +1,3 @@
-h2 {
-  font-size: 100px;
-}
-
 .concept {
   width: 100%;
   padding: 0 40px;
@@ -9,7 +5,8 @@ h2 {
           box-sizing: border-box;
 }
 .concept h2 {
-  text-align: right;
+  font-size: 60px;
+  color: #08192D;
 }
 .concept .concept_wrapper {
   display: -webkit-box;
@@ -18,6 +15,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 80px 0;
 }
 .concept .concept_wrapper .concept_img .concept_img_front {
   width: 400px;
@@ -57,18 +55,48 @@ h2 {
 }
 .concept .concept_wrapper .concept_info p {
   font-size: 20px;
-  line-height: 1.5;
 }
 .concept .concept_wrapper .concept_info .concept_foreword {
   width: 120%;
   position: relative;
   right: 20%;
-  font-family: "Libre Baskerville", serif;
-  text-align: right;
   padding: 40px 0;
 }
-.concept .concept_wrapper .concept_info .concept_foreword p {
-  padding: 10px 0;
+.concept .concept_wrapper .concept_info .concept_foreword blockquote {
+  font-size: 28px;
+  text-align: center;
+}
+.concept .concept_wrapper .concept_info .concept_foreword blockquote::before {
+  content: "\f10d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 40px;
+  color: #08192D;
+  padding: 10px;
+}
+.concept .concept_wrapper .concept_info .concept_foreword blockquote::after {
+  content: "\f10e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 40px;
+  color: #08192D;
+  padding: 10px;
+}
+.concept .concept_wrapper .concept_info .concept_foreword span {
+  font-size: 20px;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+}
+.concept .concept_wrapper .concept_info .concept_foreword span::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(8, 25, 45, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
 }
 .concept .concept_wrapper .concept_info .concept_intr {
   position: relative;
@@ -77,42 +105,19 @@ h2 {
   background-color: rgba(254, 254, 254, 0.6549019608);
 }
 .concept .concept_wrapper .concept_info .concept_intr p {
-  padding: 20px 0;
   text-align: justify;
   font-weight: 300;
+  padding: 20px 0;
 }
 
 .space {
   width: 100%;
-  padding: 0 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.space .space_info {
-  width: 50%;
-}
-.space .space_info p {
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: justify;
-}
-.space .space_info .space_info_first {
-  width: 120%;
-  position: relative;
-  left: 0%;
-  font-family: "Libre Baskerville", serif;
-  padding: 40px 0;
-}
-.space .space_info .space_info_first p {
-  padding: 10px 0;
-}
-.space .space_info .space_info_sec {
-  padding: 0 40px;
-  background-color: rgba(254, 254, 254, 0.6549019608);
-}
-.space .space_info .space_info_sec p {
-  padding: 20px 0;
-  font-weight: 300;
+.space h2 {
+  font-size: 60px;
+  color: #08192D;
 }
 .space .space_wrapper {
   display: -webkit-box;
@@ -121,6 +126,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 80px 0;
 }
 .space .space_wrapper .space_img .space_img_front {
   width: 400px;
@@ -155,18 +161,41 @@ h2 {
   -o-object-position: center;
      object-position: center;
 }
+.space .space_info {
+  width: 50%;
+}
+.space .space_info p {
+  font-size: 20px;
+  text-align: justify;
+}
+.space .space_info .space_info_first {
+  width: 120%;
+  position: relative;
+  left: 0%;
+  padding-bottom: 40px;
+}
+.space .space_info .space_info_first p {
+  padding: 20px 0;
+}
+.space .space_info .space_info_sec {
+  padding: 0 40px;
+  background-color: rgba(254, 254, 254, 0.6549019608);
+}
+.space .space_info .space_info_sec p {
+  padding: 20px 0;
+}
 
-.space_wrapper {
+.space_slider_wrapper {
   width: 100%;
   margin: 20px auto;
 }
-.space_wrapper .space_item {
+.space_slider_wrapper .space_item {
   width: 100%;
   height: 360px;
   background-color: cadetblue;
   margin: 0 auto;
 }
-.space_wrapper .space_item img {
+.space_slider_wrapper .space_item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

@@ -52,16 +52,16 @@
         <section class="news">
             <div class="container">
                 <!-- 下拉式選單 -->
-                <div class="btn_wrapper">
-                    <div class="btn_category">
-                        <a href="#">ALL</a>
-                    </div>
-                    <div class="btn_category">
-                        <a href="#">2023.06</a>
-                    </div>
-                    <div class="btn_category">
-                        <a href="#">2023.05</a>
-                    </div>
+                <div class="select_box">
+                    <label for="dates">Category</label>
+                    <select name="dates" id="dates">
+                        <option value="">2023 June</option>
+                        <option value="">2023 May</option>
+                        <option value="">2023 Apr</option>
+                        <option value="">2023 Mar</option>
+                        <option value="">2023 Feb</option>
+                        <option value="">2023 Jan</option>
+                    </select>
                 </div>
 
                 <div class="news_wrapper">
@@ -243,6 +243,9 @@
         </section>
 
 
+        <!-- top button -->
+        <button onclick="topFunction()" class="topBtn" title="go to top">TOP</button>
+
         <!-- footer -->
         <footer>
             <div class="footer_wrapper">
@@ -366,6 +369,8 @@
 
     </script>
 
+    <!-- top btn js -->
+    <script src="js/main.js"></script>
 
 
 </body>

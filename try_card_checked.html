@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>訂購票券</title>
+    <style>
+        /* CSS樣式設定 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        } */
+
+        #ticket-type-1 {
+            display: none;
+        }
+
+        #ticket-type-1:checked+.card {
+            border: 3px solid #ccc;
+        }
+
+        #ticket-type-2 {
+            display: none;
+        }
+
+        #ticket-type-2:checked+.card {
+            border: 3px solid #ccc;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+
+        .card {
+            border: 1px solid #ccc;
+            width: 500px;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 20px;
+        }
+
+        .card .card_img {
+            width: 60%;
+        }
+
+        .card .card_img img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            border-radius: 10px;
+        }
+
+        .card .card_txt {
+            color: #08192D;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card .card_txt h3 {
+            font-size: 24px;
+        }
+
+        .card .card_txt span {
+            font-size: 20px;
+        }
+
+        .card .card_txt p {
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>訂購票券</h1>
+
+        <h2>票種：</h2>
+
+        <input type="checkbox" id="ticket-type-1">
+        <label for="ticket-type-1" class="card">
+            <div class="card_img">
+                <img src="img/exhibition/current/ex01.jpg" alt="exhibition">
+            </div>
+            <div class="card_txt">
+                <h3>Dreamscape - Where Fantasy and Reality Converge</h3>
+                <span>2023.04.18 - 2023.06.13
+                </span>
+            </div>
+        </label>
+
+        <!-- <input type="checkbox" id="ticket-type-2" value="2" onchange="toggleCard(2)">
+        <label for="ticket-type-2" class="card">
+            <h3>VIP票</h3>
+            <p>票價：$200</p>
+            <div class="quantity">
+                <button onclick="decreaseQuantity(1)">-</button>
+                <input type="number" id="quantity-2" value="0">
+                <button onclick="increaseQuantity(1)">+</button>
+            </div>
+        </label> -->
+
+
+        <div class="quantity">
+            <button onclick="decreaseQuantity()">-</button>
+            <input type="number" id="quantity" value="1">
+            <button onclick="increaseQuantity()">+</button>
+        </div>
+
+        <div class="total-price">總價：$<span id="total-price">0</span></div>
+
+        <div class="payment-methods">
+            <p>付款方式：</p>
+            <input type="radio" name="payment" value="credit-card"> 信用卡
+            <input type="radio" name="payment" value="paypal"> PayPal
+        </div>
+
+        <button onclick="calculateTotal()">計算總價</button>
+    </div>
+
+    <script>
+
+        function increaseQuantity() {
+            var quantityInput = document.getElementById("quantity");
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        }
+
+        function decreaseQuantity() {
+            var quantityInput = document.getElementById("quantity");
+            if (quantityInput.value > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        }
+
+        function calculateTotal() {
+            var totalPrice = 0;
+
+            // 計算所選的票種總價
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            for (var i = 0; i < checkboxes.length; i++) {
+                var ticketType = checkboxes[i].value;
+                var quantity = document.getElementById("quantity").value;
+
+                // 假設一般票價格為100，VIP票價格為200
+                var price = ticketType === "1" ? 100 : 200;
+
+                totalPrice += price * quantity;
+            }
+
+            document.getElementById("total-price").textContent = totalPrice;
+        }
+    </script>
+</body>
+
+</html>
