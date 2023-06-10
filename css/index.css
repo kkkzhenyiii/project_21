@@ -1,42 +1,43 @@
 .home-slideshow {
-  min-height: 100vh;
+  height: 80vh;
   width: 100%;
   margin: 0 auto 40px;
   overflow: hidden;
-  position: relative;
-  top: 0;
 }
 
 .slideshow-mover {
-  min-height: 100%;
-  width: 3973px;
-  position: absolute;
-  top: 20vh;
-  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 2222px;
   z-index: 0;
-  -webkit-animation: moveSlideshow 120s linear infinite;
-          animation: moveSlideshow 120s linear infinite;
+  -webkit-animation: slideShow 100s linear infinite;
+          animation: slideShow 100s linear infinite;
 }
 .slideshow-mover img {
-  width: 50%;
+  display: block;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-@-webkit-keyframes moveSlideshow {
+@-webkit-keyframes slideShow {
   100% {
-    -webkit-transform: translateX(-66.6666%);
-            transform: translateX(-66.6666%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
-@keyframes moveSlideshow {
+@keyframes slideShow {
   100% {
-    -webkit-transform: translateX(-66.6666%);
-            transform: translateX(-66.6666%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 header {
-  position: absolute;
-  top: 0;
+  padding: 40px 40px 20px 40px;
+  margin-bottom: 0;
 }
 
 .whatson {
@@ -297,7 +298,7 @@ header {
   box-sizing: border-box;
 }
 .subscribe .subscirbe_wrapper .subscribe_input form input[type=submit] {
-  margin: 0 auto;
+  margin: 0 10px;
   padding: 10px 40px;
   display: inline-block;
   border: none;
@@ -321,9 +322,6 @@ header {
 }
 
 @media screen and (max-width: 1023px) {
-  .slideshow-mover img {
-    width: 25%;
-  }
   .whatson h2 {
     font-size: 120px;
   }
@@ -372,12 +370,6 @@ header {
     font-size: 80px;
     padding-bottom: 0px;
   }
-  .whatson .whatson_wrapper .whatson_slider .whatson_item a .whatson_intro h3 {
-    font-size: 36px;
-  }
-  .whatson .whatson_wrapper .whatson_slider .whatson_item a .whatson_intro h4 {
-    font-size: 32px;
-  }
   .slick-track {
     padding-top: 0px;
   }
@@ -409,6 +401,12 @@ header {
   }
 }
 @media screen and (max-width: 410px) {
+  .news_list ul li a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .subscribe .subscribe_input {
     border-bottom: none;
     border: 1px solid #08192D;

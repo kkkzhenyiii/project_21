@@ -1,46 +1,47 @@
 .home-slideshow {
-    min-height: 100vh;
+    height: 80vh;
     width: 100%;
     margin: 0 auto 40px;
     overflow: hidden;
-    position: relative;
-    top: 0;
+    // position: relative;
+    
 }
 
 
 .slideshow-mover {
-    min-height: 100%;
-    width: 3973px;
+    display: flex;
+    // min-height: 100%;
+    height: 100%;
+    width: 2222px;
     // background-image: url(../img/index/big_bg_02.png);
     // background-repeat: repeat-x;
     // background-position: left center;
     // background-size: 50%;
-    position: absolute;
-    top: 20vh;
-    left: 0;
+    // position: absolute;
+    // top: 20vh;
+    // left: 0;
     z-index: 0;
-    // transform: translate3d(0, 0, 0);
-    animation: moveSlideshow 120s linear infinite;
+    animation: slideShow 100s linear infinite;
 
     img {
-        width: 50%;
-        // height: 100%;
-        // object-fit: contain;
-        
+        display: block;
+        width: 100%;
+        object-fit: contain;
     }
 }
 
-@keyframes moveSlideshow {
+@keyframes slideShow {
     100% {
-        transform: translateX(-66.6666%);
+        transform: translateX(-100%);
     }
 }
+
 
 
 // this header setting only in the index page
 header {
-    position: absolute;
-    top: 0;
+    padding: 40px 40px 20px 40px;
+    margin-bottom: 0;
 }
 
 
@@ -305,7 +306,7 @@ header {
                 }
 
                 input[type=submit] {
-                    margin: 0 auto;
+                    margin: 0 10px;
                     padding: 10px 40px;
                     display: inline-block;
                     border: none;
@@ -341,12 +342,6 @@ header {
 // iPad & Cellphone -- width < 1023
 
 @media screen and (max-width:1023px) {
-
-    .slideshow-mover {
-        img {
-            width: 25%;
-        }
-    }
 
     // whats-on setting on the iPad device
     // change the font-size
@@ -460,28 +455,28 @@ header {
             padding-bottom: 0px;
         }
 
-        .whatson_wrapper {
+        // .whatson_wrapper {
 
-            .whatson_slider {
+        //     .whatson_slider {
 
-                .whatson_item {
+        //         .whatson_item {
 
-                    a {
+        //             a {
 
-                        .whatson_intro {
+        //                 .whatson_intro {
 
-                            h3 {
-                                font-size: 36px;
-                            }
+        //                     h3 {
+        //                         // font-size: 36px;
+        //                     }
 
-                            h4 {
-                                font-size: 32px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        //                     h4 {
+        //                         // font-size: 32px;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     // whats on slider on the Cellphone device
@@ -527,6 +522,18 @@ header {
 // ***** RWD *****
 // mini-version for iphone XS
 @media screen and (max-width:410px) {
+
+
+    // NEWS setting on Iphone XS
+    .news_list {
+
+        ul li {
+
+            a {
+                flex-direction: column;
+            }
+        }
+    }
 
     // subscribe setting on Iphone XS
     .subscribe {
