@@ -12,11 +12,12 @@
 
 
 .slideshow-mover {
-    min-height: 100vh;
+    min-height: 100%;
     width: 3973px;
     background-image: url(../img/index/big_bg_02.png);
     background-repeat: repeat-x;
     background-position: left center;
+    background-size: 50%;
     position: absolute;
     top: 0;
     left: 0;
@@ -32,6 +33,7 @@
 }
 
 
+// this header setting only in the index page
 header {
     position: absolute;
     top: 0;
@@ -39,7 +41,7 @@ header {
 
 
 
-// what'on ------ centerMode carousel
+// whats-on setting on the desktop device
 .whatson {
     margin-bottom: 200px;
 
@@ -51,8 +53,9 @@ header {
     }
 
     .whatson_wrapper {
-        width: 80%;
-        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 40px;
 
         .whatson_slider {
 
@@ -68,7 +71,7 @@ header {
                         object-fit: cover;
                         object-position: center;
                         border-radius: 0px 20px 100px 20px;
-                transition: all .5s ease-in-out;
+                        transition: all .5s ease-in-out;
                     }
 
                     .whatson_intro {
@@ -76,9 +79,11 @@ header {
                         text-align: center;
                         line-height: 1.5;
                         color: #91989F;
-                        font-size: 24px;
                         padding: 10px 0;
 
+                        h3 {
+                            font-size: 24px;
+                        }
 
                         h4 {
                             font-family: 'Noto Sans', sans-serif;
@@ -91,10 +96,10 @@ header {
                 &:hover {
                     filter: grayscale(1);
                     transition: all 1s;
-                    
+
                     img {
                         border-radius: 0px 20px 0px 20px;
-                transition: all .5s ease-in-out;
+                        transition: all .5s ease-in-out;
                     }
 
                     .whatson_intro {
@@ -109,9 +114,13 @@ header {
     }
 }
 
-// whats on slider 
+// whats on slider on the desktop device
 .slick-list {
     padding-bottom: 40px !important;
+}
+
+.slick-track {
+    padding-top: 40px;
 }
 
 .slick-slide {
@@ -145,117 +154,124 @@ header {
     right: -20px !important;
 }
 
+// ↑↑↑ whats on slider on the desktop device
 
-// NEWS
 
+
+// NEWS setting on the desktop device
 .news {
-    display: flex;
-    justify-content: center;
     background-color: rgba($color: #08192D, $alpha: .6);
-    padding: 80px 0;
-    box-sizing: border-box;
     overflow: hidden;
 
-    .news_title {
-        width: 30%;
+    .news_wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 80px 40px;
         box-sizing: border-box;
-        font-style: italic;
-        font-size: 40px;
-        color: #fefefe;
-        position: relative;
 
-        .page_link {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            
+        .news_title {
+            width: 20%;
+            box-sizing: border-box;
+            font-style: italic;
+            font-size: 40px;
+            color: #fefefe;
+            position: relative;
 
-            a {
-                display: inline-block;
-                padding: 20px 30px;
-                font-size: 20px;
-                color: #fefefe;
-                position: relative;
-                z-index: 1;
-                transform: translate(0);
-                transition: all .5s ease-in-out;
+            .page_link {
+                position: absolute;
+                left: 0;
+                bottom: 0;
 
 
-                &::after {
-                    content: "\f178";
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 600;
-                    font-style: normal;
-                    padding-left: 10px;
-                }
-
-                &::before {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    content: "";
-                    width: 60px;
-                    height: 60px;aspect-ratio: 60/60;
-                    border-radius: 50px;
-                    border: 1px solid #fefefe;
-                    z-index: -1;
-                    transform-origin: left;
-                    transform: scale(1);
+                a {
+                    display: inline-block;
+                    padding: 20px 30px;
+                    font-size: 20px;
+                    color: #fefefe;
+                    position: relative;
+                    z-index: 1;
+                    transform: translate(0);
                     transition: all .5s ease-in-out;
-                }
 
-                &:hover {
-                    transform: translateX(10px);
-                    transition: all .5s ease-in-out;
-                } 
-                &:hover::before {
-                    transform-origin: left;
-                    transform: scale(1.5);
-                    transition: all .5s ease-in-out;
-                }
 
+                    &::after {
+                        content: "\f178";
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 600;
+                        font-style: normal;
+                        padding-left: 10px;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: "";
+                        width: 60px;
+                        height: 60px;
+                        aspect-ratio: 60/60;
+                        border-radius: 50px;
+                        border: 1px solid #fefefe;
+                        z-index: -1;
+                        transform-origin: left;
+                        transform: scale(1);
+                        transition: all .5s ease-in-out;
+                    }
+
+                    &:hover {
+                        transform: translateX(10px);
+                        transition: all .5s ease-in-out;
+                    }
+
+                    &:hover::before {
+                        transform-origin: left;
+                        transform: scale(1.5);
+                        transition: all .5s ease-in-out;
+                    }
+
+                }
             }
         }
-    }
 
-    .news_list {
-        width: 60%;
-        box-sizing: border-box;
-
-        ul li {
-            border-bottom: 1px solid #fefefe;
+        .news_list {
+            width: 80%;
             box-sizing: border-box;
 
-            a {
-                display: flex;
-                gap: 40px;
-                padding: 40px 0;
-                color: #fefefe;
-                font-size: 24px;
-                transform-origin: left;
-                transform: scale(1);
-                transition: all .5s;
+            ul li {
+                border-bottom: 1px solid #fefefe;
+                box-sizing: border-box;
 
-                &:hover {
+                a {
+                    display: flex;
+                    gap: 40px;
+                    padding: 40px 0;
+                    color: #fefefe;
+                    font-size: 24px;
                     transform-origin: left;
-                    transform: scale(1.1);
+                    transform: scale(1);
                     transition: all .5s;
+
+                    &:hover {
+                        transform-origin: left;
+                        transform: scale(1.05);
+                        transition: all .5s;
+                    }
                 }
+
+
             }
-
-
         }
     }
 }
 
+// ↑↑↑ NEWS setting on the desktop device
 
-// subscribe
+
+// subscribe setting on the desktop device
 .subscribe {
     margin: 160px 0;
 
     .subscirbe_wrapper {
-        width: 80%;
-        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -263,52 +279,267 @@ header {
         font-size: 20px;
 
         .subscribe_intro {
-            width: 480px;
+            width: 50%;
             text-align: justify;
         }
 
         .subscribe_input {
-            // width: 500px;
             border-bottom: 3px solid #08192D;
 
+            form {
+                text-align: center;
 
-            input[type=text] {
-                width: 320px;
-                padding: 20px;
-                display: inline-block;
-                border: none;
-                box-sizing: border-box;
-                background-color: rgba($color: #08192D, $alpha: .0);
-                font-family: 'Unna', serif;
-                font-size: 20px;
-                box-sizing: border-box;
-
-            }
-
-            input[type=submit] {
-                margin: 0 auto;
-                padding: 10px 40px;
-                display: inline-block;
-                border: none;
-                border-radius: 40px;
-                box-sizing: border-box;
-                background-color: rgba(8, 25, 45, 0.6);
-                color: #fefefe;
-                font-family: 'Unna', serif;
-                font-style: italic;
-                font-size: 20px;
-                transition: all .5s;
-
-                &:hover {
-                    cursor: pointer;
-                    background-color: rgba(8, 25, 45, 0.3);
-                    color: #08192D;
-                    transition: all .5s;
+                input[type=text] {
+                    padding: 20px;
+                    display: inline-block;
+                    border: none;
+                    box-sizing: border-box;
+                    background-color: rgba($color: #08192D, $alpha: .0);
+                    font-family: 'Unna', serif;
+                    font-size: 20px;
+                    box-sizing: border-box;
                 }
 
+                input[type=submit] {
+                    margin: 0 auto;
+                    padding: 10px 40px;
+                    display: inline-block;
+                    border: none;
+                    border-radius: 40px;
+                    box-sizing: border-box;
+                    background-color: rgba(8, 25, 45, 0.6);
+                    color: #fefefe;
+                    font-family: 'Unna', serif;
+                    font-style: italic;
+                    font-size: 20px;
+                    transition: all .5s;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgba(8, 25, 45, 0.3);
+                        color: #08192D;
+                        transition: all .5s;
+                    }
+
+                }
             }
+
+
 
         }
 
+    }
+}
+
+
+
+// ***** RWD *****
+// iPad & Cellphone -- width < 1023
+
+@media screen and (max-width:1023px) {
+
+    .home-slideshow {
+        min-height: 80vh;
+    }
+
+    header {
+        position: relative;
+    }
+
+    // whats-on setting on the iPad device
+    // change the font-size
+    .whatson {
+
+        h2 {
+            font-size: 120px;
+        }
+
+        .whatson_wrapper {
+
+            .whatson_slider {
+
+                .whatson_item {
+
+                    a {
+
+                        .whatson_intro {
+
+                            h3 {
+                                font-size: 24px;
+                            }
+
+                            h4 {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // whats on slider on the iPad device
+    .slick-slide {
+        transform: scale(0.8);
+    }
+
+    .slick-center {
+        transform: scale(1.1);
+    }
+
+    .slick-prev {
+        left: -20px !important;
+    }
+
+    .slick-next {
+        right: 0px !important;
+    }
+
+    // ↑↑↑ whats on slider on the iPad device
+
+
+    // NEWS setting on the iPad device
+    .news {
+
+        .news_wrapper {
+
+            .news_title {
+                font-size: 30px;
+
+                .page_link {
+
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .news_list {
+
+                ul li {
+
+                    a {
+                        gap: 30px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    // ↑↑↑ NEWS setting on the iPad device
+
+
+    // subscribe setting on the iPad device
+    .subscribe {
+
+        .subscirbe_wrapper {
+            flex-direction: column;
+
+            .subscribe_intro {
+                width: 80%;
+            }
+        }
+    }
+}
+
+
+
+// ***** RWD *****
+// Cellphone -- width < 768
+
+@media screen and (max-width:767px) {
+
+    // whats on slider on the Cellphone device
+    .whatson {
+
+        h2 {
+            font-size: 80px;
+            padding-bottom: 0px;
+        }
+
+        .whatson_wrapper {
+
+            .whatson_slider {
+
+                .whatson_item {
+
+                    a {
+
+                        .whatson_intro {
+
+                            h3 {
+                                font-size: 36px;
+                            }
+
+                            h4 {
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // whats on slider on the Cellphone device
+    .slick-track {
+        padding-top: 0px;
+    }
+
+    .slick-slide {
+        transform: scale(0.8);
+    }
+
+    .slick-center {
+        transform: scale(0.8);
+    }
+
+    // ↑↑↑ whats on slider on the Cellphone device
+
+
+    // NEWS setting on the Cellphone device
+    .news {
+
+        .news_wrapper {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+
+            .news_title {
+                width: 80%;
+
+                .page_link {
+                    position: absolute;
+                    left: 80%;
+                    bottom: -100%;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+// ***** RWD *****
+// mini-version for iphone XS
+@media screen and (max-width:410px) {
+
+    // subscribe setting on Iphone XS
+    .subscribe {
+
+        .subscribe_input {
+            border-bottom: none;
+            border: 1px solid #08192D;
+            padding: 10px 0;
+            border-radius: 10px;
+            margin: 0 10px;
+
+            input[type=text] {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
     }
 }
