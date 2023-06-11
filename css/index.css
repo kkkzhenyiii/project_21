@@ -365,7 +365,7 @@ header {
     width: 80%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px), (orientation: landscape) {
   .whatson h2 {
     font-size: 80px;
     padding-bottom: 0px;

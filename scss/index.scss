@@ -445,7 +445,7 @@ header {
 // ***** RWD *****
 // Cellphone -- width < 768
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:767px), (orientation: landscape) {
 
     // whats on slider on the Cellphone device
     .whatson {
@@ -455,28 +455,6 @@ header {
             padding-bottom: 0px;
         }
 
-        // .whatson_wrapper {
-
-        //     .whatson_slider {
-
-        //         .whatson_item {
-
-        //             a {
-
-        //                 .whatson_intro {
-
-        //                     h3 {
-        //                         // font-size: 36px;
-        //                     }
-
-        //                     h4 {
-        //                         // font-size: 32px;
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
     }
 
     // whats on slider on the Cellphone device
