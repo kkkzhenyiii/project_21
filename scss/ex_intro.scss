@@ -59,6 +59,7 @@
     margin: 160px 0;
 
     .intro_title {
+        padding: 0 80px;
 
         h2 {
             font-size: 60px;
@@ -82,6 +83,8 @@
             /* for Safari */
             position: sticky;
             top: 0;
+            display: flex;
+            flex-direction: column;
 
             span {
                 font-size: 40px;
@@ -153,12 +156,14 @@
         article {
             width: 70%;
             padding: 80px;
+            box-sizing: border-box;
             text-align: center;
 
             img {
                 border-radius: 10px;
                 box-shadow: 2px 2px 15px #9198;
                 margin: 40px 0;
+                width: 80%;
             }
 
             p {
@@ -171,22 +176,7 @@
 
 
 
-.ex_slider_wrapper {
-    width: 60%;
-    margin: 40px auto;
 
-    .ex_item {
-        width: 200px;
-        height: 200px;
-        // background-color: cadetblue;
-        margin: 0 auto;
-        padding: 10px;
-
-        img {
-            width: 100%;
-        }
-    }
-}
 
 
 
@@ -196,7 +186,7 @@
 // ***** RWD *****
 // ***** RWD *****
 // ***** RWD *****
-// special setting for text of banner
+// special setting
 @media screen and (max-width:1200px) {
     .banner_wrapper {
 
@@ -218,6 +208,40 @@
             }
         }
     }
+
+
+    .intro_article {
+
+        .intro_title {
+            text-align: center;
+
+            h2 {
+                font-size: 50px;
+            }
+        }
+
+        .intro_wrapper {
+            flex-direction: column-reverse;
+
+            .intro_aside {
+                width: 100%;
+                border-right: none;
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+
+                .page_link {
+                    flex-basis: 100%;
+                }
+
+            }
+
+            article {
+                width: 100%;
+            }
+        }
+    }
+
 }
 
 
@@ -251,6 +275,28 @@
                         font-size: 16px;
                     }
 
+                }
+            }
+        }
+    }
+
+    .intro_article {
+        margin: 80px 0;
+    
+        .intro_title {
+    
+            h2 {
+                font-size: 40px;
+            }
+        }
+    
+        .intro_wrapper {
+            margin: 0;
+    
+            article {
+    
+                p {
+                    font-size: 20px;
                 }
             }
         }
@@ -294,6 +340,83 @@
                     }
                 }
             }
+        }
+    }
+
+    .intro_article {
+    
+        .intro_title {
+    
+            h2 {
+                font-size: 30px;
+            }
+        }
+    
+        .intro_wrapper {
+    
+            .intro_aside {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+    
+                .page_link {
+                    padding: 100px 0;
+                    text-align: center;
+    
+                    a {
+                        display: inline-block;
+                        padding: 20px 30px;
+                        font-size: 40px;
+                        font-style: italic;
+                        color: #08192D;
+                        position: relative;
+                        z-index: 1;
+                        transform: translate(0);
+                        transition: all .5s ease-in-out;
+    
+    
+                        &::after {
+                            content: "\f02b";
+                            font-family: "Font Awesome 6 Free";
+                            font-weight: 600;
+                            font-style: normal;
+                            padding-left: 10px;
+                        }
+    
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            content: "";
+                            width: 80px;
+                            height: 80px;
+                            aspect-ratio: 80/80;
+                            border-radius: 50px;
+                            // border: 1px solid #08192D;
+                            background-color: rgba($color: #08192D, $alpha: .3);
+                            z-index: -1;
+                            transform-origin: left;
+                            transform: scale(1);
+                            transition: all .5s ease-in-out;
+                        }
+    
+                        &:hover {
+                            transform: translateX(10px);
+                            transition: all .5s ease-in-out;
+                        }
+    
+                        &:hover::before {
+                            transform-origin: left;
+                            transform: scale(1.5);
+                            transition: all .5s ease-in-out;
+                        }
+    
+                    }
+                }
+    
+            }
+
         }
     }
 }
