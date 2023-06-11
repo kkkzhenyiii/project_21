@@ -64,6 +64,7 @@
         h2 {
             font-size: 60px;
             color: #08192D;
+            line-height: 1.5;
         }
     }
 
@@ -282,19 +283,32 @@
 
     .intro_article {
         margin: 80px 0;
-    
+
         .intro_title {
-    
+
             h2 {
                 font-size: 40px;
             }
         }
-    
+
         .intro_wrapper {
             margin: 0;
-    
+
+            .intro_aside {
+
+                span {
+                    font-size: 30px;
+                    font-style: italic;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    padding: 20px;
+                }
+            }
+
             article {
-    
+
                 p {
                     font-size: 20px;
                 }
@@ -344,26 +358,26 @@
     }
 
     .intro_article {
-    
+
         .intro_title {
-    
+
             h2 {
                 font-size: 30px;
             }
         }
-    
+
         .intro_wrapper {
-    
+
             .intro_aside {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
 
-    
+
                 .page_link {
                     padding: 100px 0;
                     text-align: center;
-    
+
                     a {
                         display: inline-block;
                         padding: 20px 30px;
@@ -374,8 +388,8 @@
                         z-index: 1;
                         transform: translate(0);
                         transition: all .5s ease-in-out;
-    
-    
+
+
                         &::after {
                             content: "\f02b";
                             font-family: "Font Awesome 6 Free";
@@ -383,7 +397,7 @@
                             font-style: normal;
                             padding-left: 10px;
                         }
-    
+
                         &::before {
                             position: absolute;
                             top: 0;
@@ -400,21 +414,28 @@
                             transform: scale(1);
                             transition: all .5s ease-in-out;
                         }
-    
+
                         &:hover {
                             transform: translateX(10px);
                             transition: all .5s ease-in-out;
                         }
-    
+
                         &:hover::before {
                             transform-origin: left;
                             transform: scale(1.5);
                             transition: all .5s ease-in-out;
                         }
-    
+
                     }
                 }
-    
+
+            }
+
+            article {
+
+                img {
+                    width: 100%;
+                }
             }
 
         }
@@ -439,6 +460,53 @@
                     h4 {
                         font-size: 24px;
                     }
+                }
+            }
+        }
+    }
+
+    .intro_article {
+
+        .intro_wrapper {
+
+            .intro_aside {
+
+                .page_link {
+                    padding: 60px 0;
+
+                    a {
+                        padding: 20px 30px;
+                        font-size: 30px;
+
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            content: "";
+                            width: 80px;
+                            height: 80px;
+                            aspect-ratio: 80/80;
+                            border-radius: 50px;
+                            // border: 1px solid #08192D;
+                            background-color: rgba($color: #08192D, $alpha: .3);
+                            z-index: -1;
+                            transform-origin: left;
+                            transform: scale(1);
+                            transition: all .5s ease-in-out;
+                        }
+
+
+
+
+                    }
+                }
+
+            }
+
+            article {
+
+                p {
+                    font-size: 16px;
                 }
             }
         }
