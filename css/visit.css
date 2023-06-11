@@ -185,6 +185,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   padding: 80px 10px;
+  gap: 20px;
 }
 .admission_price .tickets_wrapper .tickets_item {
   width: 300px;
@@ -407,16 +408,15 @@ section {
       -ms-flex-align: center;
           align-items: center;
 }
-.route .transportation .means_item .means_info {
+.route .transportation .means_item .means_icon p {
   color: #fefefe;
-}
-.route .transportation .means_item .means_info h4 {
   text-align: center;
   font-size: 24px;
   font-style: italic;
   padding: 20px 0;
 }
 .route .transportation .means_item .means_info p {
+  color: #fefefe;
   font-size: 20px;
   font-family: "Noto Sans", sans-serif;
 }
@@ -468,10 +468,59 @@ section {
     font-size: 45px;
   }
   .admission_price .tickets_wrapper {
-    padding: 80px;
+    padding: 80px 40px;
   }
   .policies .policies_title h2 {
     font-size: 45px;
+  }
+  .route .route_title h2 {
+    font-size: 60px;
+    text-align: center;
+  }
+  .route .transportation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+  .route .transportation .means_item {
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 80px;
+    padding: 40px 80px;
+  }
+  .route .transportation .means_item .means_icon p {
+    color: #fefefe;
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    padding: 20px 0;
+  }
+  .route .transportation .means_item .means_info p {
+    color: #fefefe;
+    font-size: 20px;
+    font-family: "Noto Sans", sans-serif;
+  }
+  .route .map {
+    margin-top: 40px;
+    padding-bottom: 50%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -482,7 +531,7 @@ section {
     font-size: 30px;
   }
   .opening_info .opening_info_title h2 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .opening_info .opening_info_wrapper .opening_hours_wrapper {
     width: 100%;
@@ -507,7 +556,7 @@ section {
     z-index: 0;
   }
   .admission_price .price_title {
-    font-size: 30px;
+    font-size: 40px;
   }
   .admission_price .tickets_wrapper .tickets_item {
     width: 240px;
@@ -525,7 +574,7 @@ section {
     font-size: 16px;
   }
   .policies .policies_title h2 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .policies .basic_wrapper {
     -webkit-box-orient: vertical;
@@ -549,7 +598,7 @@ section {
     text-align: left;
   }
   .policies .access_title h3 {
-    font-size: 28px;
+    font-size: 32px;
   }
   .policies .access_title p {
     font-size: 20px;
@@ -586,8 +635,7 @@ section {
     text-align: left;
   }
   .route .route_title h2 {
-    font-size: 30px;
-    text-align: center;
+    font-size: 40px;
   }
   .route .transportation {
     display: none;
@@ -629,16 +677,16 @@ section {
     padding: 0 0 40px;
   }
   .admission_price .page_link a {
-    padding: 10px 15px;
-    font-size: 20px;
+    padding: 20px 30px;
+    font-size: 30px;
   }
   .admission_price .page_link a::after {
     padding-left: 5px;
   }
   .admission_price .page_link a::before {
-    width: 40px;
-    height: 40px;
-    aspect-ratio: 40/40;
-    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 50/50;
+    top: 10%;
   }
 }

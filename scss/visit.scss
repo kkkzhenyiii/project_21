@@ -197,6 +197,7 @@ section {
         justify-content: space-evenly;
         align-items: center;
         padding: 80px 10px;
+        gap: 20px;
 
         .tickets_item {
             width: 300px;
@@ -415,17 +416,21 @@ section {
             flex-direction: column;
             align-items: center;
 
-            .means_info {
-                color: #fefefe;
+            .means_icon {
 
-                h4 {
+                p {
+                    color: #fefefe;
                     text-align: center;
                     font-size: 24px;
                     font-style: italic;
                     padding: 20px 0;
                 }
+            }
+
+            .means_info {
 
                 p {
+                    color: #fefefe;
                     font-size: 20px;
                     font-family: 'Noto Sans', sans-serif;
                 }
@@ -519,7 +524,7 @@ section {
         }
 
         .tickets_wrapper {
-            padding: 80px;
+            padding: 80px 40px;
 
         }
     }
@@ -534,6 +539,62 @@ section {
             h2 {
                 font-size: 45px;
             }
+        }
+    }
+
+
+    // route setting on the iPad device
+    .route {
+
+        .route_title {
+    
+            h2 {
+                font-size: 60px;
+                text-align: center;
+            }
+        }
+    
+        .transportation {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+    
+            .means_item {
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 80px;
+                padding: 40px 80px;
+    
+                .means_icon {
+    
+                    p {
+                        color: #fefefe;
+                        text-align: center;
+                        font-size: 24px;
+                        font-style: italic;
+                        padding: 20px 0;
+                    }
+                }
+    
+                .means_info {
+    
+                    p {
+                        color: #fefefe;
+                        font-size: 20px;
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                }
+            }
+        }
+
+        .map {
+            
+            margin-top: 40px;
+            padding-bottom: 50%;
         }
     }
 }
@@ -562,7 +623,7 @@ section {
 
         .opening_info_title {
             h2 {
-                font-size: 30px;
+                font-size: 40px;
             }
         }
 
@@ -609,7 +670,7 @@ section {
     .admission_price {
 
         .price_title {
-            font-size: 30px;
+            font-size: 40px;
         }
 
         .tickets_wrapper {
@@ -644,7 +705,7 @@ section {
         .policies_title {
 
             h2 {
-                font-size: 30px;
+                font-size: 40px;
             }
         }
 
@@ -684,7 +745,7 @@ section {
         .access_title {
 
             h3 {
-                font-size: 28px;
+                font-size: 32px;
             }
 
             p {
@@ -730,8 +791,7 @@ section {
         .route_title {
 
             h2 {
-                font-size: 30px;
-                text-align: center;
+                font-size: 40px;
             }
         }
 
@@ -740,6 +800,7 @@ section {
         }
 
         .map {
+            
             margin-top: 40px;
             padding-bottom: 100%;
             filter: grayscale(1);
@@ -808,18 +869,18 @@ section {
             padding: 0 0 40px;
 
             a {
-                padding: 10px 15px;
-                font-size: 20px;
+                padding: 20px 30px;
+                font-size: 30px;
 
                 &::after {
                     padding-left: 5px;
                 }
 
                 &::before {
-                    width: 40px;
-                    height: 40px;
-                    aspect-ratio: 40/40;
-                    border-radius: 50px;
+                    width: 50px;
+                    height: 50px;
+                    aspect-ratio: 50/50;
+                    top: 10%;
                 }
             }
         }
