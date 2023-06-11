@@ -603,6 +603,9 @@ section {
   .visit_banner .banner_title {
     font-size: 24px;
   }
+  .opening_info .opening_info_wrapper .opening_hours_wrapper {
+    font-size: 16px;
+  }
   .opening_info .opening_info_wrapper .calendar_wrapper {
     width: 100%;
     padding: 10px 20px 0;
