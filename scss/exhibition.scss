@@ -518,6 +518,21 @@
             }
         }
     }
+
+
+    .more_link {
+        position: relative;
+
+        &::after {
+            content: '';
+            height: 120px;
+            width: 1.5px;
+            background-color: #08192D;
+            position: absolute;
+            left: 50%;
+            top: 110%;
+        }
+    }
 }
 
 

@@ -154,7 +154,7 @@ header {
 
 // footer setting on the desk device
 footer {
-    margin-top: 60px;
+    margin-top: 160px;
     background: rgba($color: #FCFAF2, $alpha: 0.3);
     backdrop-filter: blur(4px);
 
@@ -439,6 +439,10 @@ footer {
 // ***** RWD *****
 // Cellphone -- width < 768
 @media screen and (max-width:767px) {
+
+    .main_container {
+        overflow: hidden;
+    }
 
     // container setting on the iPad device
     .container {

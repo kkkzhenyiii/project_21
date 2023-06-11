@@ -634,6 +634,9 @@ section {
   .policies .access_wrapper .access_item .access_info .txt p {
     text-align: left;
   }
+  .route {
+    position: relative;
+  }
   .route .route_title h2 {
     font-size: 40px;
   }
@@ -645,6 +648,24 @@ section {
     padding-bottom: 100%;
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
+  }
+  .route::before {
+    content: "";
+    height: 60px;
+    width: 1.5px;
+    background-color: #08192D;
+    position: absolute;
+    left: 50%;
+    bottom: 105%;
+  }
+  .route::after {
+    content: "";
+    height: 90px;
+    width: 1.5px;
+    background-color: #08192D;
+    position: absolute;
+    left: 50%;
+    top: 110%;
   }
 }
 @media screen and (max-width: 410px) {
@@ -675,6 +696,7 @@ section {
   }
   .admission_price .page_link {
     padding: 0 0 40px;
+    position: relative;
   }
   .admission_price .page_link a {
     padding: 20px 30px;
@@ -688,5 +710,23 @@ section {
     height: 50px;
     aspect-ratio: 50/50;
     top: 10%;
+  }
+  .admission_price .page_link::before {
+    content: "";
+    height: 60px;
+    width: 1.5px;
+    background-color: #08192D;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+  }
+  .admission_price .page_link::after {
+    content: "";
+    height: 60px;
+    width: 1.5px;
+    background-color: #08192D;
+    position: absolute;
+    left: 50%;
+    top: 60%;
   }
 }

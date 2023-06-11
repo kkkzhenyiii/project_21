@@ -441,6 +441,18 @@
     padding: 4px 20px;
     border-radius: 0;
   }
+  .more_link {
+    position: relative;
+  }
+  .more_link::after {
+    content: "";
+    height: 120px;
+    width: 1.5px;
+    background-color: #08192D;
+    position: absolute;
+    left: 50%;
+    top: 110%;
+  }
 }
 @media screen and (max-width: 410px) {
   .banner_wrapper .banner_item .banner_card .banner_info h4 {

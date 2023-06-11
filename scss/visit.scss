@@ -547,18 +547,18 @@ section {
     .route {
 
         .route_title {
-    
+
             h2 {
                 font-size: 60px;
                 text-align: center;
             }
         }
-    
+
         .transportation {
             flex-direction: column;
             align-items: center;
             gap: 40px;
-    
+
             .means_item {
                 width: 80%;
                 margin: 0 auto;
@@ -568,9 +568,9 @@ section {
                 justify-content: center;
                 gap: 80px;
                 padding: 40px 80px;
-    
+
                 .means_icon {
-    
+
                     p {
                         color: #fefefe;
                         text-align: center;
@@ -579,9 +579,9 @@ section {
                         padding: 20px 0;
                     }
                 }
-    
+
                 .means_info {
-    
+
                     p {
                         color: #fefefe;
                         font-size: 20px;
@@ -592,7 +592,7 @@ section {
         }
 
         .map {
-            
+
             margin-top: 40px;
             padding-bottom: 50%;
         }
@@ -800,11 +800,33 @@ section {
         }
 
         .map {
-            
+
             margin-top: 40px;
             padding-bottom: 100%;
             filter: grayscale(1);
         }
+
+        position: relative;
+
+            &::before {
+                content: '';
+                height: 60px;
+                width: 1.5px;
+                background-color: #08192D;
+                position: absolute;
+                left: 50%;
+                bottom: 105%;
+            }
+
+            &::after {
+                content: '';
+                height: 90px;
+                width: 1.5px;
+                background-color: #08192D;
+                position: absolute;
+                left: 50%;
+                top: 110%;
+            }
 
     }
 }
@@ -882,6 +904,28 @@ section {
                     aspect-ratio: 50/50;
                     top: 10%;
                 }
+            }
+
+            position: relative;
+
+            &::before {
+                content: '';
+                height: 60px;
+                width: 1.5px;
+                background-color: #08192D;
+                position: absolute;
+                left: 50%;
+                bottom: 100%;
+            }
+
+            &::after {
+                content: '';
+                height: 60px;
+                width: 1.5px;
+                background-color: #08192D;
+                position: absolute;
+                left: 50%;
+                top: 60%;
             }
         }
     }

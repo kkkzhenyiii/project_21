@@ -426,6 +426,9 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .subscribe {
+    position: relative;
+  }
   .subscribe .subscribe_input {
     border-bottom: none;
     border: 1px solid #08192D;
@@ -436,5 +439,23 @@ header {
   .subscribe .subscribe_input input[type=text] {
     text-align: center;
     margin-bottom: 10px;
+  }
+  .subscribe::before {
+    content: "";
+    height: 80px;
+    width: 1.5px;
+    background-color: #08192D;
+    position: absolute;
+    left: 50%;
+    bottom: 110%;
+  }
+  .subscribe::after {
+    content: "";
+    height: 80px;
+    width: 1.5px;
+    background-color: #08192D;
+    position: absolute;
+    left: 50%;
+    top: 110%;
   }
 }

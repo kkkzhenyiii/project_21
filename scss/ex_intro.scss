@@ -59,7 +59,7 @@
     margin: 160px 0;
 
     .intro_title {
-        padding: 0 80px;
+        padding: 0 40px;
 
         h2 {
             font-size: 60px;
@@ -230,9 +230,21 @@
                 flex-direction: row;
                 justify-content: space-evenly;
                 flex-wrap: wrap;
+                position: relative;
+
 
                 .page_link {
                     flex-basis: 100%;
+                }
+
+                &::after {
+                    content: '';
+                    height: 160px;
+                    width: 1px;
+                    background-color: #08192D;
+                    position: absolute;
+                    left: 50%;
+                    top: 80%;
                 }
 
             }
@@ -295,6 +307,7 @@
             margin: 0;
 
             .intro_aside {
+                position: relative;
 
                 span {
                     font-size: 30px;
@@ -304,6 +317,20 @@
                 h3 {
                     font-size: 20px;
                     padding: 20px;
+                }
+
+                .page_link {
+                    padding: 60px 0;
+                }
+
+                &::after {
+                    content: '';
+                    height: 100px;
+                    width: 1px;
+                    background-color: #08192D;
+                    position: absolute;
+                    left: 50%;
+                    top: 80%;
                 }
             }
 
@@ -373,9 +400,31 @@
                 align-items: center;
                 text-align: center;
 
+                position: relative;
+
+                &::before {
+                    content: '';
+                    height: 60px;
+                    width: 1px;
+                    background-color: #08192D;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 100%;
+                }
+
+                &::after {
+                    content: '';
+                    height: 80px;
+                    width: 1px;
+                    background-color: #08192D;
+                    position: absolute;
+                    left: 50%;
+                    top: 90%;
+                }
+
 
                 .page_link {
-                    padding: 100px 0;
+                    padding: 60px 0;
                     text-align: center;
 
                     a {
@@ -467,37 +516,62 @@
 
     .intro_article {
 
+        .intro_title {
+            position: relative;
+
+            &::before {
+                content: '';
+                height: 60px;
+                width: 1px;
+                background-color: #08192D;
+                position: absolute;
+                left: 50%;
+                bottom: 100%;
+            }
+
+            &::after {
+                content: '';
+                height: 60px;
+                width: 1px;
+                background-color: #08192D;
+                position: absolute;
+                left: 50%;
+                top: 100%;
+            }
+        }
+
         .intro_wrapper {
 
             .intro_aside {
 
+                position: relative;
+
+                &::before {
+                    content: '';
+                    height: 80px;
+                    width: 1px;
+                    background-color: #08192D;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 95%;
+                }
+
+                &::after {
+                    content: '';
+                    height: 80px;
+                    width: 1px;
+                    background-color: #08192D;
+                    position: absolute;
+                    left: 50%;
+                    top: 90%;
+                }
+
                 .page_link {
-                    padding: 60px 0;
+                    padding: 30px 0;
 
                     a {
                         padding: 20px 30px;
                         font-size: 30px;
-
-                        &::before {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            content: "";
-                            width: 80px;
-                            height: 80px;
-                            aspect-ratio: 80/80;
-                            border-radius: 50px;
-                            // border: 1px solid #08192D;
-                            background-color: rgba($color: #08192D, $alpha: .3);
-                            z-index: -1;
-                            transform-origin: left;
-                            transform: scale(1);
-                            transition: all .5s ease-in-out;
-                        }
-
-
-
-
                     }
                 }
 

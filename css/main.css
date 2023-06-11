@@ -141,7 +141,7 @@ header nav ul li a:hover {
 }
 
 footer {
-  margin-top: 60px;
+  margin-top: 160px;
   background: rgba(252, 250, 242, 0.3);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
@@ -374,6 +374,9 @@ footer .footer_wrapper .footer_img img {
   }
 }
 @media screen and (max-width: 767px) {
+  .main_container {
+    overflow: hidden;
+  }
   .container {
     max-width: 767px;
   }
