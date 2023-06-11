@@ -4,7 +4,7 @@
     margin: 0 auto 40px;
     overflow: hidden;
     // position: relative;
-    
+
 }
 
 
@@ -445,7 +445,7 @@ header {
 // ***** RWD *****
 // Cellphone -- width < 768
 
-@media screen and (max-width:767px), (orientation: landscape) {
+@media screen and (max-width:767px) {
 
     // whats on slider on the Cellphone device
     .whatson {
@@ -500,6 +500,37 @@ header {
 // ***** RWD *****
 // mini-version for iphone XS
 @media screen and (max-width:410px) {
+
+    .home-slideshow {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto 40px;
+        overflow: hidden;
+        // position: relative;
+
+    }
+
+    .slideshow-mover {
+        height: 80%;
+        width: 2222px;
+
+        img {
+            width: 50%;
+        }
+    }
+
+
+
+    //whats on setting on Iphone XS
+    .whatson {
+        margin-bottom: 100px;
+
+        h2 {
+            font-size: 60px;
+        }
+
+
+    }
 
 
     // NEWS setting on Iphone XS

@@ -15,10 +15,10 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 280px;
+        top: 40%;
         text-align: center;
         font-size: 60px;
-        color: #FCFAF2;
+        color: #fefefe;
     }
 
 }
@@ -41,10 +41,11 @@ section {
     .opening_info_wrapper {
         display: flex;
         justify-content: space-evenly;
-        padding: 80px 0;
+        padding: 80px 40px;
+        box-sizing: border-box;
 
         .opening_hours_wrapper {
-            width: 500px;
+            width: 50%;
             padding: 0 40px;
             display: flex;
             flex-direction: column;
@@ -66,7 +67,7 @@ section {
                         content: '\f186';
                         font-family: "Font Awesome 6 Free";
                         font-weight: 900;
-                        
+
                         padding-left: 10px;
                     }
                 }
@@ -76,7 +77,7 @@ section {
 
         // calendar ----------
         .calendar_wrapper {
-            width: 500px;
+            width: 50%;
             background-color: #fefefe;
             border-radius: 10px;
             padding: 20px 20px 0;
@@ -192,9 +193,10 @@ section {
 
     .tickets_wrapper {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         align-items: center;
-        padding: 80px 0;
+        padding: 80px 10px;
 
         .tickets_item {
             width: 300px;
@@ -209,6 +211,7 @@ section {
             justify-content: space-evenly;
             box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
             position: relative;
+            margin: 0 0 80px;
 
             p {
                 font-size: 32px;
@@ -452,4 +455,369 @@ section {
         }
     }
 
+}
+
+
+
+
+
+// ********** RWD **********
+// iPad & Cellphone -- width < 1023
+
+@media screen and (max-width:1023px) {
+
+    // banner setting on the iPad device
+    .visit_banner {
+
+        .banner_title {
+            font-size: 45px;
+        }
+
+    }
+
+    // opening hours setting on the iPad device
+    .opening_info {
+
+        .opening_info_title {
+            h2 {
+                font-size: 45px;
+            }
+        }
+
+        .opening_info_wrapper {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 80px;
+
+            .opening_hours_wrapper {
+                width: 80%;
+            }
+
+            // calendar setting on the iPad device
+            .calendar_wrapper {
+                width: 80%;
+
+                .calendar_box {
+
+                    .days {
+
+                        li {
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // admission_price setting on the iPad device
+    .admission_price {
+
+        .price_title {
+            font-size: 45px;
+        }
+
+        .tickets_wrapper {
+            padding: 80px;
+
+        }
+    }
+
+
+
+    // visitor policies setting on the iPad device
+    .policies {
+
+        .policies_title {
+
+            h2 {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+
+// ***** RWD *****
+// Cellphone -- width < 768
+@media screen and (max-width:767px) {
+
+    section {
+        margin: 80px auto;
+    }
+
+    // banner setting on the Cellphone device
+    .visit_banner {
+
+        .banner_title {
+            font-size: 30px;
+        }
+
+    }
+
+
+    // opening hours setting on the Cellphone device
+    .opening_info {
+
+        .opening_info_title {
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        .opening_info_wrapper {
+
+            .opening_hours_wrapper {
+                width: 100%;
+            }
+
+            // calendar setting on the Cellphone device
+            .calendar_wrapper {
+                width: 100%;
+                padding: 10px 20px 0;
+                font-size: 16px;
+
+                .calender_header {
+                    padding: 16px 0;
+
+                    .icons span {
+                        height: 32px;
+                        width: 32px;
+                        line-height: 32px;
+                    }
+                }
+
+                .calendar_box {
+                    padding: 0px;
+
+                    .days {
+
+                        li {
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+    // admission_price setting on the Cellphone device
+    .admission_price {
+
+        .price_title {
+            font-size: 30px;
+        }
+
+        .tickets_wrapper {
+
+            .tickets_item {
+                width: 240px;
+                height: 240px;
+
+                p {
+                    font-size: 20px;
+                }
+
+                .tickets_info {
+                    position: absolute;
+                    top: 240px;
+                    padding: 10px;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+    // visitor policies setting on the Cellphone device
+    .policies {
+
+        .policies_title {
+
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        .basic_wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            .basic_item {
+                width: 80%;
+
+                .basic_info {
+
+                    .title {
+
+                        h4 {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .txt {
+                        font-size: 16px;
+
+                        p {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+        .access_title {
+
+            h3 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 20px;
+                padding: 0 40px;
+            }
+        }
+
+        .access_wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            .access_item {
+                width: 80%;
+
+                .access_info {
+                    display: flex;
+                    flex-direction: column;
+
+                    .title {
+                        h4 {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .txt {
+                        font-size: 16px;
+
+                        p {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // route setting on the Cellphone device
+    .route {
+
+        .route_title {
+
+            h2 {
+                font-size: 30px;
+                text-align: center;
+            }
+        }
+
+        .transportation {
+            display: none;
+        }
+
+        .map {
+            margin-top: 40px;
+            padding-bottom: 100%;
+            filter: grayscale(1);
+        }
+
+    }
+}
+
+
+
+
+
+// ***** RWD *****
+// mini-version for iphone XS
+@media screen and (max-width:410px) {
+
+    .visit_banner {
+
+        .banner_title {
+            font-size: 24px;
+        }
+
+    }
+
+
+    .opening_info {
+        .opening_info_wrapper {
+
+            // calendar setting on the mini device
+            .calendar_wrapper {
+                width: 100%;
+                padding: 10px 20px 0;
+                font-size: 12px;
+
+                .calender_header {
+                    padding: 16px 0;
+
+                    .icons span {
+                        height: 32px;
+                        width: 32px;
+                        line-height: 32px;
+                    }
+                }
+
+                .calendar_box {
+                    padding: 0px;
+
+                    .days {
+
+                        li {
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .admission_price {
+
+        .page_link {
+            padding: 0 0 40px;
+
+            a {
+                padding: 10px 15px;
+                font-size: 20px;
+
+                &::after {
+                    padding-left: 5px;
+                }
+
+                &::before {
+                    width: 40px;
+                    height: 40px;
+                    aspect-ratio: 40/40;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
 }

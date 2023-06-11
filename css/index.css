@@ -365,7 +365,7 @@ header {
     width: 80%;
   }
 }
-@media screen and (max-width: 767px), (orientation: landscape) {
+@media screen and (max-width: 767px) {
   .whatson h2 {
     font-size: 80px;
     padding-bottom: 0px;
@@ -401,6 +401,25 @@ header {
   }
 }
 @media screen and (max-width: 410px) {
+  .home-slideshow {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto 40px;
+    overflow: hidden;
+  }
+  .slideshow-mover {
+    height: 80%;
+    width: 2222px;
+  }
+  .slideshow-mover img {
+    width: 50%;
+  }
+  .whatson {
+    margin-bottom: 100px;
+  }
+  .whatson h2 {
+    font-size: 60px;
+  }
   .news_list ul li a {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
