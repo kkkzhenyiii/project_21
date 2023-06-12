@@ -2,15 +2,17 @@
 .bookingSystem {
 
     text-align: center;
+    background-color: rgba($color: #08192D, $alpha: .6);
 
     h2 {
-        color: #08192D;
+        padding-top: 40px;
+        color: #fefefe;
         font-size: 60px;
     }
 }
 
 .mulForm_wrapper {
-    background-color: rgba($color: #08192D, $alpha: .6);
+    // background-color: rgba($color: #08192D, $alpha: .6);
 }
 
 // form
