@@ -191,9 +191,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
+// input[type=number] {
+//     -moz-appearance: textfield;
+// }
 
 
 // total-price
@@ -319,7 +319,7 @@ input.invalid {
 .arrow_btn {
     padding-top: 80px;
     overflow: auto;
-    
+
 }
 
 button {
@@ -388,8 +388,6 @@ button:hover {
     .faq_title {
         font-size: 60px;
         text-align: center;
-
-
     }
 
     .faq_list {
@@ -406,15 +404,19 @@ button:hover {
                 position: relative;
 
                 .switch_btn {
+
                     // padding: 20px;
                     color: #08192D;
                     border: none;
                     background-color: rgba($color: #fff, $alpha: .0);
                     position: absolute;
                     right: 20px;
-                    top: 0px;
+                    top: calc((100% - 40px) / 2);
                     font-size: 24px;
                     cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+
                 }
             }
 
@@ -445,4 +447,100 @@ button:hover {
             display: none;
         }
     }
+}
+
+
+
+
+
+
+// ********** RWD **********
+// ********** RWD **********
+// ********** RWD **********
+// ********** RWD **********
+// ********** RWD **********
+// iPad & Cellphone -- width < 1023
+
+@media screen and (max-width:1023px) {
+
+
+    // FAQ setting on the iPad device
+    .faq {
+
+        .faq_title {
+            font-size: 45px;
+        }
+
+        .faq_list {
+
+            .faq_item {
+
+                .question {
+
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+
+
+// ***** RWD *****
+// Cellphone -- width < 768
+@media screen and (max-width:767px) {
+
+
+    // FAQ setting on the Cellphone device
+    .faq {
+
+        .faq_title {
+            font-size: 36px;
+        }
+
+        .faq_list {
+
+            .faq_item {
+
+                .question {
+                    padding: 20px 60px 20px 20px;
+                    font-size: 24px;
+
+                }
+            }
+        }
+    }
+}
+
+
+// ***** RWD *****
+// mini-version for iphone XS
+@media screen and (max-width:420px) {
+
+    // FAQ setting on the ipone XS
+    .faq {
+
+        .faq_title {
+            font-size: 36px;
+        }
+
+        .faq_list {
+            margin: 60px auto 80px;
+
+            .faq_item {
+
+                .question {
+                    padding: 20px 80px 20px 20px;
+                    font-size: 20px;
+                }
+
+                .answer {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
 }

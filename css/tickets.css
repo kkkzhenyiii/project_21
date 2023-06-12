@@ -204,10 +204,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 .total-price {
   padding-top: 40px;
   font-style: italic;
@@ -384,9 +380,11 @@ button:hover {
   background-color: rgba(255, 255, 255, 0);
   position: absolute;
   right: 20px;
-  top: 0px;
+  top: calc((100% - 40px) / 2);
   font-size: 24px;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
 }
 .faq .faq_list .faq_item .icon_minus {
   display: none;
@@ -406,4 +404,37 @@ button:hover {
 }
 .faq .faq_list .show_answer .icon_plus {
   display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .faq .faq_title {
+    font-size: 45px;
+  }
+  .faq .faq_list .faq_item .question {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .faq_title {
+    font-size: 36px;
+  }
+  .faq .faq_list .faq_item .question {
+    padding: 20px 60px 20px 20px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .faq .faq_title {
+    font-size: 36px;
+  }
+  .faq .faq_list {
+    margin: 60px auto 80px;
+  }
+  .faq .faq_list .faq_item .question {
+    padding: 20px 80px 20px 20px;
+    font-size: 20px;
+  }
+  .faq .faq_list .faq_item .answer p {
+    font-size: 16px;
+  }
 }

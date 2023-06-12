@@ -399,6 +399,27 @@ header {
     left: 80%;
     bottom: -100%;
   }
+  .subscribe {
+    position: relative;
+  }
+  .subscribe::before {
+    content: "";
+    height: 80px;
+    width: 1.5px;
+    background-color: #08192D;
+    position: absolute;
+    left: 50%;
+    bottom: 110%;
+  }
+  .subscribe::after {
+    content: "";
+    height: 80px;
+    width: 1.5px;
+    background-color: #08192D;
+    position: absolute;
+    left: 50%;
+    top: 110%;
+  }
 }
 @media screen and (max-width: 410px) {
   .home-slideshow {

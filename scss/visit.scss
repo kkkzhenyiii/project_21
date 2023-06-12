@@ -244,7 +244,7 @@ section {
         width: fit-content;
         margin: 0 auto;
 
-        
+
         a {
             display: inline-block;
             padding: 20px 0px 20px 30px;
@@ -298,25 +298,25 @@ section {
         // line at the left / right side
         position: relative;
 
-            &::before {
-                content: '';
-                height: 1.5px;
-                width: 180%;
-                background-color: #08192D;
-                position: absolute;
-                right: 110%;
-                bottom: 50%;
-            }
+        &::before {
+            content: '';
+            height: 1.5px;
+            width: 180%;
+            background-color: #08192D;
+            position: absolute;
+            right: 110%;
+            bottom: 50%;
+        }
 
-            &::after {
-                content: '';
-                height: 1.5px;
-                width: 180%;
-                background-color: #08192D;
-                position: absolute;
-                left: 110%;
-                top: 50%;
-            }
+        &::after {
+            content: '';
+            height: 1.5px;
+            width: 180%;
+            background-color: #08192D;
+            position: absolute;
+            left: 110%;
+            top: 50%;
+        }
     }
 }
 
@@ -496,23 +496,24 @@ section {
 // ********** RWD **********
 // ********** RWD **********
 // ********** RWD **********
+// special setting 
 @media screen and (max-width: 1200px) {
-    .admission_price {    
-    
+    .admission_price {
+
         .page_link {
-    
+
             // line at the left / right side
-    
-                &::before {
-                    width: 150%;
-                }
-    
-                &::after {
-                    width: 150%;
-                }
+
+            &::before {
+                width: 150%;
+            }
+
+            &::after {
+                width: 150%;
+            }
         }
     }
-    
+
 }
 
 
@@ -581,16 +582,16 @@ section {
         }
 
         .page_link {
-    
+
             // line at the left / right side
-    
-                &::before {
-                    width: 120%;
-                }
-    
-                &::after {
-                    width: 120%;
-                }
+
+            &::before {
+                width: 120%;
+            }
+
+            &::after {
+                width: 120%;
+            }
         }
     }
 
