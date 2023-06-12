@@ -1,3 +1,40 @@
+.home-slideshow {
+    height: 50vh;
+    width: 100%;
+    margin: 0 auto 100px;
+    overflow: hidden;
+    // position: relative;
+
+}
+
+
+.slideshow-mover {
+    display: flex;
+    // min-height: 100%;
+    height: 100%;
+    width: 2222px;
+    z-index: 0;
+    animation: slideShow 100s linear infinite;
+
+    img {
+        display: block;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+@keyframes slideShow {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+section {
+    margin-top: 60px;
+}
+
 .concept {
     width: 100%;
     padding: 0 40px;
@@ -37,7 +74,7 @@
                 position: relative;
                 right: -50%;
                 bottom: 20%;
-                opacity: 0.5;
+                opacity: 0.2;
                 filter: blur(1px);
                 z-index: 0;
 
@@ -124,6 +161,7 @@
 
 .space {
     width: 100%;
+    padding: 0 40px;
     box-sizing: border-box;
 
     h2 {
@@ -159,7 +197,7 @@
                 position: relative;
                 left: -50%;
                 bottom: 20%;
-                opacity: 0.5;
+                opacity: 0.2;
                 filter: blur(1px);
                 z-index: 0;
 
@@ -188,6 +226,7 @@
             position: relative;
             left: 0%;
             padding-bottom: 40px;
+            z-index: 2;
 
             p {
                 padding: 20px 0;
@@ -195,8 +234,10 @@
         }
 
         .space_info_sec {
+            width: 80%;
             padding: 0 40px;
             background-color: #fefefea7;
+            z-index: 2;
 
             p {
                 padding: 20px 0;
@@ -207,22 +248,22 @@
 
 }
 
-.space_slider_wrapper {
-    width: 100%;
-    margin: 20px auto;
+// .space_slider_wrapper {
+//     overflow: hidden;
+//     opacity: 0.8;
 
 
-    .space_item {
-        width: 100%;
-        height: 360px;
-        background-color: cadetblue;
-        margin: 0 auto;
+//     .space_item {
+//         width: 100%;
+//         height: 50vh;
+//         background-color: cadetblue;
+//         margin: 0 auto;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-    }
-}
+//         img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+//             object-position: center;
+//         }
+//     }
+// }

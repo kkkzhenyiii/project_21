@@ -19,7 +19,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 220px;
+        top: 35%;
         text-align: center;
         font-size: 60px;
         color: #FCFAF2;
@@ -206,6 +206,61 @@
             transform: scale(2.4);
             background-color: rgba($color: #91989F, $alpha: .3);
             transition: all .5s ease-in-out;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+// ********** RWD **********
+// iPad & Cellphone -- width < 1023
+
+@media screen and (max-width:1023px) {
+
+
+    // banner setting on the iPad device
+    .news_banner {
+
+        .banner_title {
+            font-size: 45px;
+        }
+
+    }
+}
+
+
+
+
+// ***** RWD *****
+// Cellphone -- width < 768
+@media screen and (max-width:767px) {
+
+    // banner setting on the Cellphone device
+    .news_banner {
+
+        .banner_title {
+            font-size: 30px;
+        }
+
+    }
+}
+
+
+
+// ***** RWD *****
+// iphone XS
+ @media screen and (max-width:480px) {
+
+    // banner setting on the Cellphone device
+    .news_banner {
+
+        .banner_title {
+            font-size: 28px;
         }
 
     }

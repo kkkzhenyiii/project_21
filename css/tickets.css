@@ -40,10 +40,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 20px;
   text-align: left;
   border-radius: 10px;
@@ -101,10 +97,12 @@
 
 #ticket-type-1:checked + .card {
   outline: 8px solid #F6C555;
+  opacity: 0.9;
 }
 
 #ticket-type-2:checked + .card {
   outline: 8px solid #F6C555;
+  opacity: 0.9;
 }
 
 .tickets_wrapper {
@@ -414,29 +412,63 @@ button:hover {
 
 @media screen and (max-width: 1200px) {
   .tickets_wrapper {
-    width: 70%;
-    padding: 80px 40px 0;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 80px 0 0;
   }
   .tickets_wrapper .tickets_item {
-    width: 300px;
-    margin-bottom: 80px;
+    width: 60%;
+    height: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px 80px;
+    margin: 0 auto 80px;
+  }
+  .tickets_wrapper .tickets_item .tickets_info {
+    position: absolute;
+    top: 100%;
+    padding: 10px;
   }
   .total-price {
     text-align: center;
     padding-top: 40px;
   }
+  .preNextBtn {
+    float: initial;
+  }
 }
 @media screen and (max-width: 1023px) {
-  .tickets_wrapper {
-    width: 100%;
-    padding: 80px 20px 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 0 auto;
+  .bookingSystem h2 {
+    font-size: 50px;
+  }
+  .type_card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .type_card .card {
+    width: 80%;
   }
   .faq .faq_title {
     font-size: 45px;
@@ -446,21 +478,40 @@ button:hover {
   }
 }
 @media screen and (max-width: 767px) {
-  .tickets_wrapper {
-    width: 100%;
-    padding: 80px 0 0;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin: 0 auto;
+  #mulForm {
+    font-size: 32px;
+  }
+  .bookingSystem h2 {
+    font-size: 36px;
+  }
+  .type_card .card {
+    width: 90%;
+  }
+  .type_card .card .card_txt h3 {
+    font-size: 20px;
+  }
+  .type_card .card .card_txt span {
+    font-size: 16px;
+  }
+  .type_card .card .card_txt p {
+    font-size: 16px;
   }
   .tickets_wrapper .tickets_item {
-    width: 240px;
-    margin-bottom: 80px;
+    width: 100%;
+    padding: 10px 40px;
+  }
+  .tickets_wrapper .tickets_item img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .tickets_wrapper .tickets_item p {
+    font-size: 20px;
+  }
+  .tickets_wrapper .tickets_item .tickets_info p {
+    font-size: 16px;
   }
   .total-price {
-    text-align: center;
-    padding-top: 40px;
+    padding: 20px;
   }
   .checkout_wrapper {
     -webkit-box-orient: vertical;
@@ -477,9 +528,6 @@ button:hover {
   .checkout_wrapper .payment {
     width: 80%;
   }
-  .preNextBtn {
-    float: initial;
-  }
   .faq .faq_title {
     font-size: 36px;
   }
@@ -490,7 +538,60 @@ button:hover {
 }
 @media screen and (max-width: 480px) {
   #mulForm {
-    font-size: 30px;
+    font-size: 24px;
+  }
+  .type_card .card {
+    width: 100%;
+  }
+  .type_card .card .card_txt h3 {
+    font-size: 16px;
+  }
+  .type_card .card .card_txt span {
+    font-size: 12px;
+  }
+  .type_card .card .card_txt p {
+    font-size: 16px;
+  }
+  .tickets_wrapper .tickets_item {
+    width: 100%;
+    height: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px 20px;
+    margin-bottom: 60px;
+  }
+  .tickets_wrapper .tickets_item img {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  .tickets_wrapper .tickets_item p {
+    font-size: 16px;
+  }
+  .tickets_wrapper .tickets_item .tickets_info {
+    position: absolute;
+    top: 100%;
+    padding: 10px;
+  }
+  .tickets_wrapper .tickets_item .tickets_info p {
+    text-align: left;
+    font-size: 12px;
+  }
+  .quantity a {
+    font-size: 8px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+  }
+  .quantity input {
+    width: 20px;
+  }
+  .quantity input[type=number] {
+    font-size: 16px;
+  }
+  .total-price {
+    font-size: 24px;
+    padding: 40px 0;
   }
   .profile_wrapper {
     width: 100%;
