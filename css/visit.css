@@ -231,10 +231,15 @@ section {
 .admission_price .page_link {
   padding: 80px 0;
   text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
 }
 .admission_price .page_link a {
   display: inline-block;
-  padding: 20px 30px;
+  padding: 20px 0px 20px 30px;
   font-size: 40px;
   font-style: italic;
   color: #08192D;
@@ -283,6 +288,24 @@ section {
           transform: scale(1.5);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+.admission_price .page_link::before {
+  content: "";
+  height: 1.5px;
+  width: 180%;
+  background-color: #08192D;
+  position: absolute;
+  right: 110%;
+  bottom: 50%;
+}
+.admission_price .page_link::after {
+  content: "";
+  height: 1.5px;
+  width: 180%;
+  background-color: #08192D;
+  position: absolute;
+  left: 110%;
+  top: 50%;
 }
 
 .policies .policies_title h2 {
@@ -438,6 +461,14 @@ section {
   height: 100% !important;
 }
 
+@media screen and (max-width: 1200px) {
+  .admission_price .page_link::before {
+    width: 150%;
+  }
+  .admission_price .page_link::after {
+    width: 150%;
+  }
+}
 @media screen and (max-width: 1023px) {
   .visit_banner .banner_title {
     font-size: 45px;
@@ -469,6 +500,12 @@ section {
   }
   .admission_price .tickets_wrapper {
     padding: 80px 40px;
+  }
+  .admission_price .page_link::before {
+    width: 120%;
+  }
+  .admission_price .page_link::after {
+    width: 120%;
   }
   .policies .policies_title h2 {
     font-size: 45px;
@@ -548,6 +585,9 @@ section {
     height: 32px;
     width: 32px;
     line-height: 32px;
+  }
+  .opening_info .opening_info_wrapper .calendar_wrapper .calender_header .icons span:last-child {
+    margin-right: 0px;
   }
   .opening_info .opening_info_wrapper .calendar_wrapper .calendar_box {
     padding: 0px;
@@ -651,21 +691,21 @@ section {
   }
   .route::before {
     content: "";
-    height: 60px;
+    height: 70px;
     width: 1.5px;
     background-color: #08192D;
     position: absolute;
     left: 50%;
-    bottom: 105%;
+    bottom: calc(100% + 25px);
   }
   .route::after {
     content: "";
-    height: 90px;
+    height: 110px;
     width: 1.5px;
     background-color: #08192D;
     position: absolute;
     left: 50%;
-    top: 110%;
+    top: calc(100% + 25px);
   }
 }
 @media screen and (max-width: 410px) {
@@ -695,11 +735,10 @@ section {
     z-index: 0;
   }
   .admission_price .page_link {
-    padding: 0 0 40px;
+    padding: 20px 0;
     position: relative;
   }
   .admission_price .page_link a {
-    padding: 20px 30px;
     font-size: 30px;
   }
   .admission_price .page_link a::after {
@@ -727,6 +766,6 @@ section {
     background-color: #08192D;
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 100%;
   }
 }

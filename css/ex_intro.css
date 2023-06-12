@@ -104,7 +104,7 @@
 }
 .intro_article .intro_wrapper .intro_aside .page_link a {
   display: inline-block;
-  padding: 20px 30px;
+  padding: 20px 0px 20px 30px;
   font-size: 40px;
   font-style: italic;
   color: #08192D;
@@ -437,7 +437,7 @@
   }
   .intro_article .intro_wrapper .intro_aside::after {
     content: "";
-    height: 80px;
+    height: 180px;
     width: 1px;
     background-color: #08192D;
     position: absolute;

@@ -241,10 +241,13 @@ section {
     .page_link {
         padding: 80px 0;
         text-align: center;
+        width: fit-content;
+        margin: 0 auto;
 
+        
         a {
             display: inline-block;
-            padding: 20px 30px;
+            padding: 20px 0px 20px 30px;
             font-size: 40px;
             font-style: italic;
             color: #08192D;
@@ -291,6 +294,29 @@ section {
             }
 
         }
+
+        // line at the left / right side
+        position: relative;
+
+            &::before {
+                content: '';
+                height: 1.5px;
+                width: 180%;
+                background-color: #08192D;
+                position: absolute;
+                right: 110%;
+                bottom: 50%;
+            }
+
+            &::after {
+                content: '';
+                height: 1.5px;
+                width: 180%;
+                background-color: #08192D;
+                position: absolute;
+                left: 110%;
+                top: 50%;
+            }
     }
 }
 
@@ -465,6 +491,32 @@ section {
 
 
 
+// ********** RWD **********
+// ********** RWD **********
+// ********** RWD **********
+// ********** RWD **********
+// ********** RWD **********
+@media screen and (max-width: 1200px) {
+    .admission_price {    
+    
+        .page_link {
+    
+            // line at the left / right side
+    
+                &::before {
+                    width: 150%;
+                }
+    
+                &::after {
+                    width: 150%;
+                }
+        }
+    }
+    
+}
+
+
+
 
 // ********** RWD **********
 // iPad & Cellphone -- width < 1023
@@ -527,7 +579,21 @@ section {
             padding: 80px 40px;
 
         }
+
+        .page_link {
+    
+            // line at the left / right side
+    
+                &::before {
+                    width: 120%;
+                }
+    
+                &::after {
+                    width: 120%;
+                }
+        }
     }
+
 
 
 
@@ -642,10 +708,17 @@ section {
                 .calender_header {
                     padding: 16px 0;
 
-                    .icons span {
-                        height: 32px;
-                        width: 32px;
-                        line-height: 32px;
+                    .icons {
+
+                        span {
+                            height: 32px;
+                            width: 32px;
+                            line-height: 32px;
+                        }
+
+                        span:last-child {
+                            margin-right: 0px;
+                        }
                     }
                 }
 
@@ -808,25 +881,25 @@ section {
 
         position: relative;
 
-            &::before {
-                content: '';
-                height: 60px;
-                width: 1.5px;
-                background-color: #08192D;
-                position: absolute;
-                left: 50%;
-                bottom: 105%;
-            }
+        &::before {
+            content: '';
+            height: 70px;
+            width: 1.5px;
+            background-color: #08192D;
+            position: absolute;
+            left: 50%;
+            bottom: calc(100% + (120px - 70px) / 2);
+        }
 
-            &::after {
-                content: '';
-                height: 90px;
-                width: 1.5px;
-                background-color: #08192D;
-                position: absolute;
-                left: 50%;
-                top: 110%;
-            }
+        &::after {
+            content: '';
+            height: 110px;
+            width: 1.5px;
+            background-color: #08192D;
+            position: absolute;
+            left: 50%;
+            top: calc(100% + (160px - 110px) / 2);
+        }
 
     }
 }
@@ -885,13 +958,14 @@ section {
         }
     }
 
+
+    // admission price setting on the mini device
     .admission_price {
 
         .page_link {
-            padding: 0 0 40px;
+            padding: 20px 0;
 
             a {
-                padding: 20px 30px;
                 font-size: 30px;
 
                 &::after {
@@ -925,7 +999,7 @@ section {
                 background-color: #08192D;
                 position: absolute;
                 left: 50%;
-                top: 60%;
+                top: 100%;
             }
         }
     }

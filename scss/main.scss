@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Unna:ital@0;1&display=swap');
 
-// * {
-//     outline: 1px solid darkcyan;
-// }
+* {
+    outline: 1px solid darkcyan;
+}
 
 html {
     scroll-behavior: smooth;
@@ -279,6 +279,11 @@ footer {
 
 @media screen and (max-width:1023px) {
 
+    .main_container {
+        overflow: hidden;
+    }
+
+
     // hamburger setting
     .hb {
         width: 40px;
@@ -366,8 +371,9 @@ footer {
             right: 0;
             bottom: 0;
             overflow: hidden;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.5s ease-in-out;
             transform: scale(0);
+            transform-origin: right;
 
             background-color: rgba(#fefefe, 0.9);
 
@@ -399,6 +405,8 @@ footer {
         // transition: opacity 0.6s ease-in;
         top: 0;
         transform: scale(1);
+        transform-origin: right;
+        transition: all .7s ease-in-out;
     }
 
     // ↑ above -- header setting on the iPad device
@@ -440,9 +448,6 @@ footer {
 // Cellphone -- width < 768
 @media screen and (max-width:767px) {
 
-    .main_container {
-        overflow: hidden;
-    }
 
     // container setting on the iPad device
     .container {

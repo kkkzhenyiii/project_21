@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Unna:ital@0;1&display=swap");
+* {
+  outline: 1px solid darkcyan;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -261,6 +265,9 @@ footer .footer_wrapper .footer_img img {
 }
 
 @media screen and (max-width: 1023px) {
+  .main_container {
+    overflow: hidden;
+  }
   .hb {
     width: 40px;
     height: 40px;
@@ -335,10 +342,12 @@ footer .footer_wrapper .footer_img img {
     right: 0;
     bottom: 0;
     overflow: hidden;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     -webkit-transform: scale(0);
             transform: scale(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
     background-color: rgba(254, 254, 254, 0.9);
   }
   header nav ul {
@@ -353,6 +362,10 @@ footer .footer_wrapper .footer_img img {
     top: 0;
     -webkit-transform: scale(1);
             transform: scale(1);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
   }
   .container {
     max-width: 1023px;
@@ -374,9 +387,6 @@ footer .footer_wrapper .footer_img img {
   }
 }
 @media screen and (max-width: 767px) {
-  .main_container {
-    overflow: hidden;
-  }
   .container {
     max-width: 767px;
   }
