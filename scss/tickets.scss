@@ -31,7 +31,7 @@
     // flex-direction: column;
     justify-content: space-between;
     gap: 40px;
-    padding: 80px 0;
+    padding: 80px 0 0;
 
     .card {
         width: 50%;
@@ -110,10 +110,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 0;
+    padding: 80px 0 0;
 
     .tickets_item {
-        width: 280px;
+        width: 240px;
         height: 300px;
         background-color: #fefefe;
         border: 1px solid #08192D;
@@ -198,7 +198,7 @@ input::-webkit-inner-spin-button {
 
 // total-price
 .total-price {
-    padding-top: 40px;
+    padding-top: 90px;
     font-style: italic;
     text-align: right;
 
@@ -218,7 +218,9 @@ input::-webkit-inner-spin-button {
 // tab-3 ----------
 // your information
 .profile_wrapper {
-    padding: 80px 200px;
+    // padding: 80px 200px 0;
+    width: 80%;
+    margin: 80px auto 0;
     text-align: left;
     font-size: 24px;
 
@@ -251,7 +253,7 @@ input::-webkit-inner-spin-button {
 // payment
 
 .checkout_wrapper {
-    padding: 80px 0;
+    padding: 80px 0 0;
     display: flex;
     align-items: baseline;
     gap: 40px;
@@ -281,6 +283,7 @@ input::-webkit-inner-spin-button {
             width: 20px;
             height: 20px;
             margin-right: 10px;
+            line-height: 1.5;
         }
 
     }
@@ -317,9 +320,12 @@ input.invalid {
 }
 
 .arrow_btn {
-    padding-top: 80px;
+    padding-top: 40px;
     overflow: auto;
+}
 
+.preNextBtn {
+    float: right;
 }
 
 button {
@@ -347,7 +353,8 @@ button:hover {
 //default status: let all step-division be hidden  
 .tab {
     display: none;
-    height: 560px;
+    // height: 560px;
+    height: auto;
 }
 
 .nav_dots {
@@ -459,9 +466,46 @@ button:hover {
 // ********** RWD **********
 // ********** RWD **********
 // ********** RWD **********
+// special setting
+@media screen and (max-width:1200px) {
+
+    // tab-02
+    .tickets_wrapper {
+        width: 70%;
+        padding: 80px 40px 0;
+        // box-sizing: border-box;
+        justify-content: space-evenly;
+        margin: 0 auto;
+
+        .tickets_item {
+            width: 300px;
+            margin-bottom: 80px;
+        }
+    }
+
+    .total-price {
+        text-align: center;
+        padding-top: 40px;
+    }
+
+}
+
+
+
+
+
 // iPad & Cellphone -- width < 1023
 
 @media screen and (max-width:1023px) {
+
+
+        // tab-02
+        .tickets_wrapper {
+            width: 100%;
+            padding: 80px 20px 0;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
 
 
     // FAQ setting on the iPad device
@@ -491,6 +535,48 @@ button:hover {
 @media screen and (max-width:767px) {
 
 
+
+     // tab-02
+     .tickets_wrapper {
+        width: 100%;
+        padding: 80px 0 0;
+        justify-content: space-evenly;
+        margin: 0 auto;
+
+        .tickets_item {
+            width: 240px;
+            margin-bottom: 80px;
+        }
+    }
+
+    .total-price {
+        text-align: center;
+        padding-top: 40px;
+    }
+
+
+
+    // tab-04
+    .checkout_wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        .profile {
+            width: 80%;
+        }
+
+        .payment {
+            width: 80%;
+        }
+    }
+
+    .preNextBtn {
+        float: initial;
+    }
+
+
+
+
     // FAQ setting on the Cellphone device
     .faq {
 
@@ -515,7 +601,74 @@ button:hover {
 
 // ***** RWD *****
 // mini-version for iphone XS
-@media screen and (max-width:420px) {
+@media screen and (max-width:480px) {
+
+    #mulForm {
+        font-size: 30px;
+    }
+
+
+// tab-3 ----------
+// your information
+.profile_wrapper {
+    width: 100%;
+    font-size: 20px;
+
+    p {
+        padding: 5px 0 20px;
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+    }
+}
+
+
+    // tab-04 setting on iphone XS
+    .checkout_wrapper {
+        font-size: 20px;
+
+        p {
+            padding: 5px 0 20px;
+
+            input {
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+
+        .profile {
+            width: 100%;
+        }
+
+        .payment {
+            width: 100%;
+        }
+
+    }
+
+    .credit_icon {
+        font-size: 40px;
+    }
+
+
+
+    // preNextBtn
+    .preNextBtn {
+
+        button {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 16px;
+        }
+    }
+
+
+
+
+
 
     // FAQ setting on the ipone XS
     .faq {

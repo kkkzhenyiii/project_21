@@ -30,7 +30,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 40px;
-  padding: 80px 0;
+  padding: 80px 0 0;
 }
 .type_card .card {
   width: 50%;
@@ -119,10 +119,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 80px 0;
+  padding: 80px 0 0;
 }
 .tickets_wrapper .tickets_item {
-  width: 280px;
+  width: 240px;
   height: 300px;
   background-color: #fefefe;
   border: 1px solid #08192D;
@@ -205,7 +205,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 .total-price {
-  padding-top: 40px;
+  padding-top: 90px;
   font-style: italic;
   text-align: right;
 }
@@ -219,7 +219,8 @@ input::-webkit-inner-spin-button {
 }
 
 .profile_wrapper {
-  padding: 80px 200px;
+  width: 80%;
+  margin: 80px auto 0;
   text-align: left;
   font-size: 24px;
 }
@@ -240,7 +241,7 @@ input::-webkit-inner-spin-button {
 }
 
 .checkout_wrapper {
-  padding: 80px 0;
+  padding: 80px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,6 +271,7 @@ input::-webkit-inner-spin-button {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  line-height: 1.5;
 }
 .checkout_wrapper .payment {
   width: 50%;
@@ -300,8 +302,12 @@ input.invalid {
 }
 
 .arrow_btn {
-  padding-top: 80px;
+  padding-top: 40px;
   overflow: auto;
+}
+
+.preNextBtn {
+  float: right;
 }
 
 button {
@@ -327,7 +333,7 @@ button:hover {
 
 .tab {
   display: none;
-  height: 560px;
+  height: auto;
 }
 
 .nav_dots {
@@ -406,7 +412,32 @@ button:hover {
   display: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .tickets_wrapper {
+    width: 70%;
+    padding: 80px 40px 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  .tickets_wrapper .tickets_item {
+    width: 300px;
+    margin-bottom: 80px;
+  }
+  .total-price {
+    text-align: center;
+    padding-top: 40px;
+  }
+}
 @media screen and (max-width: 1023px) {
+  .tickets_wrapper {
+    width: 100%;
+    padding: 80px 20px 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+  }
   .faq .faq_title {
     font-size: 45px;
   }
@@ -415,6 +446,40 @@ button:hover {
   }
 }
 @media screen and (max-width: 767px) {
+  .tickets_wrapper {
+    width: 100%;
+    padding: 80px 0 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  .tickets_wrapper .tickets_item {
+    width: 240px;
+    margin-bottom: 80px;
+  }
+  .total-price {
+    text-align: center;
+    padding-top: 40px;
+  }
+  .checkout_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .checkout_wrapper .profile {
+    width: 80%;
+  }
+  .checkout_wrapper .payment {
+    width: 80%;
+  }
+  .preNextBtn {
+    float: initial;
+  }
   .faq .faq_title {
     font-size: 36px;
   }
@@ -423,7 +488,46 @@ button:hover {
     font-size: 24px;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 480px) {
+  #mulForm {
+    font-size: 30px;
+  }
+  .profile_wrapper {
+    width: 100%;
+    font-size: 20px;
+  }
+  .profile_wrapper p {
+    padding: 5px 0 20px;
+  }
+  .profile_wrapper p input {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .checkout_wrapper {
+    font-size: 20px;
+  }
+  .checkout_wrapper p {
+    padding: 5px 0 20px;
+  }
+  .checkout_wrapper p input {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .checkout_wrapper .profile {
+    width: 100%;
+  }
+  .checkout_wrapper .payment {
+    width: 100%;
+  }
+  .credit_icon {
+    font-size: 40px;
+  }
+  .preNextBtn button {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+  }
   .faq .faq_title {
     font-size: 36px;
   }
