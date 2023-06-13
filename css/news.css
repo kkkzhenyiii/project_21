@@ -43,6 +43,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
@@ -51,7 +54,7 @@
 .news_wrapper .news_card {
   width: 300px;
   height: 500px;
-  margin: 20px 0;
+  margin: 20px auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.7);
   -webkit-box-shadow: 2px 2px 15px rgba(8, 25, 45, 0.5);
@@ -207,5 +210,18 @@
 @media screen and (max-width: 480px) {
   .news_banner .banner_title {
     font-size: 28px;
+  }
+  .select_box {
+    font-size: 30px;
+    color: #08192D;
+    text-align: center;
+  }
+  .select_box select {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    color: #fefefe;
+    background-color: rgba(8, 25, 45, 0.5);
   }
 }

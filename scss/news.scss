@@ -50,6 +50,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     padding: 80px 0;
@@ -59,7 +60,7 @@
     .news_card {
         width: 300px;
         height: 500px;
-        margin: 20px 0;
+        margin: 20px auto;
         padding: 20px;
         background-color: rgba($color: #fff, $alpha: 0.7);
         box-shadow: 2px 2px 15px rgba($color: #08192D, $alpha: .5);
@@ -264,4 +265,22 @@
         }
 
     }
+
+
+    // select_box
+.select_box {
+    font-size: 30px;
+    color: #08192D;
+    text-align: center;
+
+
+    select {
+        font-size: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        color: #fefefe;
+        background-color: rgba($color: #08192D, $alpha: 0.5);
+    }
+}
 }
