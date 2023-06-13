@@ -95,11 +95,13 @@
 
 #ticket-type-1:checked + .card {
   outline: 8px solid #F6C555;
+  outline-style: 10px;
   opacity: 0.9;
 }
 
 #ticket-type-2:checked + .card {
   outline: 8px solid #F6C555;
+  outline-style: 10px;
   opacity: 0.9;
 }
 
