@@ -11,9 +11,7 @@
     }
 }
 
-.mulForm_wrapper {
-    // background-color: rgba($color: #08192D, $alpha: .6);
-}
+
 
 // form
 #mulForm {
@@ -320,6 +318,7 @@ input {
 //when getting error
 input.invalid {
     outline: 4px solid #F6C555;
+    outline-style: round($number: 10px);
 }
 
 .arrow_btn {
@@ -754,7 +753,7 @@ button:hover {
     }
 
     .quantity input {
-        width: 20px;
+        width: 22px;
     }
 
     .quantity input[type=number] {
@@ -825,7 +824,7 @@ button:hover {
             width: 60px;
             height: 60px;
             line-height: 60px;
-            font-size: 16px;
+            font-size: 12px;
         }
     }
 
