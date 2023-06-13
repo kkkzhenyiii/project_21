@@ -188,8 +188,8 @@ section {
   gap: 20px;
 }
 .admission_price .tickets_wrapper .tickets_item {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   background-color: rgba(254, 254, 254, 0.7);
   color: #08192D;
   text-align: center;
@@ -220,7 +220,7 @@ section {
 }
 .admission_price .tickets_wrapper .tickets_item .tickets_info {
   position: absolute;
-  top: 300px;
+  top: 100%;
   padding: 10px;
 }
 .admission_price .tickets_wrapper .tickets_item .tickets_info p {
@@ -462,6 +462,69 @@ section {
 }
 
 @media screen and (max-width: 1200px) {
+  .admission_price .price_title {
+    font-size: 60px;
+    text-align: center;
+  }
+  .admission_price .tickets_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 80px 10px;
+    gap: 20px;
+  }
+  .admission_price .tickets_wrapper .tickets_item {
+    width: 220px;
+    height: 220px;
+    background-color: rgba(254, 254, 254, 0.7);
+    color: #08192D;
+    text-align: center;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 0 0 80px;
+  }
+  .admission_price .tickets_wrapper .tickets_item p {
+    font-size: 32px;
+  }
+  .admission_price .tickets_wrapper .tickets_item .tickets_price {
+    font-style: italic;
+  }
+  .admission_price .tickets_wrapper .tickets_item .tickets_info {
+    position: absolute;
+    top: 100%;
+    padding: 10px;
+  }
+  .admission_price .tickets_wrapper .tickets_item .tickets_info p {
+    text-align: center;
+    font-size: 20px;
+    color: #91989F;
+  }
+  .admission_price .page_link {
+    position: relative;
+  }
   .admission_price .page_link::before {
     width: 150%;
   }
@@ -499,7 +562,7 @@ section {
     font-size: 45px;
   }
   .admission_price .tickets_wrapper {
-    padding: 80px 40px;
+    padding: 80px 160px;
   }
   .admission_price .page_link::before {
     width: 120%;
@@ -560,7 +623,7 @@ section {
     padding-bottom: 50%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   section {
     margin: 80px auto;
   }
@@ -598,9 +661,8 @@ section {
   .admission_price .price_title {
     font-size: 40px;
   }
-  .admission_price .tickets_wrapper .tickets_item {
-    width: 240px;
-    height: 240px;
+  .admission_price .tickets_wrapper {
+    padding: 80px 40px;
   }
   .admission_price .tickets_wrapper .tickets_item p {
     font-size: 20px;
