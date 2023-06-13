@@ -686,7 +686,7 @@ section {
   .concept .concept_wrapper .concept_info .concept_title h2 {
     font-size: 36px;
     color: #08192D;
-    text-align: right;
+    text-align: center;
   }
   .concept .concept_wrapper .concept_info .concept_foreword {
     width: 100%;
@@ -753,6 +753,7 @@ section {
   .concept .concept_wrapper .concept_info .concept_intr p {
     padding: 16px 0;
     color: #08192D;
+    text-align: center;
   }
   .space {
     width: 100%;
@@ -783,6 +784,7 @@ section {
   .space .space_info .space_info_title h2 {
     font-size: 36px;
     color: #08192D;
+    text-align: center;
   }
   .space .space_info .space_info_first {
     width: 100%;
@@ -794,6 +796,7 @@ section {
   .space .space_info .space_info_first p {
     padding: 24px 0;
     color: #08192D;
+    text-align: center;
   }
   .space .space_info .space_info_sec {
     width: 100%;
@@ -806,5 +809,6 @@ section {
   .space .space_info .space_info_sec p {
     padding: 16px 0;
     color: #08192D;
+    text-align: center;
   }
 }
