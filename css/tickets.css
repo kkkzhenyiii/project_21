@@ -585,7 +585,7 @@ button:hover {
     line-height: 15px;
   }
   .quantity input {
-    width: 22px;
+    width: 24px;
   }
   .quantity input[type=number] {
     font-size: 16px;
